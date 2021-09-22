@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.20)
+project(Innopolis C)
+
+set(CMAKE_C_STANDARD 99)
+
+add_executable(innopolis BS-Year1/ITP-1/Lab-2/EX-1/EX-1.c)
+add_executable(Innopolis1 BS-Year1/ITP-1/Lab-3/EX-1/EX-1.c)
+add_executable(Innopolis2 BS-Year1/ITP-1/Lab-3/EX-10/EX-10.c)
+add_executable(Innopolis3 BS-Year1/ITP-1/Lab-3/EX-11/EX-11.c)
+add_executable(Innopolis4 BS-Year1/ITP-1/Lab-3/EX-12/EX-12.c)
+add_executable(Innopolis5 BS-Year1/ITP-1/Lab-3/EX-13/EX-13.c)
+add_executable(Innopolis6 BS-Year1/ITP-1/Lab-3/EX-5/EX-5.c)
+add_executable(Innopolis7 BS-Year1/ITP-1/Lab-3/EX-6/EX-6.c)
+add_executable(Innopolis8 BS-Year1/ITP-1/Lab-3/EX-7/EX-7.c)
+add_executable(Innopolis9 BS-Year1/ITP-1/Lab-3/EX-8/EX-8.c)
+add_executable(Innopolis10 BS-Year1/ITP-1/Lab-3/EX-9/EX-9.c)
+add_executable(Innopolis12 BS-Year1/ITP-1/Assignment2/SkiResort/SkiResort.c)
