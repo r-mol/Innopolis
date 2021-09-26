@@ -7,7 +7,7 @@ int main() {
     int arr[1000];
     int i = 0;
 
-    //Input
+    //Input from file
     while (!feof(fin))
     {
         fscanf(fin, "%X", &arr[i]);
