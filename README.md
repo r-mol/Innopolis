@@ -11,4 +11,5 @@
 ### • [Lab3](BS-Year1/ITP-1/Lab-3)
 ### • [Lab4](BS-Year1/ITP-1/Lab-4)
 ## 📌 Java - Language
+### • [Lab5](BS-Year1/ITP-1/Lab-5)
 ## 📌 C++ - Language
