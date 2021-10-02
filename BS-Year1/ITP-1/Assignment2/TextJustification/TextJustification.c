@@ -2,132 +2,111 @@
 #include <string.h>
 #include <stdlib.h>
 
-int main() {
-    FILE *fin = fopen("../input.txt", "r");
-    FILE *fout = fopen("../output.txt", "w");
+struct text{
+    char word[100];
+};
 
-    char text[300];
+int main() {
+    FILE *fin = fopen("input.txt", "r");
+    FILE *fout = fopen("output.txt", "w");
+
+    int count_words = 0;
+    struct text ptr[100];
     int maxWidth;
 
-    //Reading From File
-    fgets(text, 1000, fin);
-    fscanf(fin, "%d", &maxWidth);
+    // Input from FILE
+    while(!feof(fin)){
+        fscanf(fin, "%s", ptr[count_words].word);
+        count_words++;
+    }
+    // Inotialize from last element of ptr
+    maxWidth = atoi(ptr[count_words-1].word);
+    count_words--;
+    int index = 0, count = 0, len = 0, spaces[100], s[100];
+    char res[300][300];
+    int rSize = 0;
 
-    int size = strlen(text) - 1;    //Initialise len of input string
-    int rows = size / maxWidth;     //Initialise count of rows
-
-    if (size % maxWidth != 0) {
-        rows += 1;
+    // Inotialize NULL to all elements of  array spaces
+    for (int i = 0; i < 100; i++) {
+        spaces[i] = 0;
     }
 
-    for (int i = 1; i < rows; i++) {
-        int spaces = 0;
-        int count_spaces = 0;
-
-        // Delete space in beginning of text
-        if (text[i * maxWidth - maxWidth] == ' ') {
-            for (int j = i * maxWidth - maxWidth; j < size; j++) {
-                text[j] = text[j + 1];
-            }
-            size--;
-        }
-
-        // Delete spaces in end of text
-        if (text[i * maxWidth] == ' ') {
-            for (int j = i * maxWidth - maxWidth; j < size; j++) {
-                text[j] = text[j + 1];
-            }
-            size--;
-        }
-
-        if (text[i * maxWidth] != ' ') {
-            int all;
-            int last;
-
-
-            // Count how many values program should move
-            for (int j = i * maxWidth; text[j] != ' '; j--) {
-                spaces++;
-            }
-
-            for (int j = (i * maxWidth) - maxWidth; j < i * maxWidth; j++) {
-                if (text[j] == ' ') {
-                    count_spaces++;
+    while(index < count_words) {
+        // find count of words for first row
+        len += strlen(ptr[index].word);
+        if(len + count > maxWidth){
+            int i = 0;
+            len -= strlen(ptr[index].word);
+            while(len < maxWidth){
+                // count how much additional spaces I need
+                if(count == 1){
+                    spaces[0]++;
+                    len++;
+                }
+                else{
+                    spaces[i % (count - 1)]++;
+                    len++;
+                    i++;
                 }
             }
-            if (count_spaces != 1) {
-                count_spaces -= 1;
-                spaces += count_spaces;
-            }
+            res[rSize][0] = '\0';
 
-            // Count how long space should be in give row
-            if (spaces % count_spaces != 0) {
-                all = spaces / count_spaces;
-                last = all + (spaces - (all * count_spaces));
-            } else {
-                all = spaces / count_spaces;
-                last = spaces / count_spaces;
-            }
-
-            //Add additional spaces
-            for (int j = 0; j < count_spaces - 1; j++) {
-                char temp;
-                int count = 0;
-                for (int q = (i * maxWidth) - maxWidth; q < i * maxWidth; q++) {
-                    if (text[q] == ' ' && text[q - 1] != ' ' && text[q + 1] != ' ' && count + 1 != count_spaces) {
-                        for (int w = 1; w < last; w++) {
-                            temp = text[q];
-                            text[q] = ' ';
-                            size++;
-                            for (int e = q + 1; e < size; e++) {
-                                char m = text[e];
-                                text[e] = temp;
-                                temp = m;
-                            }
-                        }
-                        count++;
-                    }
+            // Add to array's res[i] words and spaces
+            for(i = 0; i < count; i++){
+                strcat(res[rSize], ptr[s[i]].word);
+                for(int j = 0; j < spaces[i]; j++){
+                    strcat(res[rSize], " ");
                 }
             }
-            char temp;
-            for (int q = i * maxWidth - all; q >= (i * maxWidth) - maxWidth; q--) {
-                if (text[q] == ' ' && text[q - 1] != ' ' && text[q + 1] != ' ') {
-                    for (int w = 1; w < all; w++) {
-                        temp = text[q];
-                        text[q] = ' ';
-                        size++;
-                        for (int e = q + 1; e < size; e++) {
-                            char m = text[e];
-                            text[e] = temp;
-                            temp = m;
-                        }
-                    }
-                    break;
-                }
+
+            // Again zeroing the variable
+            for (i = 0; i < 100; i++) {
+                spaces[i] = 0;
+            }
+            count = 0;
+            len = strlen(ptr[index].word);
+            rSize++;
+        }
+
+        s[count] = index;
+        count++;
+        index++;
+    }
+
+    // The same algorithm but for last element
+    int i = 0;
+    for(int i = 0; i < count - 1; i++){
+        spaces[i]++;
+        len++;
+    }
+    while(len < maxWidth){
+        spaces[count - 1]++;
+        len++;
+    }
+    res[rSize][0] = '\0';
+    for(i = 0; i < count; i++){
+        strcat(res[rSize], ptr[s[i]].word);
+        for(int j = 0; j < spaces[i]; j++) {
+            strcat(res[rSize], " ");
+        }
+    }
+
+    // Output to file fout
+    for(int w = 0;w <= rSize; w++) {
+        if(rSize == w){
+            int e = 0;
+            do{
+                fprintf(fout,"%c",res[w][e]);
+                e++;
+            }while(res[rSize][e] != '\000' && res[rSize][e] != '.');
+
+            if(res[rSize][e] == '.'){
+                fprintf(fout,".");
             }
         }
-        // Output to file fout
-        for (int j = (i * maxWidth) - maxWidth; j < i * maxWidth; j++) {
-            fprintf(fout, "%c", text[j]);
+        else{
+            fprintf(fout,"%s\n",res[w]);
         }
-        fprintf(fout, "\n");
-    }
-    if (text[rows * maxWidth - maxWidth] == ' ') {
-        for (int j = rows * maxWidth - maxWidth; j < size; j++) {
-            text[j] = text[j + 1];
-        }
-        size--;
-    }
-
-    if (text[rows * maxWidth] == ' ') {
-        for (int j = rows * maxWidth - maxWidth; j < size; j++) {
-            text[j] = text[j + 1];
-        }
-        size--;
-    }
-
-    for (int j = (rows * maxWidth) - maxWidth; j < size; j++) {
-        fprintf(fout, "%c", text[j]);
     }
 
     fclose(fin);
