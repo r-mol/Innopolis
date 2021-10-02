@@ -18,7 +18,7 @@ int main() {
     int n;
     scanf("%d", &n);
     for (int i = 0; i < n; i++) {
-        printf("Plz enter your name:");
+        printf("Plz enter your fullname:");
         scanf("%s", std[i].Name);
         printf("Plz enter your Surname:");
         scanf("%s", std[i].Surname);

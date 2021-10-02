@@ -5,15 +5,14 @@
 // structure for items information
 struct item{
     char name_item[100];
-    int size;
+    double size;
     int amount;
     char measurement_unit[6];
 };
 
 // structure for tenant information
 struct Forms{
-    char name[30];
-    char surname[30];
+    char fullname[30];
     char date[11];
     char time[9];
     struct item equipment[100];
@@ -21,21 +20,18 @@ struct Forms{
 
 
 int main() {
-    FILE *fin = fopen("../input.txt", "r");
-    FILE *fout = fopen("../output.txt", "w");
+    FILE *fin = fopen("input.txt", "r");
+    FILE *fout = fopen("output.txt", "w");
 
     struct Forms tenant[100];
 
-
-
     int CountRenters = 0;
     int CountEquipment[100];
-    char s[2];
+    char s[2] = {'\000','\n'};
 
     // Input data from file (fin)
     while(!feof(fin)) {
-        fscanf(fin, "%s", tenant[CountRenters].name);
-        fscanf(fin, "%s", tenant[CountRenters].surname);
+        fscanf(fin, "%[^\n]s", tenant[CountRenters].fullname);
         fscanf(fin, "%s", tenant[CountRenters].date);
         fscanf(fin, "%s", tenant[CountRenters].time);
 
@@ -43,15 +39,26 @@ int main() {
             if((s[0] = (char)fgetc(fin)) == '\n' && (s[1] = (char)fgetc(fin)) == '\n'){
                 break;
             }else{
-                fscanf(fin, "%s", tenant[CountRenters].equipment[CountEquipment[CountRenters]].name_item);
-                for(int j = strlen(tenant[CountRenters].equipment[CountEquipment[CountRenters]].name_item) - 1; j >= 0 ; j--){
-                    tenant[CountRenters].equipment[CountEquipment[CountRenters]].name_item[j + 1] = tenant[CountRenters].equipment[CountEquipment[CountRenters]].name_item[j];
+                if(s[0] == ' '){
+                    fscanf(fin, "%[^0-9]s", tenant[CountRenters].equipment[CountEquipment[CountRenters]].name_item);
+                    for(int j = 0; j < strlen(tenant[CountRenters].equipment[CountEquipment[CountRenters]].name_item) ; j++){
+                        tenant[CountRenters].equipment[CountEquipment[CountRenters]].name_item[j] = tenant[CountRenters].equipment[CountEquipment[CountRenters]].name_item[j+1];
+                    }
+
                 }
-                tenant[CountRenters].equipment[CountEquipment[CountRenters]].name_item[0] = s[1];
+                else {
+                    fscanf(fin, "%[^0-9]s", tenant[CountRenters].equipment[CountEquipment[CountRenters]].name_item);
+                    for(int j = strlen(tenant[CountRenters].equipment[CountEquipment[CountRenters]].name_item) - 1; j >= 0 ; j--){
+                        tenant[CountRenters].equipment[CountEquipment[CountRenters]].name_item[j + 1] = tenant[CountRenters].equipment[CountEquipment[CountRenters]].name_item[j];
+                    }
+                    tenant[CountRenters].equipment[CountEquipment[CountRenters]].name_item[0] = s[1];
+                }
+
                 s[1] = '\000';
             }
 
-            fscanf(fin, "%d", &tenant[CountRenters].equipment[CountEquipment[CountRenters]].size);
+
+            fscanf(fin, "%lf", &tenant[CountRenters].equipment[CountEquipment[CountRenters]].size);
             fscanf(fin, "%d", &tenant[CountRenters].equipment[CountEquipment[CountRenters]].amount);
             fscanf(fin, "%s", tenant[CountRenters].equipment[CountEquipment[CountRenters]].measurement_unit);
             if(tenant[CountRenters].equipment[CountEquipment[CountRenters]].name_item[0] != '\000') {
@@ -68,20 +75,8 @@ int main() {
     //Check for correct input
     for(int i = 0; i < CountRenters; i++) {
         //Check Name
-        for(int j = 0; j < strlen(tenant[i].name); j++) {
-            if(('A' > tenant[i].name[j] || tenant[i].name[j] > 'Z') && ('a' > tenant[i].name[j] || tenant[i].name[j] > 'z')){
-                fprintf(fout,"Invalid input!");
-                check = 1;
-                break;
-            }
-        }
-        if(check == 1){
-            break;
-        }
-
-        //Check Surname
-        for(int j = 0; j < strlen(tenant[i].surname); j++) {
-            if((64 > tenant[i].surname[j] || tenant[i].surname[j] > 90) && (97 > tenant[i].surname[j] || tenant[i].surname[j] > 122)){
+        for(int j = 0; j < strlen(tenant[i].fullname); j++) {
+            if(('A' > tenant[i].fullname[j] || tenant[i].fullname[j] > 'Z') && ('a' > tenant[i].fullname[j] || tenant[i].fullname[j] > 'z') && tenant[i].fullname[j] != ' '){
                 fprintf(fout,"Invalid input!");
                 check = 1;
                 break;
@@ -92,6 +87,17 @@ int main() {
         }
 
         //Check date format
+        for(int q = 0; q < strlen(tenant[i].date) - 2; q++){
+            if((tenant[i].date[q] < '/' || tenant[i].date[q] > '9')&& tenant[i].date[q] != '\000'){
+                fprintf(fout,"Invalid input!");
+                check = 1;
+                break;
+            }
+        }
+        if(check == 1){
+            break;
+        }
+
         int day = (int)(tenant[i].date[0] - 48) * 10 + (int)(tenant[i].date[1] - 48);
         int month = (int)(tenant[i].date[3] - 48) * 10 + (int)(tenant[i].date[4] - 48);
         int year = (int)(tenant[i].date[6] - 48) * 1000 + (int)(tenant[i].date[7] - 48) * 100 + (int)(tenant[i].date[8] - 48) * 10 + (int)(tenant[i].date[9] - 48);
@@ -148,6 +154,18 @@ int main() {
 
 
         // Check time format
+
+//        for(int q = 0; q < strlen(tenant[i].time); q++){
+//            if(tenant[i].time[q] < '0' || tenant[i].time[q] > '9' || tenant[i].time[q] != ':'){
+//                fprintf(fout,"Invalid input!");
+//                check = 1;
+//                break;
+//            }
+//        }
+//        if(check == 1){
+//            break;
+//        }
+
         int hours = (int)(tenant[i].time[0] - 48) * 10 + (int)(tenant[i].time[1] - 48);
         int minutes = (int)(tenant[i].time[3] - 48) * 10 + (int)(tenant[i].time[4] - 48);
         int seconds = (int)(tenant[i].time[6] - 48) * 10 + (int)(tenant[i].time[7] - 48);
@@ -167,7 +185,7 @@ int main() {
                 break;
             }
             for(int q = 0; q < strlen(tenant[i].equipment[j].name_item); q++) {
-                if((64 > tenant[i].equipment[j].name_item[q] || tenant[i].equipment[j].name_item[q] > 90) && (97 > tenant[i].equipment[j].name_item[q] || tenant[i].equipment[j].name_item[q] > 122)){
+                if((64 > tenant[i].equipment[j].name_item[q] || tenant[i].equipment[j].name_item[q] > 90) && (97 > tenant[i].equipment[j].name_item[q] || tenant[i].equipment[j].name_item[q] > 122) && tenant[i].equipment[j].name_item[q] != 32){
                     fprintf(fout,"Invalid input!");
                     check = 1;
                     break;
@@ -192,40 +210,46 @@ int main() {
             }
 
             // Check measurement_unit
+            if(strcmp(tenant[i].equipment[j].measurement_unit, "pcs") !=0 && strcmp(tenant[i].equipment[j].measurement_unit, "pair") !=0  ){
+                fprintf(fout,"Invalid input!");
+                check = 1;
+                break;
+            }
             if(tenant[i].equipment[j].amount > 1 && strcmp(tenant[i].equipment[j].measurement_unit, "pair") == 0 ){
                 strcpy(tenant[i].equipment[j].measurement_unit, "pairs");
             }
+
+
 
         }
     }
 
 
- if(check != 1) {
-     for (int i = 0; i < CountRenters; i++) {
-         fprintf(fout, "%s ", tenant[i].name);
-         fprintf(fout, "%s has rented ", tenant[i].surname);
+    if(check != 1) {
+        for (int i = 0; i < CountRenters; i++) {
+            fprintf(fout, "%s has rented ", tenant[i].fullname);
 
-         for (int j = 0; j < CountEquipment[i]; j++) {
-             fprintf(fout, "%d ", tenant[i].equipment[j].amount);
-             fprintf(fout, "%s of ", tenant[i].equipment[j].measurement_unit);
-             fprintf(fout, "%s of size ", tenant[i].equipment[j].name_item);
-             if(j+2 == CountEquipment[i]){
-                 fprintf(fout, "%d and ", tenant[i].equipment[j].size);
-             }
-             else if(j+1 == CountEquipment[i]){
-                 fprintf(fout, "%d on ", tenant[i].equipment[j].size);
-             }
-             else {
-                 fprintf(fout, "%d, ", tenant[i].equipment[j].size);
-             }
-         }
-         fprintf(fout, "%s at ", tenant[i].date);
-         fprintf(fout, "%s.", tenant[i].time);
-         if(i+1!=CountRenters){
-             fprintf(fout,"\n");
-         }
-     }
- }
+            for (int j = 0; j < CountEquipment[i]; j++) {
+                fprintf(fout, "%d ", tenant[i].equipment[j].amount);
+                fprintf(fout, "%s of ", tenant[i].equipment[j].measurement_unit);
+                fprintf(fout, "%sof size ", tenant[i].equipment[j].name_item);
+                if(j+2 == CountEquipment[i]){
+                    fprintf(fout, "%g and ", tenant[i].equipment[j].size);
+                }
+                else if(j+1 == CountEquipment[i]){
+                    fprintf(fout, "%g on ", tenant[i].equipment[j].size);
+                }
+                else {
+                    fprintf(fout, "%g, ", tenant[i].equipment[j].size);
+                }
+            }
+            fprintf(fout, "%s at ", tenant[i].date);
+            fprintf(fout, "%s.", tenant[i].time);
+            if(i+1!=CountRenters){
+                fprintf(fout,"\n");
+            }
+        }
+    }
 
     fclose(fin);
     fclose(fout);
