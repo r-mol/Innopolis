@@ -4,21 +4,21 @@ class Book {
     double price;
     int qty;
 
-    public Book(String name, Author author, double price){
+    public Book(String name, Author author, double price) {
         this.name = name;
         this.author = author;
         this.price = price;
         this.qty = 0;
     }
 
-    public Book(String name, Author author, double price, int qty){
+    public Book(String name, Author author, double price, int qty) {
         this.name = name;
         this.author = author;
         this.price = price;
         this.qty = qty;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
@@ -30,17 +30,19 @@ class Book {
         return price;
     }
 
-    public void setPrice(double price){
+    public void setPrice(double price) {
         this.price = price;
     }
 
-    public int getQty(){
+    public int getQty() {
         return qty;
     }
 
-    public void setQty(int qty){
+    public void setQty(int qty) {
         this.qty = qty;
     }
 
-
+    public String toString() {
+        return String.format("Book[name = %s, %s, price = %f, qty = %d]", name, author.toString(), price, qty);
+    }
 }
