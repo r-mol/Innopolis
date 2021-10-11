@@ -13,7 +13,7 @@ public class Main {
         char gender;
         Book[] books = new Book[len];
 
-        for (int i = 0; i < len; i++){
+        for (int i = 0; i < len; i++) {
             System.out.print("Enter name of book: ");
             name = input.nextLine();
             System.out.print("Enter Author's name: ");
@@ -26,11 +26,11 @@ public class Main {
             price = input.nextDouble();
             System.out.print("Enter Book's quantity: ");
             qty = input.nextInt();
-            books[i] = new Book(name,new Author(name_author,email,gender),price,qty);
+            books[i] = new Book(name, new Author(name_author, email, gender), price, qty);
             input.nextLine();
         }
 
-        for (int i = 0; i < len; i++){
+        for (int i = 0; i < len; i++) {
             System.out.println(books[i]);
         }
 

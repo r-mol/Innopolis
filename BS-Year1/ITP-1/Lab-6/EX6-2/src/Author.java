@@ -9,6 +9,6 @@ class Author {
     }
 
     public String toString(){
-        return String.format("Author[name = %s, email = %s, gender = %c",name, email, gender);
+        return String.format("Author[name = %s, email = %s, gender = %c]",name, email, gender);
     }
 }
