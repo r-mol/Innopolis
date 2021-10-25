@@ -8,6 +8,7 @@ public class Main {
         int minutes = 0;
         int angle;
 
+        // Read from file
         try {
             FileReader reader = new FileReader("input.txt");
             hour = reader.read() - 48;
@@ -20,6 +21,8 @@ public class Main {
             e.printStackTrace();
         }
 
+
+        // Find the angle between values of hour and minute
         if(hour < 0 || hour > 23 || minutes < 0 || minutes > 59){
             angle = -1;
         }
@@ -44,7 +47,7 @@ public class Main {
             data = String.valueOf(angle);
         }
 
-
+        // Write the value of angle
         try{
             FileWriter writer = new FileWriter("output.txt");
             writer.write(data);
