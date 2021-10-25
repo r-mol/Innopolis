@@ -13,7 +13,6 @@ public class Bill {
 
     @Override
     public String toString() {
-        return String.format("Bill name: %s, ID: %d, amount: %d",
-                name, ID, amount);
+        return String.format("Bill name: %s, ID: %d, amount: %d", name, ID, amount);
     }
 }

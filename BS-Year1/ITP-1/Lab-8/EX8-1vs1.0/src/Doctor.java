@@ -16,9 +16,9 @@ public class Doctor extends User {
 
     public void getNewPatient(int amountNewPatients) {
         int cntPatients = 0;
-        for (Receptionist recet : receptionists) {
+        for (Receptionist reset : receptionists) {
             if (cntPatients == amountNewPatients) break;
-            for (Patient patient : recet.getPatients()) {
+            for (Patient patient : reset.getPatients()) {
                 if (cntPatients == amountNewPatients) break;
                 if (!patient.hasDoctor) {
                     patient.setDoctor();
