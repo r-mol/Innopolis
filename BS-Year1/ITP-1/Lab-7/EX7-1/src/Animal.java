@@ -6,7 +6,7 @@ public class Animal {
     int height;
     int weight;
     String color;
-    String eat;
+    boolean eat;
     String sleep;
     String animalSound;
 
@@ -42,7 +42,7 @@ public class Animal {
     public void setColor(String color) {
         this.color = color;
     }
-    public String getisEat() {
+    public boolean getisEat() {
         return eat;
     }
     public String getisSleep() {
@@ -71,7 +71,7 @@ public class Animal {
     public String getColor() {
         return color;
     }
-    public String getEat() {
+    public boolean getEat() {
         return eat;
     }
     public String getSleep() {

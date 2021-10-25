@@ -4,7 +4,7 @@ public class exactAnimal {
         int height = 2;
         int weight = 200;
         String color = "black & white";
-        String eat = "Don't eating now!";
+        boolean eat = false;
         String sleep = "sdfds";
         String animalSound = "gdfg";
     }
