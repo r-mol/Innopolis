@@ -4,20 +4,18 @@ import java.lang.*;
 public class Main {
 
     public enum Planet {
-        MERCURY (7,3.303*Math.pow(10,23), 2.4397*Math.pow(10,6), "Mercury"),
-        VENUS(6,4.869*Math.pow(10,24),6.0518*Math.pow(10,6), "Venus"),
-        EARTH (5,5.976*Math.pow(10,24),6.37814*Math.pow(10,6),"Earth"),
-        MARS (4,6.421*Math.pow(10,23),3.3972*Math.pow(10,6), "Mars"),
-        JUPITER (3,1.9*Math.pow(10,27),7.1492*Math.pow(10,7),"Jupiter"),
-        SATURN (2,5.688*Math.pow(10,26),6.0268*Math.pow(10,7), "Saturn"),
-        URANUS (1,8.686*Math.pow(10,25),2.5559*Math.pow(10,7),"Uranus"),
-        NEPTUNE (0,1.024*Math.pow(10,26),2.4746*Math.pow(10,7),"Neptune");
-        private final int numPlanet;
+        MERCURY (3.303*Math.pow(10,23), 2.4397*Math.pow(10,6), "Mercury"),
+        VENUS(4.869*Math.pow(10,24),6.0518*Math.pow(10,6), "Venus"),
+        EARTH (5.976*Math.pow(10,24),6.37814*Math.pow(10,6),"Earth"),
+        MARS (6.421*Math.pow(10,23),3.3972*Math.pow(10,6), "Mars"),
+        JUPITER (1.9*Math.pow(10,27),7.1492*Math.pow(10,7),"Jupiter"),
+        SATURN (5.688*Math.pow(10,26),6.0268*Math.pow(10,7), "Saturn"),
+        URANUS (8.686*Math.pow(10,25),2.5559*Math.pow(10,7),"Uranus"),
+        NEPTUNE (1.024*Math.pow(10,26),2.4746*Math.pow(10,7),"Neptune");
         private final double mass;
         private final double radius;
         private final String name;
-       Planet (int numPlanet, double mass, double radius, String name) {
-            this.numPlanet = numPlanet;
+       Planet (double mass, double radius, String name) {
             this.mass = mass;
             this.radius = radius;
             this.name = name;
@@ -27,9 +25,6 @@ public class Main {
         }
         public double getRadius() {
             return this.radius;
-        }
-        public int getNumPlanet() {
-            return this.numPlanet;
         }
         public String getName(){
            return this.name;
