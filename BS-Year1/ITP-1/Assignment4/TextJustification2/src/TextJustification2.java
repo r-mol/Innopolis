@@ -35,18 +35,20 @@ class LimitIsExceededMaxWidthException extends Exception {
     }
 }
 
+
+
 public class TextJustification2 {
     public static void main(String[] args) {
-        File inputfile = new File("input.txt");
+        File input = new File("input.txt");
         String text = null;
         int maxWidth = 0;
         String except = null;
         Character[] symbols = {' ', '.', ',', '!', '?', '-', ':', ';', '(', ')', '\'', '"'};
-        ArrayList<Character> symbolsList = new ArrayList<Character>(Arrays.asList(symbols));
+        ArrayList<Character> symbolsList = new ArrayList<>(Arrays.asList(symbols));
         boolean found = true;
 
         try {
-            Scanner scanner = new Scanner(inputfile);
+            Scanner scanner = new Scanner(input);
 
             if (scanner.hasNextLine()) {
                 text = scanner.nextLine();
@@ -67,6 +69,7 @@ public class TextJustification2 {
             if (text.charAt(0) == ' ') {
                 throw new EmptyWordException();
             }
+
 
             int begin = 0;
             int cc = 1;
@@ -142,7 +145,7 @@ public class TextJustification2 {
 
                     if (count < 1) {
                         text = txt.toString();
-                        text = text.substring(0, j) + " " + text.substring(j, text.length());
+                        text = text.substring(0, j) + " " + text.substring(j);
                         txt = new StringBuilder(text);
                         count = 1;
                         y = 1;
@@ -180,24 +183,15 @@ public class TextJustification2 {
                     if (text.charAt(i) == ' ') {
                         if (Spaces[row][2] != 0) {
                             int temp = Spaces[row][0];
-                            String firstpart = text.substring(0, i);
-                            String lastpart = text.substring(i + 1, text.length());
+                            StringBuilder firstPart = new StringBuilder(text.substring(0, i));
+                            String lastPart = text.substring(i + 1);
                             while (temp != 0) {
-                                firstpart += ' ';
+                                firstPart.append(' ');
                                 temp--;
                             }
 
-                            text = firstpart + lastpart;
+                            text = firstPart + lastPart;
                             Spaces[row][2]--;
-                        }
-                        else{
-                            int temp = Spaces[row][1];
-                            String firstpart = text.substring(0, i);
-                            String lastpart = text.substring(i + 1, text.length());
-                            while (temp != 0) {
-                                firstpart += ' ';
-                                temp--;
-                            }
                         }
                         if(Spaces[row][0] != 0) {
                             i += Spaces[row][0] - 1;
@@ -227,7 +221,6 @@ public class TextJustification2 {
             except = "Exception, '" + e.getMessage() + "' exceeds " + maxWidth + " symbols!";
         }
 
-
         // Output Exception/correct answer
         try {
             FileWriter writer = new FileWriter("output.txt");
@@ -237,10 +230,8 @@ public class TextJustification2 {
                 for (int i = 0; i < text.length(); i++) {
                     if (i % maxWidth == 0 && i != 0) {
                         writer.write("\n");
-                        writer.write(text.charAt(i));
-                    } else {
-                        writer.write(text.charAt(i));
                     }
+                    writer.write(text.charAt(i));
 
                 }
             }
