@@ -1,11 +1,12 @@
 # 📕Innopolis (2021-2024)
 ## Here I will post programs from University Education
 ## 📌[ITP-1](BS-Year1/ITP-1)
-### • [Hexadecimal sort]()
-### • [Ski resort](BS-Year1/ITP-1/Assignment2/SkiResort/SkiResort.c)
-### • [Text justification](BS-Year1/ITP-1/Assignment2/TextJustification/TextJustification.c)
-### • [Inside box](BS-Year1/ITP-1/Assignment3/HandsOfaClock/src/Main.java)
-### • [Hands of a clock](BS-Year1/ITP-1/Assignment3/InsideBox/src/Main.java)
+### • [Hexadecimal sort (Written in C language)]()
+### • [Ski resort (Written in C language)](BS-Year1/ITP-1/Assignment2/SkiResort/SkiResort.c)
+### • [Text justification #1 (Written in C language)](BS-Year1/ITP-1/Assignment2/TextJustification/TextJustification.c)
+### • [Inside box (Written in Java language)](BS-Year1/ITP-1/Assignment3/HandsOfaClock/src/Main.java)
+### • [Hands of a clock (Written in Java language)](BS-Year1/ITP-1/Assignment3/InsideBox/src/Main.java)
+### • [Text justification #2 (Written in Java language)](BS-Year1/ITP-1/Assignment4/TextJustification2/src/TextJustification2.java)
 ## 📌 C - Language
 ### • [Lab1](BS-Year1/ITP-1/Lab-1)
 ### • [Lab2](BS-Year1/ITP-1/Lab-2)
