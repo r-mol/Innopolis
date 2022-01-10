@@ -7,6 +7,8 @@
 ### • [Inside box "Java"](BS-Year1/ITP-1/Assignment3/HandsOfaClock/src/Main.java)
 ### • [Hands of a clock "Java"](BS-Year1/ITP-1/Assignment3/InsideBox/src/Main.java)
 ### • [Text justification #2 "Java"](BS-Year1/ITP-1/Assignment4/TextJustification2/src/TextJustification2.java)
+### • [Examination System "Java"](BS-Year1/ITP-1/Assignment5/ExaminationSystem/src/)
+### • [Operations On Number "Java"](BS-Year1/ITP-1/Assignment5/OperationsOnNumber/src/)
 ## 📌 C - Language
 ### • [Lab1](BS-Year1/ITP-1/Lab-1)
 ### • [Lab2](BS-Year1/ITP-1/Lab-2)
