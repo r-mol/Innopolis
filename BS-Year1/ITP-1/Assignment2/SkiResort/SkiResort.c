@@ -1,5 +1,4 @@
 #include <stdio.h>
-//#include <stdlib.h>
 #include <string.h>
 
 // structure for items information
@@ -154,18 +153,6 @@ int main() {
 
 
         // Check time format
-
-//        for(int q = 0; q < strlen(tenant[i].time); q++){
-//            if(tenant[i].time[q] < '0' || tenant[i].time[q] > '9' || tenant[i].time[q] != ':'){
-//                fprintf(fout,"Invalid input!");
-//                check = 1;
-//                break;
-//            }
-//        }
-//        if(check == 1){
-//            break;
-//        }
-
         int hours = (int)(tenant[i].time[0] - 48) * 10 + (int)(tenant[i].time[1] - 48);
         int minutes = (int)(tenant[i].time[3] - 48) * 10 + (int)(tenant[i].time[4] - 48);
         int seconds = (int)(tenant[i].time[6] - 48) * 10 + (int)(tenant[i].time[7] - 48);
