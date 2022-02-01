@@ -20,8 +20,8 @@ struct Forms{
 
 
 int main() {
-    FILE *fin = fopen("input.txt", "r");
-    FILE *fout = fopen("output.txt", "w");
+    FILE *fin = fopen("../input.txt", "r");
+    FILE *fout = fopen("../output.txt", "w");
 
     struct Forms tenant[100];
 
