@@ -2,6 +2,7 @@
 #include <map>
 #include <string>
 #include <vector>
+#include <stack>
 
 bool cmp(std::pair<std::string, int> &a, std::pair<std::string, int> &b) {
     if (a.second == b.second) {
@@ -11,7 +12,7 @@ bool cmp(std::pair<std::string, int> &a, std::pair<std::string, int> &b) {
     }
 }
 
-void sortAndPrint(std::map<std::string, int> &M) {
+void sort(std::map<std::string, int> &M) {
     std::vector<std::pair<std::string, int> > A;
 
     A.reserve(M.size());
@@ -21,9 +22,6 @@ void sortAndPrint(std::map<std::string, int> &M) {
 
     sort(A.begin(), A.end(), cmp);
     reverse(A.begin(), A.end());
-    for (auto &it: A) {
-        std::cout << it.first << ' ' << it.second << std::endl;
-    }
 }
 
 void fillTheMap(std::map<std::string, int> &map1, std::string str) {
@@ -43,6 +41,24 @@ void fillTheMap(std::map<std::string, int> &map1, std::string str) {
     }
 }
 
+void searchUniqueKeyInSecondString(std::map<std::string, int> &map1, std::map<std::string, int> &map2) {
+    int countOfUniqueKeys = 0;
+    std::stack<std::string> unique;
+    for (auto &iter: map2) {
+        if (map1.find(iter.first) == map1.end()) {
+            countOfUniqueKeys++;
+            unique.push(iter.first);
+        }
+    }
+
+    std::cout << countOfUniqueKeys << std::endl;
+
+    while (!unique.empty()) {
+        std::cout << unique.top() << std::endl;
+        unique.pop();
+    }
+}
+
 void frequencyAnalysis() {
     std::string num;
     std::string str;
@@ -51,7 +67,15 @@ void frequencyAnalysis() {
     std::map<std::string, int> map1;
 
     fillTheMap(map1, str);
-    sortAndPrint(map1);
+    sort(map1);
+
+    getline(std::cin, num);
+    getline(std::cin, str);
+    std::map<std::string, int> map2;
+
+    fillTheMap(map2, str);
+
+    searchUniqueKeyInSecondString(map1, map2);
 }
 
 int main() {
