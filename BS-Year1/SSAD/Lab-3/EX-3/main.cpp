@@ -4,7 +4,7 @@ int main() {
     int n;
     int num = 4029, index = -1;
     std::cin >> n;
-    int a[n]
+    int a[n];
     for (int i = 0; i < n; i++) {
         std::cin >> a[i];
     }
