@@ -33,10 +33,8 @@ class ArrayCircularBoundedQueue<T> implements ICircularBoundedQueue<T>{
     public void offer(T value) {
         if (capacity == rear) {
             this.poll();
-            queue[rear] = value;
-        } else {
-            queue[rear] = value;
         }
+        queue[rear] = value;
         rear++;
     }
 
@@ -51,7 +49,7 @@ class ArrayCircularBoundedQueue<T> implements ICircularBoundedQueue<T>{
                 queue[i] = queue[i + 1];
             }
 
-            if (rear + 1 < capacity) {
+            if (rear < capacity) {
                 queue[rear] = 0;
             }
 

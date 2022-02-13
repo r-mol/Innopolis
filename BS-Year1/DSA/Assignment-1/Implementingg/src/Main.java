@@ -205,81 +205,79 @@ class QueuedBoundedStack<T> implements IBoundedStack<T> {
     }
 }
 
-interface DoubleHashEl<T> {
-    int hashCode2(T item, int maxSizeSet, int primeSize);
-
-    int getPrime(int maxSizeSet);
-}
-
-class SkinObject<T> implements DoubleHashEl<T> {
-
-    @Override
-    public int hashCode2(T item, int maxSizeSet, int primeSize) {
-        int value = item.hashCode();
-        value %= maxSizeSet;
-        if (value < 0)
-            value += maxSizeSet;
-        return primeSize - value % primeSize;
-    }
-
-    @Override
-    public int getPrime(int maxSizeSet) {
-        for (int i = maxSizeSet - 1; i >= 1; i--) {
-            int cnt = 0;
-            for (int j = 2; j * j <= i; j++) {
-                if (i % j == 0) {
-                    cnt++;
-                }
-            }
-
-            if (cnt == 0) {
-                return i;
-            }
-        }
-        return 3;
-    }
-}
-
-class DoubleHashSet<T extends DoubleHashEl<T>> implements ISet<T> {
-
+class DoubleHashSet<T> implements ISet<T> {
+    private final int primeNum = 97;
     private final int maxSizeSet;
-    private int size;
-    private int hash;
+    private int size = 0;
     private Object[] arr;
-    int primeSize;
+
 
     DoubleHashSet(int maxSizeSet) {
-        //arr = new int[maxSizeSet];
+        arr = new Object[maxSizeSet];
         this.maxSizeSet = maxSizeSet;
-        primeSize = getPrime(this.maxSizeSet);
     }
 
-    private int getPrime(int maxSizeSet) {
-        return 0;
-    }
-
-    int getHash(T item) {
-        return (item.hashCode() + item.hashCode2(item, maxSizeSet, primeSize)) % maxSizeSet;
+    int getHash(T item, int j) {
+        return (item.hashCode() + j*hashCode2(item)) % maxSizeSet;
     }
 
     @Override
     public void add(T item) {
+        int hash = getHash(item,0);
 
+        if(getIndex(hash) == null){
+            setIndex(hash, item);
+        }
+        else{
+            for(int i = 0; i < maxSizeSet; i++){
+                if(getIndex((getHash(item,i))).equals(item)){
+                    break;
+                }else if(getIndex(getHash(item,i)) == null){
+                    setIndex(hash, item);
+                    break;
+                }
+            }
+        }
+        size++;
     }
 
     @Override
     public void remove(T item) {
+        int hash = getHash(item,0);
 
+        if(getIndex(hash).equals(item)){
+            setIndex(hash, null);
+        }
+        else{
+            for(int i = 0; i < maxSizeSet; i++){
+                if(getIndex(getHash(item,i)).equals(item)){
+                    setIndex(hash, null);
+                    break;
+                }
+            }
+        }
+
+        size--;
     }
 
     @Override
     public boolean contains(T item) {
 
-        for (Object t : arr) {
-            if (t.hashCode() == item.hashCode()) {
-                return true;
-            }
-        }
+         int hash = getHash(item,0);
+
+         if(getIndex(hash)==null){
+             return false;
+         }
+         if(getIndex(hash).equals(item)){
+             return true;
+         }
+         else{
+             for(int i = 0; i < maxSizeSet; i++){
+                 if(getIndex(getHash(item,i)).equals(item)){
+                     return true;
+                 }
+             }
+         }
 
         return false;
     }
@@ -293,6 +291,25 @@ class DoubleHashSet<T extends DoubleHashEl<T>> implements ISet<T> {
     public boolean isEmpty() {
         return size == 0;
     }
+
+    public int hashCode2(T item){
+        return primeNum-Math.abs(item.hashCode()%primeNum);
+    }
+
+    public T getIndex(int index){
+        try {
+            return (T) this.arr[index];
+        }
+        catch (NullPointerException e) {
+            return null;
+        }
+
+    }
+
+    public void setIndex (int index, T item){
+        this.arr[index] = item;
+    }
+
 }
 
 class Node<T> {
@@ -347,5 +364,18 @@ class Main {
         stack.flush();
         System.out.println("Empty? " + stack.isEmpty());
 
+        System.out.println("Plz, enter size of the stack: ");
+        int sizeSet = scanner.nextInt();
+        DoubleHashSet<Object> set = new DoubleHashSet<>(sizeSet);
+        set.add(1);
+        set.add(2);
+        set.add(3);
+        set.remove(3);
+        System.out.println(set.contains(3));
+        System.out.println(set.contains(2));
+        System.out.println(set.size());
+        set.remove(2);
+        set.remove(1);
+        System.out.println(set.isEmpty());
     }
 }
