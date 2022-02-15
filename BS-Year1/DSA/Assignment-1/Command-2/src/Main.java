@@ -9,15 +9,15 @@ public class Main {
         for(int i = 0; i < size; i++){
             String [] line = scanner.nextLine().split(" ");
 
-            if(line[0].equals("NEW")){
-                if (files.contains(line[1])){
-                    System.out.println("ERROR: cannot execute NEW " + line[1]);
-                }else if(!files.contains(line[1])){
-                    files.add(line[1]);
-                }
-                else{
-                    System.out.println("ERROR: cannot execute NEW " + line[1]);
-                }
+            switch (line[0]) {
+                case "NEW":
+                    if (files.contains(line[1])) {
+                        System.out.println("ERROR: cannot execute NEW " + line[1]);
+                    } else if (!files.contains(line[1])) {
+                        files.add(line[1]);
+                    } else {
+                        System.out.println("ERROR: cannot execute NEW " + line[1]);
+                    }
 //                if (files.contains(line[1])) {
 //                System.out.println("ERROR: cannot execute NEW " + line[1]);
 //                } else if(line[1].endsWith("/"))
@@ -43,20 +43,21 @@ public class Main {
 //                        System.out.println("ERROR: cannot execute NEW " + line[1]);
 //                    }
 //                }
-            }else if(line[0].equals("REMOVE")){
-                if(files.contains(line[1])){
-                    files.remove(line[1]);
-                }
-                else{
-                    System.out.println("ERROR: cannot execute REMOVE " + line[1]);
-                }
-            }
-            else if(line[0].equals("LIST")){
-                for(int j  = 0; j< 1572869;j++){
-                    if(files.getIndex(j)!=null){ //&& files.getIndex(j)!="YUHhhh") {
-                        System.out.print(files.getIndex(j) + " ");
+                    break;
+                case "REMOVE":
+                    if (files.contains(line[1])) {
+                        files.remove(line[1]);
+                    } else {
+                        System.out.println("ERROR: cannot execute REMOVE " + line[1]);
                     }
-                }
+                    break;
+                case "LIST":
+                    for (int j = 0; j < 1572869; j++) {
+                        if (files.getIndex(j) != null) { //&& files.getIndex(j)!="YUHhhh") {
+                            System.out.print(files.getIndex(j) + " ");
+                        }
+                    }
+                    break;
             }
         }
     }
@@ -74,10 +75,9 @@ interface ISet<T> {
     boolean isEmpty(); // check if the set is empty
 }
 class DoubleHashSet<T> implements ISet<T> {
-//    private final Long primeNum = 8683317618811886495518194401279999999;
     private final int maxSizeSet;
     private int size = 0;
-    private Object[] arr;
+    private final Object[] arr;
 
 
     DoubleHashSet(int maxSizeSet) {
@@ -100,9 +100,6 @@ class DoubleHashSet<T> implements ISet<T> {
                 if (getIndex(getHash(item, i)) == null) {
                     setIndex(getHash(item, i), item);
                     break;
-//                }
-//                else if(getIndex(getHash(item, i)) == "YUHhhh"){
-//                    continue;
                 }else if (getIndex((getHash(item, i))).equals(item)) {
                     break;
                 }

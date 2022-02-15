@@ -56,7 +56,7 @@ interface ICircularBoundedQueue<T> {
 
 class LinkedCircularBoundedQueue<T> implements ICircularBoundedQueue<T> {
 
-    private int maxSizeQueue;
+    private final int maxSizeQueue;
     private Node<T> front;
     private Node<T> rear;
     private int size;
@@ -206,10 +206,9 @@ class QueuedBoundedStack<T> implements IBoundedStack<T> {
 }
 
 class DoubleHashSet<T> implements ISet<T> {
-    private final int primeNum = 97;
     private final int maxSizeSet;
     private int size = 0;
-    private Object[] arr;
+    private final Object[] arr;
 
 
     DoubleHashSet(int maxSizeSet) {
@@ -218,22 +217,21 @@ class DoubleHashSet<T> implements ISet<T> {
     }
 
     int getHash(T item, int j) {
-        return (item.hashCode() + j*hashCode2(item)) % maxSizeSet;
+        return Math.abs(item.hashCode() + j * hashCode2(item)) % maxSizeSet;
     }
 
     @Override
     public void add(T item) {
-        int hash = getHash(item,0);
+        int hash = getHash(item, 0);
 
-        if(getIndex(hash) == null){
+        if (getIndex(hash) == null) {
             setIndex(hash, item);
-        }
-        else{
-            for(int i = 0; i < maxSizeSet; i++){
-                if(getIndex((getHash(item,i))).equals(item)){
+        } else {
+            for (int i = 0; i < maxSizeSet; i++) {
+                if (getIndex(getHash(item, i)) == null) {
+                    setIndex(getHash(item, i), item);
                     break;
-                }else if(getIndex(getHash(item,i)) == null){
-                    setIndex(hash, item);
+                }else if (getIndex((getHash(item, i))).equals(item)) {
                     break;
                 }
             }
@@ -243,14 +241,13 @@ class DoubleHashSet<T> implements ISet<T> {
 
     @Override
     public void remove(T item) {
-        int hash = getHash(item,0);
+        int hash = getHash(item, 0);
 
-        if(getIndex(hash).equals(item)){
+        if (getIndex(hash).equals(item)) {
             setIndex(hash, null);
-        }
-        else{
-            for(int i = 0; i < maxSizeSet; i++){
-                if(getIndex(getHash(item,i)).equals(item)){
+        } else {
+            for (int i = 0; i < maxSizeSet; i++) {
+                if (getIndex(getHash(item, i)).equals(item)) {
                     setIndex(hash, null);
                     break;
                 }
@@ -263,21 +260,26 @@ class DoubleHashSet<T> implements ISet<T> {
     @Override
     public boolean contains(T item) {
 
-         int hash = getHash(item,0);
+        int hash = getHash(item, 0);
 
-         if(getIndex(hash)==null){
-             return false;
-         }
-         if(getIndex(hash).equals(item)){
-             return true;
-         }
-         else{
-             for(int i = 0; i < maxSizeSet; i++){
-                 if(getIndex(getHash(item,i)).equals(item)){
-                     return true;
-                 }
-             }
-         }
+        if (getIndex(hash) == null) {
+            return false;
+        }
+        if (getIndex(hash).equals(item)) {
+            return true;
+        } else {
+            for (int i = 0; i < maxSizeSet; i++) {
+                try{
+                    if (getIndex(getHash(item, i)).equals(item)) {
+                        return true;
+
+                    }
+                } catch (NullPointerException e) {
+                    return false;
+                }
+
+            }
+        }
 
         return false;
     }
@@ -292,21 +294,20 @@ class DoubleHashSet<T> implements ISet<T> {
         return size == 0;
     }
 
-    public int hashCode2(T item){
-        return primeNum-Math.abs(item.hashCode()%primeNum);
+    public int hashCode2(T item) {
+        return 7919 * item.hashCode() % 7919;
     }
 
-    public T getIndex(int index){
+    public T getIndex(int index) {
         try {
             return (T) this.arr[index];
-        }
-        catch (NullPointerException e) {
+        } catch (NullPointerException e) {
             return null;
         }
 
     }
 
-    public void setIndex (int index, T item){
+    public void setIndex(int index, T item) {
         this.arr[index] = item;
     }
 
