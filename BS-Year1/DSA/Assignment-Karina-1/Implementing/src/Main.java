@@ -18,14 +18,14 @@ class ArrayCircularBoundedQueue<T> implements ICircularBoundedQueue<T>{
     private final int front;
     private int rear;
     private final int capacity;
-    private final Object [] queue;
+    private final T [] queue;
 
     ArrayCircularBoundedQueue(int capacity)
     {
         front = 0;
         rear = 0;
         this.capacity = capacity;
-        queue = new Object[this.capacity];
+        queue = (T[])new Object[this.capacity];
     }
 
 
@@ -44,13 +44,13 @@ class ArrayCircularBoundedQueue<T> implements ICircularBoundedQueue<T>{
         if (this.isEmpty()) {
             throw new IllegalStateException("Queue is Empty");
         }else {
-            value = (T)queue[front];
+            value = queue[front];
             for (int i = 0; i < rear - 1; i++) {
                 queue[i] = queue[i + 1];
             }
 
             if (rear < capacity) {
-                queue[rear] = 0;
+                queue[rear] = null;
             }
 
             rear--;
@@ -63,7 +63,7 @@ class ArrayCircularBoundedQueue<T> implements ICircularBoundedQueue<T>{
         if (this.isEmpty()) {
             throw new IllegalStateException("Queue is Empty");
         }
-        return (T)queue[front];
+        return queue[front];
     }
 
     @Override
@@ -99,7 +99,7 @@ public class Main {
         System.out.println("Plz, enter capacity: ");
         Scanner scanner = new Scanner(System.in);
         int capacity = scanner.nextInt();
-        ArrayCircularBoundedQueue<Object> queue = new ArrayCircularBoundedQueue<Object>(capacity);
+        ArrayCircularBoundedQueue<Object> queue = new ArrayCircularBoundedQueue<>(capacity);
 
         queue.offer(1);
         queue.offer(2);
@@ -107,12 +107,14 @@ public class Main {
 
         System.out.println("Full? " + queue.isFull());
         System.out.println("Peek = " + queue.peek());
-        queue.offer(4);
+        queue.offer(10);
         System.out.println("Peek = " + queue.peek());
-        queue.offer(5);
+        queue.offer(12);
         System.out.println("Peek = " + queue.peek());
-        queue.offer(6);
+        queue.offer(14);
         System.out.println("Peek = " + queue.peek());
+        queue.poll();
+        System.out.println("Empty? = " + queue.isEmpty());
         queue.flush();
         System.out.println("Empty? = " + queue.isEmpty());
     }
