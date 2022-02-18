@@ -7,23 +7,30 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] arg) {
+
+        // Scan the first line with numbers
         Scanner scanString = new Scanner(System.in);
         String tempNum = scanString.nextLine();
+
+        // Split line into two numbers
         String[]t = tempNum.split(" ");
         int countOfQueue = Integer.parseInt(t[0]);
         int maxSizeQueue = Integer.parseInt(t[1]);
-        LinkedCircularBoundedQueue<Object> queue1 = new LinkedCircularBoundedQueue<>(maxSizeQueue);
 
+        // Initialise and declare  the Linked Circular Bounded Queue with name queue
+        LinkedCircularBoundedQueue<Object> queue = new LinkedCircularBoundedQueue<>(maxSizeQueue);
+
+        // If there are lines insert them to the queue
         if(scanString.hasNextLine()) {
             while (countOfQueue != 0) {
-                queue1.offer(scanString.nextLine());
+                queue.offer(scanString.nextLine());
                 countOfQueue--;
             }
         }
 
-        while (!queue1.isEmpty()) {
-            System.out.println(queue1.poll());
-
+        // Standard output of elements of queue
+        while (!queue.isEmpty()) {
+            System.out.println(queue.poll());
         }
     }
 }
@@ -107,10 +114,13 @@ class LinkedCircularBoundedQueue<T> implements ICircularBoundedQueue<T> {
         if (this.isEmpty()) {
             throw new IllegalStateException("Queue is Empty");
         }
+
         T temp = this.front.value;
         this.front = front.next;
         this.size--;
+
         if (this.front == null){ this.rear = null;}
+
         return temp;
     }
 
@@ -161,7 +171,6 @@ class LinkedCircularBoundedQueue<T> implements ICircularBoundedQueue<T> {
     public boolean isFull() { // O(1)
         return this.size == maxSizeQueue;
     }
-
 }
 
 class Node<T> {

@@ -7,18 +7,25 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
+        // Scan the first line with number
         Scanner scanner = new Scanner(System.in);
         int size = Integer.parseInt(scanner.nextLine());
+
+        // Initialise and declare  HashSet with size 1572869
         DoubleHashSet<Object> files = new DoubleHashSet<>(1572869);
         for (int i = 0; i < size; i++) {
+            // Scan and split command and File or Directory name
             String[] line = scanner.nextLine().split(" ");
 
+            // Choose the suitable cake of command
             switch (line[0]) {
                 case "NEW":
+                    // At first check of a containing
                     if (files.contains(line[1])) {
                         System.out.println("ERROR: cannot execute NEW " + line[1]);
-                    } else if (line[1].endsWith("/")) {
+                    }
+                    // Secondly check if it is a directory
+                    else if (line[1].endsWith("/")) {
                         StringBuilder temp = new StringBuilder(line[1]);
                         temp.deleteCharAt(temp.length() - 1);
                         line[1] = String.valueOf(temp);
@@ -29,7 +36,9 @@ public class Main {
                             line[1] += "/";
                             System.out.println("ERROR: cannot execute NEW " + line[1]);
                         }
-                    } else {
+                    }
+                    // Finally, check if it is a file name
+                    else {
                         if (!files.contains(line[1] + "/")) {
                             files.add(line[1]);
                         } else if (files.contains(line[1])) {
@@ -40,6 +49,7 @@ public class Main {
                     }
                     break;
                 case "REMOVE":
+                    // It removes only if item is located in the set, either it throws error
                     if (files.contains(line[1])) {
                         files.remove(line[1]);
                     } else {
@@ -47,6 +57,7 @@ public class Main {
                     }
                     break;
                 case "LIST":
+                    // Print all elements of the set
                     for (int j = 0; j < 1572869; j++) {
                         if (files.getItem(j) != null) {
                             System.out.print(files.getItem(j) + " ");
@@ -154,7 +165,6 @@ class DoubleHashSet<T> implements ISet<T> {
                 }
             }
         }
-
         size--;
     }
 

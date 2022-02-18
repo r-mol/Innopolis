@@ -7,20 +7,30 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        // Scan the first line with numbers
         Scanner scanner = new Scanner(System.in);
         String tempNum = scanner.nextLine();
+
+        // Split line into two numbers
         String[] t = tempNum.split(" ");
         int countOfCommands = Integer.parseInt(t[0]);
         int maxSizeStack = Integer.parseInt(t[1]);
+
+        // Initialise and declare stack and files
         QueuedBoundedStack<Object> stack = new QueuedBoundedStack<>(maxSizeStack);
         DoubleHashSet<Object> files = new DoubleHashSet<>(7919);
+
+        // Push empty HashSet to the stack
         stack.push(files);
         boolean check = false;
 
         for (int i = 0; i < countOfCommands; i++) {
+            // Get the HashSet from the top of the stack to work with it
             files = new DoubleHashSet<>((DoubleHashSet<Object>) stack.top());
+            // This variable is responsible for changing of the HashSet files
             check = false;
 
+            // Input a Command and the item
             String line1 = scanner.nextLine();
             String[] line = new String[2];
             if(line1.contains(" ")){
@@ -29,12 +39,17 @@ public class Main {
                 line[0] = line1;
             }
 
+            // Choose the suitable cake of command
             switch (line[0]) {
                 case "NEW":
+
+                    // At first check of a containing
                     if (files.contains(line[1])) {
                         System.out.println("ERROR: cannot execute NEW " + line[1]);
                         check = true;
-                    } else if (line[1].endsWith("/")) {
+                    }
+                    // Secondly check if it is a directory
+                    else if (line[1].endsWith("/")) {
                         StringBuilder temp = new StringBuilder(line[1]);
                         temp.deleteCharAt(temp.length() - 1);
                         line[1] = String.valueOf(temp);
@@ -46,7 +61,9 @@ public class Main {
                             System.out.println("ERROR: cannot execute NEW " + line[1]);
                             check = true;
                         }
-                    } else {
+                    }
+                    // Finally, check if it is a file name
+                    else {
                         if (!files.contains(line[1] + "/")) {
                             files.add(line[1]);
                         } else if (files.contains(line[1])) {
@@ -59,6 +76,7 @@ public class Main {
                     }
                     break;
                 case "REMOVE":
+                    // It removes only if item is located in the set, either it throws error
                     if (files.contains(line[1])) {
                         files.remove(line[1]);
                     } else {
@@ -67,6 +85,7 @@ public class Main {
                     }
                     break;
                 case "LIST":
+                    // Print all elements of the set
                     check = true;
                     for (int j = 0; j < 7919; j++) {
                         if (((DoubleHashSet<Object>) stack.top()).getItem(j) != null) {
@@ -76,15 +95,18 @@ public class Main {
                     System.out.println();
                     break;
                 case "UNDO":
+                    // Undo the last command/s
                     check = true;
+                    // This case undo the last command
                     if (line[1] == null) {
                         if (stack.size() <= 1) { //change on <=
                             System.out.println("ERROR: cannot execute UNDO");
                         } else {
                             stack.pop();
                         }
-                    } else {
-
+                    }
+                    // This case undo the last line[1] commands
+                    else {
                         if (stack.size() <= Integer.parseInt(line[1])) { //change on <=
                             System.out.println("ERROR: cannot execute UNDO " + line[1]);
                         } else {
@@ -99,7 +121,6 @@ public class Main {
                 stack.push(files);
             }
         }
-
     }
 }
 
@@ -475,7 +496,6 @@ class DoubleHashSet<T> implements ISet<T> {
                 }
             }
         }
-
         size--;
     }
 
@@ -497,15 +517,12 @@ class DoubleHashSet<T> implements ISet<T> {
                 try{
                     if (getItem(getHash(item, i)).equals(item)) {
                         return true;
-
                     }
                 } catch (NullPointerException e) {
                     return false;
                 }
-
             }
         }
-
         return false;
     }
 
@@ -561,5 +578,3 @@ class Node<T> {
         this.next = null;
     }
 }
-
-
