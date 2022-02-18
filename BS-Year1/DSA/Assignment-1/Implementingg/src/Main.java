@@ -10,12 +10,19 @@ public class Main {
         System.out.println("Plz, enter size of the queue: ");
         Scanner scanner = new Scanner(System.in);
         int sizeQueue = scanner.nextInt();
+
+        // create queue
         LinkedCircularBoundedQueue<Object> queue = new LinkedCircularBoundedQueue<>(sizeQueue);
+
+        // add 3 elements to queue
         queue.offer(1);
         queue.offer(2);
         queue.offer(3);
 
+        //check if it full or not
         System.out.println("Full? " + queue.isFull());
+
+        // add three elements and check if it is circular or not
         System.out.println("Peek = " + queue.peek());
         queue.offer(4);
         System.out.println("Peek = " + queue.peek());
@@ -23,15 +30,25 @@ public class Main {
         System.out.println("Peek = " + queue.peek());
         queue.offer(6);
         System.out.println("Peek = " + queue.peek());
+
+        // check method flush
         queue.flush();
+
+        // and check it
         System.out.println("Empty? = " + queue.isEmpty());
 
         System.out.println("Plz, enter size of the stack: ");
         int sizeStack = scanner.nextInt();
+
+        //create stack
         QueuedBoundedStack<Object> stack = new QueuedBoundedStack<>(sizeStack);
+
+        // add three elements
         stack.push(1);
         stack.push(2);
         stack.push(3);
+
+        // add three elements and check if it is bounded or not
         System.out.println("Top = " + stack.top());
         stack.push(4);
         System.out.println("Top = " + stack.top());
@@ -41,6 +58,8 @@ public class Main {
         System.out.println("Full? " + stack.isFull());
         System.out.println("Top = " + stack.top());
         System.out.println("Full? " + stack.isFull());
+
+        // check correctness of work method pop()
         System.out.println("Pop = " + stack.pop());
         System.out.println("Top = " + stack.top());
         System.out.println("Pop = " + stack.pop());
@@ -49,16 +68,32 @@ public class Main {
 
         System.out.println("Plz, enter size of the stack: ");
         int sizeSet = scanner.nextInt();
+
+        //create set
         DoubleHashSet<Object> set = new DoubleHashSet<>(sizeSet);
+
+        //add three elements
         set.add(1);
         set.add(2);
         set.add(3);
+
+        //remove element 3
         set.remove(3);
+
+        //check if it contains or not
         System.out.println(set.contains(3));
+
+        //check of containing element 2
         System.out.println(set.contains(2));
+
+        //check the size of set
         System.out.println(set.size());
+
+        //remove all elements
         set.remove(2);
         set.remove(1);
+
+        //check the method isEmpty()
         System.out.println(set.isEmpty());
     }
 }
