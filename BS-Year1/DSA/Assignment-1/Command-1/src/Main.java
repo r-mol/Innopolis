@@ -1,3 +1,8 @@
+/*
+@author Roman Molochkov group 4
+tg: @roman_molochkov
+ */
+
 import java.util.Scanner;
 
 public class Main {
@@ -8,6 +13,7 @@ public class Main {
         int countOfQueue = Integer.parseInt(t[0]);
         int maxSizeQueue = Integer.parseInt(t[1]);
         LinkedCircularBoundedQueue<Object> queue1 = new LinkedCircularBoundedQueue<>(maxSizeQueue);
+
         if(scanString.hasNextLine()) {
             while (countOfQueue != 0) {
                 queue1.offer(scanString.nextLine());
@@ -44,12 +50,25 @@ interface ICircularBoundedQueue<T> {
 }
 
 class LinkedCircularBoundedQueue<T> implements ICircularBoundedQueue<T> {
-
-    private int maxSizeQueue;
+    /*
+    Declaration of variables:
+    1. maxSizeQueue
+    2. front
+    3. rear
+    4. size
+     */
+    private final int maxSizeQueue;
     private Node<T> front;
     private Node<T> rear;
     private int size;
 
+    /*
+    In Constructor initialize:
+    1. maxSizeQueue by user input
+    2. front by null
+    3. rear by null
+    4. size by 0
+     */
     public LinkedCircularBoundedQueue(int maxSizeQueue) {
         this.maxSizeQueue = maxSizeQueue;
         this.front = null;
@@ -57,6 +76,12 @@ class LinkedCircularBoundedQueue<T> implements ICircularBoundedQueue<T> {
         this.size = 0;
     }
 
+    /*
+    The method offer() considers 3 ways of insert an element to the rear of the queue.
+    1. Queue is empty and element do not have predecessor and descendant.
+    2. Queue is full and it has Linked Circular Bounded Queue, that is why it should remove element from front by method poll() and after insert element to the rear.
+    3. Standart insert to the rear.
+     */
     public void offer(T value) { // O(1)
         Node<T> node = new Node(value);
         if (this.isEmpty()) {
@@ -73,17 +98,26 @@ class LinkedCircularBoundedQueue<T> implements ICircularBoundedQueue<T> {
         this.size++;
     }
 
+    /*
+    The method poll() checks if the queue is empty or not.
+    If the queue is not empty, then it copies value to the variable temp.
+    After it changes the link, decrease the size and return value of the front element.
+     */
     public T poll() { // O(1)
         if (this.isEmpty()) {
             throw new IllegalStateException("Queue is Empty");
         }
-        T toRet = this.front.value;
+        T temp = this.front.value;
         this.front = front.next;
         this.size--;
-        if (this.front == null) this.rear = null;
-        return toRet;
+        if (this.front == null){ this.rear = null;}
+        return temp;
     }
 
+    /*
+    The method peek() checks if queue empty or not.
+    After return value of the front element, without removing.
+     */
     public T peek() { // O(1)
         if (this.isEmpty()) {
             throw new IllegalStateException("Queue is Empty");
@@ -91,34 +125,44 @@ class LinkedCircularBoundedQueue<T> implements ICircularBoundedQueue<T> {
         return this.front.value;
     }
 
+    /*
+    The method flush() is removing all elements from the queue by method poll().
+     */
     public void flush() { // O(n)
         while (!this.isEmpty()) {
             this.poll();
         }
     }
 
+    /*
+    The method size() returns value of the variable size.
+     */
     public int size() { // O(1)
         return this.size;
     } // O(1)
 
+    /*
+    The method capacity() returns value of the variable maxSizeQueue.
+     */
     public int capacity() { // O(1)
         return maxSizeQueue;
     } // O(1)
 
+    /*
+    The method isEmpty() checks if the front equals null and the rear equals null than queue is empty
+     */
     public boolean isEmpty() { // O(1)
         return this.front == null && this.rear == null;
     } // O(1)
 
+    /*
+    The method isFull() compares size with maxSizeQueue and if they are equal than queue is full.
+     */
     public boolean isFull() { // O(1)
         return this.size == maxSizeQueue;
-    } // O(1)
-
-    public void setSize(int size) {
-        this.size = size;
-    } // O(1)
+    }
 
 }
-
 
 class Node<T> {
     T value;
@@ -129,5 +173,3 @@ class Node<T> {
         this.next = null;
     }
 }
-
-

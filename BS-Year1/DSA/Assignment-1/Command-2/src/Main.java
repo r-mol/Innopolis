@@ -1,3 +1,8 @@
+/*
+@author Roman Molochkov group 4
+tg: @roman_molochkov
+ */
+
 import java.util.Scanner;
 
 public class Main {
@@ -74,7 +79,7 @@ class DoubleHashSet<T> implements ISet<T> {
      */
     private final int maxSizeSet;
     private int size;
-    private final Object[] arr;
+    private final Object[] arr ;
 
     /*
    In Constructor initialize:
@@ -89,7 +94,21 @@ class DoubleHashSet<T> implements ISet<T> {
     }
 
     /*
-    In the method getHash() we use default function hashCode() of the element and the function hashCode2() which are
+   In Copy-Constructor initialize:
+   Copy all elements from the other object.
+    */
+    DoubleHashSet(DoubleHashSet<Object> temp) {
+        this.maxSizeSet = temp.maxSizeSet;
+        this.size = temp.size;
+        int i = 0;
+        arr = new Object[temp.maxSizeSet];
+        for(Object a: temp.arr){
+            arr[i++]= a;
+        }
+    }
+
+    /*
+    The method getHash() uses default function hashCode() of the element and the function hashCode2() which are
     dependent on repetitions.
      */
     int getHash(T item, int j) {
@@ -97,9 +116,9 @@ class DoubleHashSet<T> implements ISet<T> {
     }
 
     /*
-    In the method add() we get hash for the item by the function getHash().
-    After we get free index by hash in which we can add our item.
-    If this index is not free we use the loop
+    The method add() gets hash for the item by the function getHash().
+    After it gets free index by hash in which we can add our item.
+    If this index is not free it uses the loop
      */
     @Override
     public void add(T item) {
@@ -119,9 +138,9 @@ class DoubleHashSet<T> implements ISet<T> {
     }
 
     /*
-   In the method remove() we get hash for the item by the function getHash().
-   After we get index by hash where can locate our item.
-   If this standard index does not contain our item we use the loop to find index after collision.
+   The method remove() gets hash for the item by the function getHash().
+   After it gets index by hash where can locate our item.
+   If this standard index does not contain our item it uses the loop to find index after collision.
     */
     @Override
     public void remove(T item) {
@@ -140,8 +159,8 @@ class DoubleHashSet<T> implements ISet<T> {
     }
 
     /*
-   In the method contains() we get hash for the item by the function getHash().
-   After we look for index by hash where can locate our item.
+   The method contains() gets hash for the item by the function getHash().
+   After it looks for index by hash where can locate our item.
    And return true - contain, false - do not contain.
     */
     @Override
@@ -170,7 +189,7 @@ class DoubleHashSet<T> implements ISet<T> {
     }
 
     /*
-    In the method size() we return variable size.
+    The method size() returns variable size.
      */
     @Override
     public int size() {
@@ -178,7 +197,7 @@ class DoubleHashSet<T> implements ISet<T> {
     }
 
     /*
-    In the method isEmpty() we return comparing of variable size with const 0.
+    The method isEmpty() returns comparing of variable size with const 0.
      */
     @Override
     public boolean isEmpty() {
@@ -186,14 +205,14 @@ class DoubleHashSet<T> implements ISet<T> {
     }
 
     /*
-    In the method hashCode2() we return hash by formula: primeNum * hash % primeNum.
+    The method hashCode2() returns hash by formula: primeNum * hash % primeNum.
      */
     public int hashCode2(T item) {
         return 7919 * item.hashCode() % 7919;
     }
 
     /*
-    In the method getItem() we return the item from the array by index.
+    The method getItem() returns the item from the array by index.
      */
     public T getItem(int index) {
         try {
@@ -201,11 +220,10 @@ class DoubleHashSet<T> implements ISet<T> {
         } catch (NullPointerException e) {
             return null;
         }
-
     }
 
     /*
-    In the method setItem() we set the item to the array by index.
+    The method setItem() sets the item to the array by index.
      */
     public void setItem(int index, T item) {
         this.arr[index] = item;

@@ -6,60 +6,100 @@ tg: @roman_molochkov
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] arg) {
-        System.out.println("Plz, enter size of the queue: ");
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int sizeQueue = scanner.nextInt();
-        LinkedCircularBoundedQueue<Object> queue = new LinkedCircularBoundedQueue<>(sizeQueue);
-        queue.offer(1);
-        queue.offer(2);
-        queue.offer(3);
+        String tempNum = scanner.nextLine();
+        String[] t = tempNum.split(" ");
+        int countOfCommands = Integer.parseInt(t[0]);
+        int maxSizeStack = Integer.parseInt(t[1]);
+        QueuedBoundedStack<Object> stack = new QueuedBoundedStack<>(maxSizeStack);
+        DoubleHashSet<Object> files = new DoubleHashSet<>(7919);
+        stack.push(files);
+        boolean check = false;
 
-        System.out.println("Full? " + queue.isFull());
-        System.out.println("Peek = " + queue.peek());
-        queue.offer(4);
-        System.out.println("Peek = " + queue.peek());
-        queue.offer(5);
-        System.out.println("Peek = " + queue.peek());
-        queue.offer(6);
-        System.out.println("Peek = " + queue.peek());
-        queue.flush();
-        System.out.println("Empty? = " + queue.isEmpty());
+        for (int i = 0; i < countOfCommands; i++) {
+            files = new DoubleHashSet<>((DoubleHashSet<Object>) stack.top());
+            check = false;
 
-        System.out.println("Plz, enter size of the stack: ");
-        int sizeStack = scanner.nextInt();
-        QueuedBoundedStack<Object> stack = new QueuedBoundedStack<>(sizeStack);
-        stack.push(1);
-        stack.push(2);
-        stack.push(3);
-        System.out.println("Top = " + stack.top());
-        stack.push(4);
-        System.out.println("Top = " + stack.top());
-        stack.push(5);
-        System.out.println("Top = " + stack.top());
-        stack.push(6);
-        System.out.println("Full? " + stack.isFull());
-        System.out.println("Top = " + stack.top());
-        System.out.println("Full? " + stack.isFull());
-        System.out.println("Pop = " + stack.pop());
-        System.out.println("Top = " + stack.top());
-        System.out.println("Pop = " + stack.pop());
-        stack.flush();
-        System.out.println("Empty? " + stack.isEmpty());
+            String line1 = scanner.nextLine();
+            String[] line = new String[2];
+            if(line1.contains(" ")){
+                line = line1.split(" ");
+            }else{
+                line[0] = line1;
+            }
 
-        System.out.println("Plz, enter size of the stack: ");
-        int sizeSet = scanner.nextInt();
-        DoubleHashSet<Object> set = new DoubleHashSet<>(sizeSet);
-        set.add(1);
-        set.add(2);
-        set.add(3);
-        set.remove(3);
-        System.out.println(set.contains(3));
-        System.out.println(set.contains(2));
-        System.out.println(set.size());
-        set.remove(2);
-        set.remove(1);
-        System.out.println(set.isEmpty());
+            switch (line[0]) {
+                case "NEW":
+                    if (files.contains(line[1])) {
+                        System.out.println("ERROR: cannot execute NEW " + line[1]);
+                        check = true;
+                    } else if (line[1].endsWith("/")) {
+                        StringBuilder temp = new StringBuilder(line[1]);
+                        temp.deleteCharAt(temp.length() - 1);
+                        line[1] = String.valueOf(temp);
+                        if (!files.contains(line[1])) {
+                            line[1] += "/";
+                            files.add(line[1]);
+                        } else {
+                            line[1] += "/";
+                            System.out.println("ERROR: cannot execute NEW " + line[1]);
+                            check = true;
+                        }
+                    } else {
+                        if (!files.contains(line[1] + "/")) {
+                            files.add(line[1]);
+                        } else if (files.contains(line[1])) {
+                            System.out.println("ERROR: cannot execute NEW " + line[1]);
+                            check = true;
+                        } else {
+                            System.out.println("ERROR: cannot execute NEW " + line[1]);
+                            check = true;
+                        }
+                    }
+                    break;
+                case "REMOVE":
+                    if (files.contains(line[1])) {
+                        files.remove(line[1]);
+                    } else {
+                        System.out.println("ERROR: cannot execute REMOVE " + line[1]);
+                        check = true;
+                    }
+                    break;
+                case "LIST":
+                    check = true;
+                    for (int j = 0; j < 7919; j++) {
+                        if (((DoubleHashSet<Object>) stack.top()).getItem(j) != null) {
+                            System.out.print(((DoubleHashSet<Object>) stack.top()).getItem(j) + " ");
+                        }
+                    }
+                    System.out.println();
+                    break;
+                case "UNDO":
+                    check = true;
+                    if (line[1] == null) {
+                        if (stack.size() <= 1) { //change on <=
+                            System.out.println("ERROR: cannot execute UNDO");
+                        } else {
+                            stack.pop();
+                        }
+                    } else {
+
+                        if (stack.size() <= Integer.parseInt(line[1])) { //change on <=
+                            System.out.println("ERROR: cannot execute UNDO " + line[1]);
+                        } else {
+                            for (int j = 0; j < Integer.parseInt(line[1]); j++) {
+                                stack.pop();
+                            }
+                        }
+                    }
+                    break;
+            }
+            if(!check) {
+                stack.push(files);
+            }
+        }
+
     }
 }
 
@@ -521,4 +561,5 @@ class Node<T> {
         this.next = null;
     }
 }
+
 
