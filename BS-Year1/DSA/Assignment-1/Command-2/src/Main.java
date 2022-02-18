@@ -11,38 +11,38 @@ public class Main {
 
             switch (line[0]) {
                 case "NEW":
-                    if (files.contains(line[1])) {
-                        System.out.println("ERROR: cannot execute NEW " + line[1]);
-                    } else if (!files.contains(line[1])) {
+//                    if (files.contains(line[1])) {
+//                        System.out.println("ERROR: cannot execute NEW " + line[1]);
+//                    } else if (!files.contains(line[1])) {
+//                        files.add(line[1]);
+//                    } else {
+//                        System.out.println("ERROR: cannot execute NEW " + line[1]);
+//                    }
+                if (files.contains(line[1])) {
+                System.out.println("ERROR: cannot execute NEW " + line[1]);
+                } else if(line[1].endsWith("/"))
+                {
+                    StringBuilder temp = new StringBuilder(line[1]);
+                    temp.deleteCharAt(temp.length()-1);
+                    line[1] = String.valueOf(temp);
+                     if (!files.contains(line[1])) {
+                        line[1] += "/";
                         files.add(line[1]);
+                    } else {
+                        line[1] += "/";
+                        System.out.println("ERROR: cannot execute NEW " + line[1]);
+                    }
+                }
+                else
+                {
+                     if (!files.contains(line[1] + "/")) {
+                        files.add(line[1]);
+                    } else if (files.contains(line[1])) {
+                        System.out.println("ERROR: cannot execute NEW " + line[1]);
                     } else {
                         System.out.println("ERROR: cannot execute NEW " + line[1]);
                     }
-//                if (files.contains(line[1])) {
-//                System.out.println("ERROR: cannot execute NEW " + line[1]);
-//                } else if(line[1].endsWith("/"))
-//                {
-//                    StringBuilder temp = new StringBuilder(line[1]);
-//                    temp.deleteCharAt(temp.length()-1);
-//                    line[1] = String.valueOf(temp);
-//                     if (!files.contains(line[1])) {
-//                        line[1] += "/";
-//                        files.add(line[1]);
-//                    } else {
-//                        line[1] += "/";
-//                        System.out.println("ERROR: cannot execute NEW " + line[1]);
-//                    }
-//                }
-//                else
-//                {
-//                     if (!files.contains(line[1] + "/")) {
-//                        files.add(line[1]);
-//                    } else if (files.contains(line[1])) {
-//                        System.out.println("ERROR: cannot execute NEW " + line[1]);
-//                    } else {
-//                        System.out.println("ERROR: cannot execute NEW " + line[1]);
-//                    }
-//                }
+                }
                     break;
                 case "REMOVE":
                     if (files.contains(line[1])) {
@@ -74,27 +74,47 @@ interface ISet<T> {
 
     boolean isEmpty(); // check if the set is empty
 }
+
 class DoubleHashSet<T> implements ISet<T> {
+    /*
+    Declaration of variables:
+    1. maxSizeSet
+    2. size
+    3. arr
+     */
     private final int maxSizeSet;
-    private int size = 0;
+    private int size;
     private final Object[] arr;
 
-
+    /*
+   In Constructor initialize:
+   1. maxSizeStack by user input
+   2. size by 0
+   3. arr by new array of Objects with capacity equal to maxSizeStack
+    */
     DoubleHashSet(int maxSizeSet) {
-        arr = new Object[maxSizeSet];
         this.maxSizeSet = maxSizeSet;
+        size = 0;
+        arr = new Object[maxSizeSet];
     }
 
+    /*
+    In the method getHash() we use default function hashCode() of the element and the function hashCode2() which are
+    dependent on repetitions.
+     */
     int getHash(T item, int j) {
         return Math.abs(item.hashCode() + j * hashCode2(item)) % maxSizeSet;
     }
 
+    /*
+    In the method add() we get hash for the item by the function getHash().
+    After we get free index by hash in which we can add our item.
+    If this index is not free we use the loop
+     */
     @Override
     public void add(T item) {
-        int hash = getHash(item, 0);
-
-        if (getIndex(hash) == null) {
-            setIndex(hash, item);
+        if (getIndex(getHash(item, 0)) == null) {
+            setIndex(getHash(item, 0), item);
         } else {
             for (int i = 0; i < maxSizeSet; i++) {
                 if (getIndex(getHash(item, i)) == null) {
@@ -110,14 +130,12 @@ class DoubleHashSet<T> implements ISet<T> {
 
     @Override
     public void remove(T item) {
-        int hash = getHash(item, 0);
-
-        if (getIndex(hash).equals(item)) {
-            setIndex(hash, null);
+        if (getIndex(getHash(item, 0)).equals(item)) {
+            setIndex(getHash(item, 0), null);
         } else {
             for (int i = 0; i < maxSizeSet; i++) {
                 if (getIndex(getHash(item, i)).equals(item)) {
-                    setIndex(hash, null);
+                    setIndex(getHash(item, i), null);
                     break;
                 }
             }
@@ -129,18 +147,16 @@ class DoubleHashSet<T> implements ISet<T> {
     @Override
     public boolean contains(T item) {
 
-        int hash = getHash(item, 0);
-
-        if (getIndex(hash) == null) {
+        if (getIndex(getHash(item, 0)) == null) {
             return false;
         }
-        if (getIndex(hash).equals(item)) {
+        if (getIndex(getHash(item, 0)).equals(item)) {
             return true;
         } else {
             for (int i = 0; i < maxSizeSet; i++) {
                 try{
-                if (getIndex(getHash(item, i)).equals(item)) {
-                    return true;
+                    if (getIndex(getHash(item, i)).equals(item)) {
+                        return true;
 
                     }
                 } catch (NullPointerException e) {

@@ -324,12 +324,15 @@ class DoubleHashSet<T> implements ISet<T> {
         return Math.abs(item.hashCode() + j * hashCode2(item)) % maxSizeSet;
     }
 
+    /*
+    In the method add() we get hash for the item by the function getHash().
+    After we get free index by hash in which we can add our item.
+    If this index is not free we use the loop
+     */
     @Override
     public void add(T item) {
-        int hash = getHash(item, 0);
-
-        if (getIndex(hash) == null) {
-            setIndex(hash, item);
+        if (getIndex(getHash(item, 0)) == null) {
+            setIndex(getHash(item, 0), item);
         } else {
             for (int i = 0; i < maxSizeSet; i++) {
                 if (getIndex(getHash(item, i)) == null) {
@@ -345,14 +348,12 @@ class DoubleHashSet<T> implements ISet<T> {
 
     @Override
     public void remove(T item) {
-        int hash = getHash(item, 0);
-
-        if (getIndex(hash).equals(item)) {
-            setIndex(hash, null);
+        if (getIndex(getHash(item, 0)).equals(item)) {
+            setIndex(getHash(item, 0), null);
         } else {
             for (int i = 0; i < maxSizeSet; i++) {
                 if (getIndex(getHash(item, i)).equals(item)) {
-                    setIndex(hash, null);
+                    setIndex(getHash(item, i), null);
                     break;
                 }
             }
@@ -364,12 +365,10 @@ class DoubleHashSet<T> implements ISet<T> {
     @Override
     public boolean contains(T item) {
 
-        int hash = getHash(item, 0);
-
-        if (getIndex(hash) == null) {
+        if (getIndex(getHash(item, 0)) == null) {
             return false;
         }
-        if (getIndex(hash).equals(item)) {
+        if (getIndex(getHash(item, 0)).equals(item)) {
             return true;
         } else {
             for (int i = 0; i < maxSizeSet; i++) {
