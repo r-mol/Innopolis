@@ -331,14 +331,14 @@ class DoubleHashSet<T> implements ISet<T> {
      */
     @Override
     public void add(T item) {
-        if (getIndex(getHash(item, 0)) == null) {
-            setIndex(getHash(item, 0), item);
+        if (getItem(getHash(item, 0)) == null) {
+            setItem(getHash(item, 0), item);
         } else {
             for (int i = 0; i < maxSizeSet; i++) {
-                if (getIndex(getHash(item, i)) == null) {
-                    setIndex(getHash(item, i), item);
+                if (getItem(getHash(item, i)) == null) {
+                    setItem(getHash(item, i), item);
                     break;
-                }else if (getIndex((getHash(item, i))).equals(item)) {
+                }else if (getItem((getHash(item, i))).equals(item)) {
                     break;
                 }
             }
@@ -346,14 +346,19 @@ class DoubleHashSet<T> implements ISet<T> {
         size++;
     }
 
+    /*
+   In the method remove() we get hash for the item by the function getHash().
+   After we get index by hash where can locate our item.
+   If this standard index does not contain our item we use the loop to find index after collision.
+    */
     @Override
     public void remove(T item) {
-        if (getIndex(getHash(item, 0)).equals(item)) {
-            setIndex(getHash(item, 0), null);
+        if (getItem(getHash(item, 0)).equals(item)) {
+            setItem(getHash(item, 0), null);
         } else {
             for (int i = 0; i < maxSizeSet; i++) {
-                if (getIndex(getHash(item, i)).equals(item)) {
-                    setIndex(getHash(item, i), null);
+                if (getItem(getHash(item, i)).equals(item)) {
+                    setItem(getHash(item, i), null);
                     break;
                 }
             }
@@ -362,18 +367,23 @@ class DoubleHashSet<T> implements ISet<T> {
         size--;
     }
 
+    /*
+   In the method contains() we get hash for the item by the function getHash().
+   After we look for index by hash where can locate our item.
+   And return true - contain, false - do not contain.
+    */
     @Override
     public boolean contains(T item) {
 
-        if (getIndex(getHash(item, 0)) == null) {
+        if (getItem(getHash(item, 0)) == null) {
             return false;
         }
-        if (getIndex(getHash(item, 0)).equals(item)) {
+        if (getItem(getHash(item, 0)).equals(item)) {
             return true;
         } else {
             for (int i = 0; i < maxSizeSet; i++) {
                 try{
-                    if (getIndex(getHash(item, i)).equals(item)) {
+                    if (getItem(getHash(item, i)).equals(item)) {
                         return true;
 
                     }
@@ -387,21 +397,33 @@ class DoubleHashSet<T> implements ISet<T> {
         return false;
     }
 
+    /*
+    In the method size() we return variable size.
+     */
     @Override
     public int size() {
         return size;
     }
 
+    /*
+    In the method isEmpty() we return comparing of variable size with const 0.
+     */
     @Override
     public boolean isEmpty() {
         return size == 0;
     }
 
+    /*
+    In the method hashCode2() we return hash by formula: primeNum * hash % primeNum.
+     */
     public int hashCode2(T item) {
         return 7919 * item.hashCode() % 7919;
     }
 
-    public T getIndex(int index) {
+    /*
+    In the method getItem() we return the item from the array by index.
+     */
+    public T getItem(int index) {
         try {
             return (T) this.arr[index];
         } catch (NullPointerException e) {
@@ -410,7 +432,10 @@ class DoubleHashSet<T> implements ISet<T> {
 
     }
 
-    public void setIndex(int index, T item) {
+    /*
+    In the method setItem() we set the item to the array by index.
+     */
+    public void setItem(int index, T item) {
         this.arr[index] = item;
     }
 

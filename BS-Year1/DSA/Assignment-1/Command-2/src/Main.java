@@ -1,48 +1,38 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
-        Scanner scanner = new Scanner (System.in);
-        int size  = Integer.parseInt(scanner.nextLine());
+        Scanner scanner = new Scanner(System.in);
+        int size = Integer.parseInt(scanner.nextLine());
         DoubleHashSet<Object> files = new DoubleHashSet<>(1572869);
-        for(int i = 0; i < size; i++){
-            String [] line = scanner.nextLine().split(" ");
+        for (int i = 0; i < size; i++) {
+            String[] line = scanner.nextLine().split(" ");
 
             switch (line[0]) {
                 case "NEW":
-//                    if (files.contains(line[1])) {
-//                        System.out.println("ERROR: cannot execute NEW " + line[1]);
-//                    } else if (!files.contains(line[1])) {
-//                        files.add(line[1]);
-//                    } else {
-//                        System.out.println("ERROR: cannot execute NEW " + line[1]);
-//                    }
-                if (files.contains(line[1])) {
-                System.out.println("ERROR: cannot execute NEW " + line[1]);
-                } else if(line[1].endsWith("/"))
-                {
-                    StringBuilder temp = new StringBuilder(line[1]);
-                    temp.deleteCharAt(temp.length()-1);
-                    line[1] = String.valueOf(temp);
-                     if (!files.contains(line[1])) {
-                        line[1] += "/";
-                        files.add(line[1]);
+                    if (files.contains(line[1])) {
+                        System.out.println("ERROR: cannot execute NEW " + line[1]);
+                    } else if (line[1].endsWith("/")) {
+                        StringBuilder temp = new StringBuilder(line[1]);
+                        temp.deleteCharAt(temp.length() - 1);
+                        line[1] = String.valueOf(temp);
+                        if (!files.contains(line[1])) {
+                            line[1] += "/";
+                            files.add(line[1]);
+                        } else {
+                            line[1] += "/";
+                            System.out.println("ERROR: cannot execute NEW " + line[1]);
+                        }
                     } else {
-                        line[1] += "/";
-                        System.out.println("ERROR: cannot execute NEW " + line[1]);
+                        if (!files.contains(line[1] + "/")) {
+                            files.add(line[1]);
+                        } else if (files.contains(line[1])) {
+                            System.out.println("ERROR: cannot execute NEW " + line[1]);
+                        } else {
+                            System.out.println("ERROR: cannot execute NEW " + line[1]);
+                        }
                     }
-                }
-                else
-                {
-                     if (!files.contains(line[1] + "/")) {
-                        files.add(line[1]);
-                    } else if (files.contains(line[1])) {
-                        System.out.println("ERROR: cannot execute NEW " + line[1]);
-                    } else {
-                        System.out.println("ERROR: cannot execute NEW " + line[1]);
-                    }
-                }
                     break;
                 case "REMOVE":
                     if (files.contains(line[1])) {
@@ -53,8 +43,8 @@ public class Main {
                     break;
                 case "LIST":
                     for (int j = 0; j < 1572869; j++) {
-                        if (files.getIndex(j) != null) { //&& files.getIndex(j)!="YUHhhh") {
-                            System.out.print(files.getIndex(j) + " ");
+                        if (files.getItem(j) != null) {
+                            System.out.print(files.getItem(j) + " ");
                         }
                     }
                     break;
@@ -113,14 +103,14 @@ class DoubleHashSet<T> implements ISet<T> {
      */
     @Override
     public void add(T item) {
-        if (getIndex(getHash(item, 0)) == null) {
-            setIndex(getHash(item, 0), item);
+        if (getItem(getHash(item, 0)) == null) {
+            setItem(getHash(item, 0), item);
         } else {
             for (int i = 0; i < maxSizeSet; i++) {
-                if (getIndex(getHash(item, i)) == null) {
-                    setIndex(getHash(item, i), item);
+                if (getItem(getHash(item, i)) == null) {
+                    setItem(getHash(item, i), item);
                     break;
-                }else if (getIndex((getHash(item, i))).equals(item)) {
+                }else if (getItem((getHash(item, i))).equals(item)) {
                     break;
                 }
             }
@@ -128,14 +118,19 @@ class DoubleHashSet<T> implements ISet<T> {
         size++;
     }
 
+    /*
+   In the method remove() we get hash for the item by the function getHash().
+   After we get index by hash where can locate our item.
+   If this standard index does not contain our item we use the loop to find index after collision.
+    */
     @Override
     public void remove(T item) {
-        if (getIndex(getHash(item, 0)).equals(item)) {
-            setIndex(getHash(item, 0), null);
+        if (getItem(getHash(item, 0)).equals(item)) {
+            setItem(getHash(item, 0), null);
         } else {
             for (int i = 0; i < maxSizeSet; i++) {
-                if (getIndex(getHash(item, i)).equals(item)) {
-                    setIndex(getHash(item, i), null);
+                if (getItem(getHash(item, i)).equals(item)) {
+                    setItem(getHash(item, i), null);
                     break;
                 }
             }
@@ -144,18 +139,23 @@ class DoubleHashSet<T> implements ISet<T> {
         size--;
     }
 
+    /*
+   In the method contains() we get hash for the item by the function getHash().
+   After we look for index by hash where can locate our item.
+   And return true - contain, false - do not contain.
+    */
     @Override
     public boolean contains(T item) {
 
-        if (getIndex(getHash(item, 0)) == null) {
+        if (getItem(getHash(item, 0)) == null) {
             return false;
         }
-        if (getIndex(getHash(item, 0)).equals(item)) {
+        if (getItem(getHash(item, 0)).equals(item)) {
             return true;
         } else {
             for (int i = 0; i < maxSizeSet; i++) {
                 try{
-                    if (getIndex(getHash(item, i)).equals(item)) {
+                    if (getItem(getHash(item, i)).equals(item)) {
                         return true;
 
                     }
@@ -169,21 +169,33 @@ class DoubleHashSet<T> implements ISet<T> {
         return false;
     }
 
+    /*
+    In the method size() we return variable size.
+     */
     @Override
     public int size() {
         return size;
     }
 
+    /*
+    In the method isEmpty() we return comparing of variable size with const 0.
+     */
     @Override
     public boolean isEmpty() {
         return size == 0;
     }
 
+    /*
+    In the method hashCode2() we return hash by formula: primeNum * hash % primeNum.
+     */
     public int hashCode2(T item) {
         return 7919 * item.hashCode() % 7919;
     }
 
-    public T getIndex(int index) {
+    /*
+    In the method getItem() we return the item from the array by index.
+     */
+    public T getItem(int index) {
         try {
             return (T) this.arr[index];
         } catch (NullPointerException e) {
@@ -192,7 +204,10 @@ class DoubleHashSet<T> implements ISet<T> {
 
     }
 
-    public void setIndex(int index, T item) {
+    /*
+    In the method setItem() we set the item to the array by index.
+     */
+    public void setItem(int index, T item) {
         this.arr[index] = item;
     }
 
