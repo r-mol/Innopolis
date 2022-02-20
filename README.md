@@ -25,6 +25,7 @@
 #### • [Lab-13](BS-Year1/ITP-1/Lab-11)
 ## 📌[DSA](BS-Year1/DSA)
 ### 📍Assignments & Exams
+#### • [Assignment-1 "Java"](BS-Year1/DSA/Assignment-1)
 ### 📍 C++ - Language
 #### • [Lab-1](BS-Year1/DSA/Lab-1)
 #### • [Lab-2](BS-Year1/DSA/Lab-2)
