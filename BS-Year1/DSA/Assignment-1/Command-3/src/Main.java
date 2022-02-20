@@ -99,7 +99,7 @@ public class Main {
                     check = true;
                     // This case undo the last command
                     if (line[1] == null) {
-                        if (stack.size() <= 1) { //change on <=
+                        if (stack.size() <= 1) {
                             System.out.println("ERROR: cannot execute UNDO");
                         } else {
                             stack.pop();
@@ -107,7 +107,7 @@ public class Main {
                     }
                     // This case undo the last line[1] commands
                     else {
-                        if (stack.size() <= Integer.parseInt(line[1])) { //change on <=
+                        if (stack.size() <= Integer.parseInt(line[1])) { 
                             System.out.println("ERROR: cannot execute UNDO " + line[1]);
                         } else {
                             for (int j = 0; j < Integer.parseInt(line[1]); j++) {
