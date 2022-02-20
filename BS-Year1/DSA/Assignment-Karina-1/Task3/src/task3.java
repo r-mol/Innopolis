@@ -74,7 +74,7 @@ public class task3 {
 
                     notChange = 1;
                     for (int j = 0; j < 7919; j++) {
-                        if (((DoubleHashSet<Object>) stack.top()).get(j) != null) {
+                        if (((DoubleHashSet<Object>) stack.top()).get(j) != null && ((DoubleHashSet<Object>) stack.top()).get(j) != "DELETED") {
                             System.out.print(((DoubleHashSet<Object>) stack.top()).get(j) + " ");
                         }
                     }
@@ -82,7 +82,7 @@ public class task3 {
             }else if(lineOfCommands[0].equals("UNDO")) {
                 notChange = 1;
 
-                if (lineOfCommands[1].equals("")) {
+                if (lineOfCommands[1] == null) {
                     if (stack.size() <= 1) {
                         System.out.println("ERROR: cannot execute UNDO");
                     } else {
@@ -278,7 +278,9 @@ class DoubleHashSet<T> implements ISet<T> {
     @Override
     public boolean contains(T item) {
 
-        if (get(hash(item, 0)).equals(item)) {
+        if (get(hash(item, 0)) == null) {
+            return false;
+        }else if (get(hash(item, 0)).equals(item)) {
             return true;
         } else {
             for (int i = 0; i < capacity; i++) {
