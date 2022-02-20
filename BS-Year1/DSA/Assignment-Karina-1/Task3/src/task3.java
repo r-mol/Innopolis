@@ -83,18 +83,18 @@ public class task3 {
                 notChange = 1;
 
                 if (lineOfCommands[1] == null) {
-                    if (stack.size() <= 1) {
-                        System.out.println("ERROR: cannot execute UNDO");
-                    } else {
+                    if (stack.size() > 1) {
                         stack.pop();
+                    } else {
+                        System.out.println("ERROR: cannot execute UNDO");
                     }
                 } else {
-                    if (stack.size() <= Integer.parseInt(lineOfCommands[1])) {
-                        System.out.println("ERROR: cannot execute UNDO " + lineOfCommands[1]);
-                    } else {
+                    if (stack.size() > Integer.parseInt(lineOfCommands[1])) {
                         for (int j = 0; j < Integer.parseInt(lineOfCommands[1]); j++) {
                             stack.pop();
                         }
+                    } else {
+                        System.out.println("ERROR: cannot execute UNDO " + lineOfCommands[1]);
                     }
                 }
             }

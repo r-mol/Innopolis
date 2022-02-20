@@ -4,9 +4,9 @@ public class task2 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        int size = Integer.parseInt(scanner.nextLine());
+        int countOfOperations = Integer.parseInt(scanner.nextLine());
         DoubleHashSet<Object> documents = new DoubleHashSet<>(1561457);
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < countOfOperations; i++) {
             String[] commandAndLine = scanner.nextLine().split(" ");
 
             if(commandAndLine[0].equals("NEW")){
