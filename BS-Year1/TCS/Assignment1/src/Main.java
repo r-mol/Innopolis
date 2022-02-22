@@ -1,61 +1,285 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 import java.lang.*;
 
 public class Main {
-    static Scanner scanner;
-    static StringBuilder temp;
-    static String[] states;
-    static String[] alphabet;
-    static String initSt;
-    static String[] finSt;
-    static String[][] trans2;
-    LinkedCircularBoundedQueue<String> Errors = new LinkedCircularBoundedQueue<>(1000);
-    LinkedCircularBoundedQueue<String> Warnings = new LinkedCircularBoundedQueue<>(1000);
+    public static void main(String[] args) throws FileNotFoundException {
+        FSA<Object> test = new FSA<>();
+        test.input();
+        test.transToGraph();
+        if(test.Errors.isEmpty()) {
+            test.check();
+        }
+        test.output();
+    }
+}
 
-    public static void main(String[] args) {
-        input();
-        System.out.println(Arrays.toString(states));
-        System.out.println(Arrays.toString(alphabet));
-        System.out.println(initSt);
-        System.out.println(Arrays.toString(finSt));
-        System.out.println(Arrays.deepToString(trans2));
+class FSA<T>{
+    File input = new File("fsa.txt");
+    Scanner scanner = new Scanner(input);
+    protected static HashSet<String> alphabet = new HashSet<>();
+    private static final HashSet<String> finSt = new HashSet<>();
+    private static String[][] trans;
+    String initSt;
+    final LinkedCircularBoundedQueue<String> Errors = new LinkedCircularBoundedQueue<>(1000);
+    final LinkedCircularBoundedQueue<String> Warnings = new LinkedCircularBoundedQueue<>(1000);
+    Graph<String> graph = new Graph<>(alphabet);
+
+    FSA() throws FileNotFoundException {
     }
 
-    public static void input() {
-        temp = new StringBuilder(scanner.nextLine());
-        temp.delete(0, temp.lastIndexOf("[") + 1);
-        temp.delete(temp.lastIndexOf("]"), temp.length());
-        states = new String(temp).split(",");
+    public void input() {
+        StringBuilder temp = new StringBuilder(scanner.nextLine());
+        StringBuilder check  = new StringBuilder(temp);
+        String sss = String.valueOf(check.delete(check.lastIndexOf("[")+1,check.lastIndexOf("]")));
+        if(!sss.equals("states=[]")) {
+            Errors.offer("E5: Input file is malformed");
+            this.output();
+            System.exit(0);
+        }else {
+            temp.delete(0, temp.lastIndexOf("[") + 1);
+            temp.delete(temp.lastIndexOf("]"), temp.length());
+
+            String[] ss = String.valueOf(temp).split(",");
+            for (String s : ss) {
+                graph.addVertex(s);
+            }
+        }
 
         temp = new StringBuilder(scanner.nextLine());
-        temp.delete(0, temp.lastIndexOf("[") + 1);
-        temp.delete(temp.lastIndexOf("]"), temp.length());
-        alphabet = new String(temp).split(",");
+        check  = new StringBuilder(temp);
+        sss = String.valueOf(check.delete(check.lastIndexOf("[")+1,check.lastIndexOf("]")));
+        if(!sss.equals("alpha=[]")) {
+            Errors.offer("E5: Input file is malformed");
+            this.output();
+            System.exit(0);
+        }else {
+            temp.delete(0, temp.lastIndexOf("[") + 1);
+            temp.delete(temp.lastIndexOf("]"), temp.length());
+            alphabet.addAll(Arrays.asList(String.valueOf(temp).split(",")));
+        }
 
         temp = new StringBuilder(scanner.nextLine());
-        temp.delete(0, temp.lastIndexOf("[") + 1);
-        temp.delete(temp.lastIndexOf("]"), temp.length());
-        initSt = new String(temp);
+        check  = new StringBuilder(temp);
+        sss = String.valueOf(check.delete(check.lastIndexOf("[")+1,check.lastIndexOf("]")));
+        if(!sss.equals("init.st=[]")) {
+            Errors.offer("E5: Input file is malformed");
+            this.output();
+            System.exit(0);
+        }else {
+            temp.delete(0, temp.lastIndexOf("[") + 1);
+            temp.delete(temp.lastIndexOf("]"), temp.length());
+            if (String.valueOf(temp).equals("")) {
+                Errors.offer("E4: Initial state is not defined");
+                this.output();
+                System.exit(0);
+            } else if (graph.hasVertex(String.valueOf(temp))) {
+                initSt = String.valueOf(temp);
+            } else {
+                Errors.offer("E1: A state '" + temp + "' is not in the set of states");
+                this.output();
+                System.exit(0);
+            }
+        }
 
         temp = new StringBuilder(scanner.nextLine());
-        temp.delete(0, temp.lastIndexOf("[") + 1);
-        temp.delete(temp.lastIndexOf("]"), temp.length());
-        finSt = new String(temp).split(",");
+        check  = new StringBuilder(temp);
+        if(check.lastIndexOf("]")!=check.length()-1){
+            Errors.offer("E5: Input file is malformed");
+            this.output();
+            System.exit(0);
+        }
+        sss = String.valueOf(check.delete(check.lastIndexOf("[")+1,check.lastIndexOf("]")));
+        if(!sss.equals("fin.st=[]")) {
+            Errors.offer("E5: Input file is malformed");
+            this.output();
+            System.exit(0);
+        }else {
+            temp.delete(0, temp.lastIndexOf("[") + 1);
+            temp.delete(temp.lastIndexOf("]"), temp.length());
+            String[] f = String.valueOf(temp).split(",");
+            if (f[0].equals("")) {
+                Warnings.offer("W1: Accepting state is not defined");
+            } else {
+                for (String s : f) {
+                    if (graph.hasVertex(s)) {
+                        finSt.add(s);
+                    } else {
+                        Errors.offer("E1: A state '" + s + "' is not in the set of states");
+                        this.output();
+                        System.exit(0);
+                    }
+                }
+            }
+        }
 
         temp = new StringBuilder(scanner.nextLine());
-        temp.delete(0, temp.lastIndexOf("[") + 1);
-        temp.delete(temp.lastIndexOf("]"), temp.length());
-        String [] trans1 = new String(temp).split(",");
-        trans2 = new String[trans1.length][];
-        for (int i = 0; i < trans1.length; i++) {
-            trans2[i] = trans1[i].split(">");
+        check  = new StringBuilder(temp);
+        if(check.lastIndexOf("]")!=check.length()-1){
+            Errors.offer("E5: Input file is malformed");
+            this.output();
+            System.exit(0);
+        }
+        sss = String.valueOf(check.delete(check.lastIndexOf("[")+1,check.lastIndexOf("]")));
+        if(!sss.equals("trans=[]")) {
+            Errors.offer("E5: Input file is malformed");
+            this.output();
+            System.exit(0);
+        }else {
+            temp.delete(0, temp.lastIndexOf("[") + 1);
+            temp.delete(temp.lastIndexOf("]"), temp.length());
+            String[] trans1 = String.valueOf(temp).split(",");
+            trans = new String[trans1.length][];
+            for (int i = 0; i < trans1.length; i++) {
+                trans[i] = trans1[i].split(">");
+            }
         }
     }
 
+    public void transToGraph(){
+        for (int i = 0; i<trans.length;i++ ) {
+            if(!graph.hasVertex(trans[i][0]) || !graph.hasVertex(trans[i][2]) ||!alphabet.contains(trans[i][1])){
+                if(!graph.hasVertex(trans[i][0])){
+                    Errors.offer("E1: A state '"+trans[i][0]+"' is not in the set of states");
+                    this.output();
+                    System.exit(0);
+                }
+                if(!graph.hasVertex(trans[i][2])){
+                    Errors.offer("E1: A state '"+trans[i][2]+"' is not in the set of states");
+                    this.output();
+                    System.exit(0);
+                }
+                if(!FSA.alphabet.contains(trans[i][1])){
+                    Errors.offer("E3: A transition '"+trans[i][1]+"' is not represented in the alphabet");
+                    this.output();
+                    System.exit(0);
+                }
+            }else {
+                graph.addEdge(trans[i][0], trans[i][2], trans[i][1]);
+            }
 
+        }
+    }
 
+    public void check(){
+        if(!graph.allIsJoin()){
+            Errors.offer("E2: Some states are disjoint");
+            this.output();
+            System.exit(0);
+        }
+         if(!graph.isReachable(initSt)){
+            Warnings.offer("W2: Some states are not reachable from the initial state");
+        }
+    }
 
+    public void output(){
 
+        try {
+            FileWriter writer = new FileWriter("result.txt");
+
+            if(!Errors.isEmpty()){
+                writer.write("Error:\n");
+                int size = Errors.size();
+                for(int i = 0; i < size; i++){
+                    writer.write(Errors.poll()+"\n");
+                }
+            }
+            else if(!Warnings.isEmpty()){
+                writer.write("FSA is incomplete\n");
+                writer.write("Warning:\n");
+                int size = Warnings.size();
+                for(int j = 0; j < size; j++){
+                    writer.write(Warnings.poll()+"\n");
+                }
+            }
+            else{
+                writer.write("FSA is complete\n");
+            }
+
+            writer.close();
+        }
+
+        catch (IOException e) {
+
+            System.out.print(e.getMessage());
+        }
+
+    }
+}
+
+class Graph<T>{
+    HashSet<String> alphabet;
+    HashSet<T> visited_states = new HashSet<>();
+
+    Graph(HashSet<String> alphabet){
+        this.alphabet = alphabet;
+    }
+
+    private Map<T, List<T> > map = new HashMap<>();
+
+    public void addVertex(T s)
+    {
+        map.put(s, new LinkedList<T>());
+    }
+
+    public void addEdge(T source, T destination, T edge) {
+
+        if (!map.containsKey(source))
+            addVertex(source);
+
+        if (!map.containsKey(destination))
+            addVertex(destination);
+
+        map.get(source).add(destination);
+
+    }
+
+    public boolean hasVertex(T s) {
+        return map.containsKey(s);
+    }
+
+    public boolean hasEdge(T s, T d) {
+        return map.get(s).contains(d);
+    }
+
+    public boolean allIsJoin(){
+
+        for(T key1 : map.keySet()){
+            for(T key2 : map.keySet()){
+               if(this.hasEdge(key1,key2) && !key1.equals(key2)){
+                   return true;
+               }
+            }
+        }
+        return false;
+
+    }
+
+    public boolean isReachable(T initSt) {
+        visited_states.add(initSt);
+        dfs(initSt, null);
+        for (T s : map.keySet()) {
+            if (!visited_states.contains(s)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public void dfs(T curState,T prevState){
+        for(List<T> s: map.values()){
+            for(T ss:s){
+                if(!visited_states.contains(ss) && ss!=prevState){
+                    visited_states.add(ss);
+                    dfs(ss,curState);
+                }
+            }
+
+        }
+    }
 }
 
 interface ICircularBoundedQueue<T> {
