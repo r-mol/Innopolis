@@ -32,9 +32,15 @@
 #### • [Lab-3](BS-Year1/DSA/Lab-3)
 ### 📍 Java - Language
 ####
-## 📌[SSAD](BS-Year1/SSAD/Lab-1)
+## 📌[SSAD](BS-Year1/SSAD)
 ### 📍Assignments & Exams
+#### • [Assignment-1 "Java"](BS-Year1/SSAD/Assignment-1)
 ### 📍 C++ - Language
 #### • [Lab-2](BS-Year1/SSAD/Lab-2)
 #### • [Lab-3](BS-Year1/SSAD/Lab-3)
+### 📍 Java - Language
+####
+## 📌[TCS](BS-Year1/TCS)
+### 📍Assignments & Exams
+#### • [Assignment-1 "Java"](BS-Year1/TCS/Assignment-1)
 ### 📍 Java - Language
