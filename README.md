@@ -42,5 +42,5 @@
 ####
 ## 📌[TCS](BS-Year1/TCS)
 ### 📍Assignments & Exams
-#### • [Assignment-1 "Java"](BS-Year1/TCS/Assignment-1)
+#### • [Assignment-1 "Java"](BS-Year1/TCS/Assignment1)
 ### 📍 Java - Language
