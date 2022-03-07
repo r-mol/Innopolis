@@ -1,5 +1,0 @@
-states=[1,2,3]
-alpha=[a,b]
-init.st=[1]
-fin.st=[]
-trans=[1>a>2,3>b>2]
