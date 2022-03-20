@@ -1,1 +1,1 @@
--4
+Exception, intended line width is not specified!
