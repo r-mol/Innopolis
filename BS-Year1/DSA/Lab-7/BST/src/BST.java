@@ -3,40 +3,60 @@ import java.util.*;
 public class BST {
     static int Index = 0;
     public static void main(String[] args) {
+
         Scanner input = new Scanner(System.in);
+
         int count = input.nextInt();
         Node root = new Node(input.nextInt());
         Index++;
         int temp = count - 1;
+
         while (temp != 0) {
             insert(root, new Node(input.nextInt()));
             temp--;
         }
-//        root.left = new Node(10);
-//        root.right = new Node(30);
-//        root.left.left = new Node(5);
-//        root.left.left.right = new Node(7);
-//        root.left.right = new Node(15);
-//        root.right.left = new Node(25);
-//        root.right.right = new Node(35);
-//        root.left.right.left = new Node(13);
-//        root.left.right.right = new Node(18);
-        System.out.println(count);
-            output(root);
-        System.out.println(1);
+
+//        System.out.println(count);
+//        output(root);
+//        System.out.println(Min(root).key);
+//        System.out.println(Max(root).key);
+        //remove(Min(root));
+        //remove(root.right);
+        remove(root.left);
+        output(root);
     }
 
-    public static void insert(Node x, Node z) {
-        Node y = null;
+    public static Node Min(Node x){
+        while (x.left != null){
+            x = x.left;
+        }
+        return x;
+    }
 
+    public static Node Max(Node x){
+        while (x.right != null){
+            x = x.right;
+        }
+        return x;
+    }
+
+    public static Node search(Node x, int k){
+        Node y = null;
         while (x != null) {
             y = x;
-            if (z.key < x.key) {
+            if (k < x.key) {
                 x = x.left;
             } else {
                 x = x.right;
             }
         }
+        return y;
+    }
+
+    public static void insert(Node x, Node z) {
+        Node y;
+        y = search(x,z.key);
+
         z.p = y;
         if (z.key < y.key) {
             y.left = z;
@@ -45,21 +65,96 @@ public class BST {
         }
     }
 
+    public static void remove(Node x){
+        if(x.left == null && x.right == null){
+            if(x.p.left  == x){
+                x.p.left = null;
+            }
+            else{
+                x.p.right = null;
+            }
+        }
+        else if(x.left != null && x.right == null){
+            if(x.p.left  == x){
+                x.p.left = x.left;
+            }
+            else{
+                x.p.right = x.left;
+            }
+        }
+        else if(x.left == null && x.right != null){
+            if(x.p.left  == x){
+                x.p.left = x.right;
+            }
+            else{
+                x.p.right = x.right;
+            }
+        }
+        else{
+            Node c = Predecessor(x);
+            if(c.p.right == c){
+                c.p.right = null;
+            }
+            else{
+                c.p.left = null;
+            }
+            if(x.p.right == x){
+                x.p.right = c;
+            }
+            else{
+                x.p.left = c;
+            }
+            c.p = x.p;
+            c.right = x.right;
+            c.left = x.left;
+        }
+    }
+
+    public static Node Successor (Node x){
+        Node t = null;
+        if (x.right != null) {
+            t = x.right;
+
+            while (t.left != null) {
+                t = t.left;
+            }
+
+        }
+        return t;
+    }
+
+    public static Node Predecessor (Node x){
+        Node t = null;
+        if (x.left != null) {
+            t = x.left;
+
+            while (t.right != null) {
+                t = t.right;
+            }
+
+        }
+        return t;
+    }
+
     public static void output(Node t) {
         System.out.print(t.key + " ");
+
         if (t.left == null) {
             System.out.print(-1+ " ");
         } else {
-            System.out.print(t.left.index + " ");
+            System.out.print(t.left.key + " ");
         }
+
         if (t.right == null) {
             System.out.println(-1 );
         } else {
-            System.out.println(t.right.index);
+            System.out.println(t.right.key);
         }
+
         if (t.left != null) {
             output(t.left);
         }
+
         if (t.right != null) {
             output(t.right);
         }
