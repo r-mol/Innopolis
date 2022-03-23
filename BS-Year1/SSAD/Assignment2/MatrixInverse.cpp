@@ -36,10 +36,6 @@ void input() {
     }
 }
 
-void inverse(double determinant){
-
-}
-
 int main() {
 
     input();
