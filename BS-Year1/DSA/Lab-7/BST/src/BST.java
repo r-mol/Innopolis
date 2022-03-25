@@ -2,29 +2,6 @@ import java.util.*;
 
 public class BST {
     static int Index = 0;
-    public static void main(String[] args) {
-
-        Scanner input = new Scanner(System.in);
-
-        int count = input.nextInt();
-        Node root = new Node(input.nextInt());
-        Index++;
-        int temp = count - 1;
-
-        while (temp != 0) {
-            insert(root, new Node(input.nextInt()));
-            temp--;
-        }
-
-//        System.out.println(count);
-//        output(root);
-//        System.out.println(Min(root).key);
-//        System.out.println(Max(root).key);
-        //remove(Min(root));
-        //remove(root.right);
-        remove(root.left);
-        output(root);
-    }
 
     public static Node Min(Node x){
         while (x.left != null){
