@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Vector;
 import java.util.Iterator;
 
@@ -103,7 +101,7 @@ class Graph2<V,E>{
     class Edge{
         Vertex from;
         Vertex to;
-        E label;
+        E weight;
 
         DoublyLinkedList.Node refEdge;
         DoublyLinkedList.Node refFrom;
@@ -112,7 +110,7 @@ class Graph2<V,E>{
         public Edge(Vertex from, Vertex to, E weight) {
             this.from = from;
             this.to = to;
-            this.label = weight;
+            this.weight = weight;
         }
     }
 
@@ -197,21 +195,18 @@ class Graph2<V,E>{
 
     void removeEdge(Edge edge){
         adjacentMatrix.get(edge.from.index).add(edge.to.index,null);
-        adjacentMatrix.get(edge.from.index).remove(adjacentMatrix.get(edge.to.index).size()-1);//check
+        adjacentMatrix.get(edge.from.index).remove(edge.to.index+1);//check
         adjacentMatrix.get(edge.to.index).add(edge.from.index,null);
-        adjacentMatrix.get(edge.to.index).remove(adjacentMatrix.get(edge.from.index).size()-1);//check
+        adjacentMatrix.get(edge.to.index).remove(edge.from.index+1);//check
         this.edges.remove(edge.refEdge);
     }
 
     void removeVertex(Vertex vertex){
         Vector<Edge> incidents = this.incidentEdges(vertex);
-        for(int i = 0; i < incidents.size();++i){
-            this.removeEdge(incidents.get(i));
+        for (Edge incident : incidents) {
+            this.removeEdge(incident);
         }
-        for(int i = 0; i < adjacentMatrix.size();++i){
-            Vector<Edge> vec = adjacentMatrix.get(i);
-            //vec.remove(vec)
-        }
+        this.vertices.remove(vertex.refVertex);
     }
 
     boolean nullObject(){
@@ -222,20 +217,48 @@ class Graph2<V,E>{
         }
         return false;
     }
+
+    public int degree(Vertex vertex) {
+        int count  = 0;
+        for(Edge edge : adjacentMatrix.get(vertex.index)) {
+            if(edge!=null){
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (Edge edge : this.edges) {
+            stringBuilder.append(edge.from.value).append(" -- ").append(edge.weight).append(" -- ").append(edge.to.value).append("\n");
+        }
+        return stringBuilder.toString();
+    }
 }
 
 public class Main2 {
     public static void main(String[] args) {
-        Graph2<String, Integer> graph = new Graph2<String, Integer>();
-        Graph2<String, Integer>.Vertex Innopolis, kazan, moscow, nowosyb;
-        kazan = graph.addVertex("Kazan");
-        Innopolis = graph.addVertex("Innopolis");
-        moscow = graph.addVertex("Moscow");
-        nowosyb = graph.addVertex("Novosyb");
-        Graph2<String, Integer>.Edge e1 = graph.addEdge(kazan, Innopolis, 40);
-        Graph2<String, Integer>.Edge e2 = graph.addEdge(moscow, kazan, 1000);
-        Graph2<String, Integer>.Edge e3 = graph.addEdge(kazan, nowosyb, 2000);
+        Graph2<String, Integer> g = new Graph2<>();
+        Graph2<String, Integer>.Vertex moscow = g.addVertex("Moscow");
+        Graph2<String, Integer>.Vertex kazan = g.addVertex("Kazan");
+        Graph2<String, Integer>.Vertex innopolis = g.addVertex("Innopolis");
+        Graph2<String, Integer>.Vertex ekaterinburg = g.addVertex("Ekaterinburg");
 
-        System.out.println("huy");
+        g.addEdge(moscow, innopolis, 800);
+        g.addEdge(kazan, innopolis, 38);
+        Graph2<String, Integer>.Edge kazan_eka = g.addEdge(kazan, ekaterinburg, 1000);
+        g.addEdge(moscow, ekaterinburg, 900);
+
+        System.out.println(g);
+
+        g.removeVertex(moscow);
+        System.out.println("Degree Kazan = " + g.degree(kazan));
+        System.out.println("After removing Moscow");
+        System.out.println(g);
+
+        g.removeEdge(kazan_eka);
+        System.out.println("After removing kazan_eka");
+        System.out.println(g);
     }
 }
