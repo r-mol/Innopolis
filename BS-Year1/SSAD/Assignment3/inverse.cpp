@@ -44,8 +44,8 @@ void inverse(int n){
 }
 
 int main() {
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
+    freopen("/Users/roman_molochkov/Developer/CLionProjects/Innopolis/input.txt", "r", stdin);
+    freopen("/Users/roman_molochkov/Developer/CLionProjects/Innopolis/output.txt", "w", stdout);
     int k;
     int n;
 
@@ -125,6 +125,13 @@ int main() {
     }
 
     inverse(n+1);
+for(int i = 0;i< SIZE; i++) {
+    for (int j = 0; j<SIZE; j++){
+        cout << inv[i][j] << " ";
+    }
+    cout << '\n';
+}
+
 
     cout << endl << "(A_T*A)_-1:"<< endl;
     for(int i=1;i<=n+1;i++)
