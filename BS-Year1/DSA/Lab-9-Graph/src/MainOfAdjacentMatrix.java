@@ -86,7 +86,7 @@ class DoublyLinkedList<E> implements Iterable<E> {
     }
 }
 
-class Graph2<V,E>{
+class GraphAdjacentMatrix<V,E>{
 
     class Vertex{
         V value;
@@ -118,7 +118,7 @@ class Graph2<V,E>{
     DoublyLinkedList<Edge> edges;
     Vector<Vector<Edge>> adjacentMatrix = new Vector<Vector<Edge>>();
 
-    public Graph2() {
+    public GraphAdjacentMatrix() {
         this.vertices = new DoublyLinkedList<>();
         this.edges = new DoublyLinkedList<>();
     }
@@ -237,17 +237,17 @@ class Graph2<V,E>{
     }
 }
 
-public class Main2 {
+public class MainOfAdjacentMatrix {
     public static void main(String[] args) {
-        Graph2<String, Integer> g = new Graph2<>();
-        Graph2<String, Integer>.Vertex moscow = g.addVertex("Moscow");
-        Graph2<String, Integer>.Vertex kazan = g.addVertex("Kazan");
-        Graph2<String, Integer>.Vertex innopolis = g.addVertex("Innopolis");
-        Graph2<String, Integer>.Vertex ekaterinburg = g.addVertex("Ekaterinburg");
+        GraphAdjacentMatrix<String, Integer> g = new GraphAdjacentMatrix<>();
+        GraphAdjacentMatrix<String, Integer>.Vertex moscow = g.addVertex("Moscow");
+        GraphAdjacentMatrix<String, Integer>.Vertex kazan = g.addVertex("Kazan");
+        GraphAdjacentMatrix<String, Integer>.Vertex innopolis = g.addVertex("Innopolis");
+        GraphAdjacentMatrix<String, Integer>.Vertex ekaterinburg = g.addVertex("Ekaterinburg");
 
         g.addEdge(moscow, innopolis, 800);
         g.addEdge(kazan, innopolis, 38);
-        Graph2<String, Integer>.Edge kazan_eka = g.addEdge(kazan, ekaterinburg, 1000);
+        GraphAdjacentMatrix<String, Integer>.Edge kazan_eka = g.addEdge(kazan, ekaterinburg, 1000);
         g.addEdge(moscow, ekaterinburg, 900);
 
         System.out.println(g);

@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 //undirected
-class Graph1<V, E> {
+class GraphAdjacentList<V, E> {
 
     class Vertex {
         V weight;
@@ -30,7 +30,7 @@ class Graph1<V, E> {
     List<Edge> edges;
 
 
-    public Graph1() {
+    public GraphAdjacentList() {
         this.vertices = new ArrayList<Vertex>();
         this.edges = new ArrayList<Edge>();
     }
@@ -74,18 +74,18 @@ class Graph1<V, E> {
     }
 }
 
-public class Main {
+public class MainOfAdjacentList {
 
     public static void main(String[] args) {
-        Graph1<String, Integer> graph = new Graph1<String, Integer>();
-        Graph1<String, Integer>.Vertex Innopolis, kazan, moscow, nowosyb;
+        GraphAdjacentList<String, Integer> graph = new GraphAdjacentList<String, Integer>();
+        GraphAdjacentList<String, Integer>.Vertex Innopolis, kazan, moscow, nowosyb;
         kazan = graph.addVertex("Kazan");
         Innopolis = graph.addVertex("Innopolis");
         moscow = graph.addVertex("Moscow");
         nowosyb = graph.addVertex("Novosyb");
-        Graph1<String, Integer>.Edge e1 = graph.addEdge(Innopolis, kazan, 40);
-        Graph1<String, Integer>.Edge e2 = graph.addEdge(moscow, kazan, 1000);
-        Graph1<String, Integer>.Edge e3 = graph.addEdge(kazan, nowosyb, 2000);
+        GraphAdjacentList<String, Integer>.Edge e1 = graph.addEdge(Innopolis, kazan, 40);
+        GraphAdjacentList<String, Integer>.Edge e2 = graph.addEdge(moscow, kazan, 1000);
+        GraphAdjacentList<String, Integer>.Edge e3 = graph.addEdge(kazan, nowosyb, 2000);
 
         graph.removeVertex(kazan);
 
@@ -96,7 +96,7 @@ public class Main {
         System.out.println(graph.adjacent(Innopolis,moscow));
         System.out.println(graph.adjacent(moscow,kazan));
 
-        for (Graph1<String, Integer>.Edge edge : graph.edges) {
+        for (GraphAdjacentList<String, Integer>.Edge edge : graph.edges) {
             System.out.println(edge.to.weight + " " + edge.from.weight + " " + edge.weight);
         }
     }
