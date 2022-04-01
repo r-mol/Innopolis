@@ -1,15 +1,15 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 //undirected
 class GraphAdjacentList<V, E> {
 
     class Vertex {
-        V weight;
+        V value;
         List<Edge> adjacent;
 
-        public Vertex(V weight) {
-            this.weight = weight;
+        public Vertex(V value) {
+            this.value = value;
             this.adjacent = new ArrayList<Edge>();
         }
     }
@@ -23,6 +23,10 @@ class GraphAdjacentList<V, E> {
             this.from = from;
             this.to = to;
             this.weight = weight;
+        }
+
+        public int getWeight(){
+            return (int)weight;
         }
     }
 
@@ -58,6 +62,72 @@ class GraphAdjacentList<V, E> {
         return false;
     }
 
+    List<Vertex> endVertices(Edge edge){
+        List<Vertex> vertices_pair = new ArrayList<>();
+        vertices_pair.add(edge.from);
+        vertices_pair.add(edge.to);
+        return vertices_pair;
+    }
+
+    Vertex opposite(Vertex vertex1, Edge edge){
+        if(edge.from == vertex1){
+            return edge.to;
+        }
+        else{
+            return edge.from;
+        }
+    }
+
+    public int MST(){
+        int minimumWeight = 0;
+        List<Edge> edgesCopy = edges.stream().sorted(Comparator.comparingInt(Edge::getWeight)).collect(Collectors.toList());
+        List<Vertex> vertexCopy = new ArrayList<>();
+
+        while(vertices.size() != vertexCopy.size()){
+            for(Edge edge: edgesCopy){
+                if(!vertexCopy.contains(edge.from) && !vertexCopy.contains(edge.to)){
+                    vertexCopy.add(edge.from);
+                    vertexCopy.add(edge.to);
+                    minimumWeight+=(int)edge.weight;
+                    edgesCopy.remove(edge);
+                    System.out.println(edge.from.value + " " + edge.to.value);
+                    break;
+                }
+                else if(!vertexCopy.contains(edge.from)){
+                    vertexCopy.add(edge.from);
+                    minimumWeight+=(int)edge.weight;
+                    edgesCopy.remove(edge);
+                    System.out.println( edge.from.value);
+                    break;
+                }else if(!vertexCopy.contains(edge.to)){
+                    vertexCopy.add(edge.to);
+                    minimumWeight+=(int)edge.weight;
+                    edgesCopy.remove(edge);
+                    System.out.println(edge.to.value);
+
+                    break;
+                }else{
+                    edgesCopy.remove(edge);
+                    break;
+                }
+            }
+        }
+       // edgesCopy.forEach(e -> System.out.println(e.weight));
+        return minimumWeight;
+    }
+
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (Edge e : this.edges) {
+            stringBuilder.append(e.from.value).append(" -- ").append(e.weight).append(" -- ").append(e.to.value).append("\n");
+        }
+        return stringBuilder.toString();
+    }
+
+    public int degree(Vertex v) {
+        return v.adjacent.size();
+    }
+
     void removeEdge(Edge edge){
         edge.from.adjacent.remove(edge);
         edge.to.adjacent.remove(edge);
@@ -83,11 +153,15 @@ public class MainOfAdjacentList {
         Innopolis = graph.addVertex("Innopolis");
         moscow = graph.addVertex("Moscow");
         nowosyb = graph.addVertex("Novosyb");
-        GraphAdjacentList<String, Integer>.Edge e1 = graph.addEdge(Innopolis, kazan, 40);
-        GraphAdjacentList<String, Integer>.Edge e2 = graph.addEdge(moscow, kazan, 1000);
-        GraphAdjacentList<String, Integer>.Edge e3 = graph.addEdge(kazan, nowosyb, 2000);
+        GraphAdjacentList<String, Integer>.Edge e1 = graph.addEdge(Innopolis, kazan, 100);
+        GraphAdjacentList<String, Integer>.Edge e2 = graph.addEdge(Innopolis, moscow, 1000);
+        GraphAdjacentList<String, Integer>.Edge e3 = graph.addEdge(Innopolis, nowosyb, 600);
+        GraphAdjacentList<String, Integer>.Edge e4 = graph.addEdge(kazan, nowosyb, 10000);
+        GraphAdjacentList<String, Integer>.Edge e5 = graph.addEdge(kazan, moscow, 80);
+        GraphAdjacentList<String, Integer>.Edge e6 = graph.addEdge(moscow, nowosyb, 700);
 
-        graph.removeVertex(kazan);
+
+        System.out.println(graph.MST());
 
         graph.removeEdge(e2);
         graph.removeEdge(e2);
@@ -97,7 +171,7 @@ public class MainOfAdjacentList {
         System.out.println(graph.adjacent(moscow,kazan));
 
         for (GraphAdjacentList<String, Integer>.Edge edge : graph.edges) {
-            System.out.println(edge.to.weight + " " + edge.from.weight + " " + edge.weight);
+            System.out.println(edge.to.value + " " + edge.from.value + " " + edge.weight);
         }
     }
 }
