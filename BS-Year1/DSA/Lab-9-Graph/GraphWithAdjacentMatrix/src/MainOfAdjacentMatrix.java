@@ -163,10 +163,10 @@ class GraphAdjacentMatrix<V,E>{
     }
 
     Vector<Vertex> endVertices(Edge edge){
-        Vector<Vertex> verticex_pair = new Vector<>();
-        verticex_pair.add(edge.from);
-        verticex_pair.add(edge.to);
-        return verticex_pair;
+        Vector<Vertex> vertices_pair = new Vector<>();
+        vertices_pair.add(edge.from);
+        vertices_pair.add(edge.to);
+        return vertices_pair;
     }
 
     Vector<Edge> incidentEdges(Vertex vertex){
