@@ -1,18 +1,24 @@
+/*
+@author Roman Molochkov
+Group #4
+Telegram: @roman_molochkov
+Email: r.molochkov@innopolis.university
+ */
+
 import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int countOperations = Integer.parseInt(scanner.nextLine());
-        FibonacciHeap<String> queue = new FibonacciHeap<>();
-        Map<String,FibonacciHeapNode<String>> existing = new TreeMap();
+        FibonacciHeap<Double, String> queue = new FibonacciHeap<>();
+        FibonacciHeapNode<Double, String> tempNode = null;
 
         String tempString;
         String[] splitString;
         String command;
         String branchName;
-        int penalty;
-        FibonacciHeapNode<String> tempNode = null;
+        double penalty;
 
         while (countOperations != 0) {
             tempString = scanner.nextLine();
@@ -20,19 +26,11 @@ public class Main {
             command = splitString[0];
             if (command.equals("ADD")) {
                 branchName = splitString[1];
-                penalty = Integer.parseInt(splitString[2]);
-
-                if (!existing.containsKey(branchName)) {
-                    tempNode = new FibonacciHeapNode<>(branchName, penalty);
-                    existing.put(branchName,tempNode);
-                    queue.insert(tempNode);
-                } else {
-                    queue.decreaseKey(existing.get(branchName), penalty);
-                }
+                penalty = Double.parseDouble(splitString[2]);
+                tempNode = new FibonacciHeapNode<>(branchName, penalty);
+                queue.insert(tempNode);
             } else if (command.equals("PRINT_MIN")) {
-
                 tempNode = queue.extractMin();
-                existing.remove(tempNode.data);
                 System.out.println(tempNode.data);
             }
 
@@ -41,31 +39,28 @@ public class Main {
     }
 }
 
-interface IPriorityQueue<V extends Comparable<V>> {
-    void insert(FibonacciHeapNode<V> x);
+interface IPriorityQueue<K extends Comparable<K>, V extends Comparable<V>> {
+    void insert(FibonacciHeapNode<K, V> x);
 
-    FibonacciHeapNode<V> findMin();
+    FibonacciHeapNode<K, V> findMin();
 
-    FibonacciHeapNode<V> extractMin();
+    FibonacciHeapNode<K, V> extractMin();
 
-    void decreaseKey(FibonacciHeapNode<V> x, double key);
+    void decreaseKey(FibonacciHeapNode<K, V> x, K key);
 
-    void delete(FibonacciHeapNode<V> x);
+    void delete(FibonacciHeapNode<K, V> x);
 
-    void union(FibonacciHeap<V> anotherQueue);
+    void union(FibonacciHeap<K, V> anotherQueue);
 }
 
-class FibonacciHeap<V extends Comparable<V>> implements IPriorityQueue {
-    private static final double oneOverLogPhi = 1.0 / Math.log((1.0 + Math.sqrt(5.0)) / 2.0);
+class FibonacciHeap<K extends Comparable<K>, V extends Comparable<V>> implements IPriorityQueue {
     private FibonacciHeapNode min = null;
     private int n = 0;
 
-    public FibonacciHeap() {
-    }
+    public FibonacciHeap() {}
 
     @Override
     public void insert(FibonacciHeapNode x) {
-
         if (min == null) {
             min = x;
         } else {
@@ -74,7 +69,7 @@ class FibonacciHeap<V extends Comparable<V>> implements IPriorityQueue {
             min.right = x;
             x.right.left = x;
 
-            if (x.key < min.key) {
+            if (x.key.compareTo(min.key) < 0) {
                 min = x;
             } else if (x.key == min.key) {
                 if (x.data.compareTo(min.data) < 0) {
@@ -87,18 +82,18 @@ class FibonacciHeap<V extends Comparable<V>> implements IPriorityQueue {
 
 
     @Override
-    public FibonacciHeapNode<V> findMin() {
+    public FibonacciHeapNode<K, V> findMin() {
         return min;
     }
 
     @Override
-    public FibonacciHeapNode<V> extractMin() {
-        FibonacciHeapNode<V> z = min;
+    public FibonacciHeapNode<K, V> extractMin() {
+        FibonacciHeapNode<K, V> z = min;
 
         if (z != null) {
             int numKids = z.degree;
-            FibonacciHeapNode<V> x = z.child;
-            FibonacciHeapNode<V> tempRight;
+            FibonacciHeapNode<K, V> x = z.child;
+            FibonacciHeapNode<K, V> tempRight;
 
             while (numKids > 0) {
                 tempRight = x.right;
@@ -125,25 +120,23 @@ class FibonacciHeap<V extends Comparable<V>> implements IPriorityQueue {
                 min = z.right;
                 consolidate();
             }
-
             n--;
         }
-
         return z;
     }
 
     @Override
-    public void decreaseKey(FibonacciHeapNode x, double key) {
-        if (key <= x.key) {
+    public void decreaseKey(FibonacciHeapNode x, Comparable key) {
+        if (key.compareTo(x.key) < 0 || key.compareTo(x.key) == 0) {
             x.key = key;
             FibonacciHeapNode y = x.parent;
 
-            if ((y != null) && (x.key <= y.key)) {
+            if ((y != null) && (x.key.compareTo(y.key) < 0 || x.key.compareTo(y.key) == 0)) {
                 cut(x, y);
                 cascadingCut(y);
             }
 
-            if (x.key < min.key) {
+            if (x.key.compareTo(min.key) < 0) {
                 min = x;
             } else {
                 if (x.key == min.key) {
@@ -158,7 +151,6 @@ class FibonacciHeap<V extends Comparable<V>> implements IPriorityQueue {
     @Override
     public void delete(FibonacciHeapNode x) {
         decreaseKey(x, Double.NEGATIVE_INFINITY);
-
         extractMin();
     }
 
@@ -172,7 +164,7 @@ class FibonacciHeap<V extends Comparable<V>> implements IPriorityQueue {
                     min.right = anotherQueue.min;
                     anotherQueue.min.left = min;
 
-                    if (anotherQueue.min.key < min.key) {
+                    if (anotherQueue.min.key.compareTo(min.key) < 0) {
                         min = anotherQueue.min;
                     } else {
                         if (anotherQueue.min.key == min.key) {
@@ -191,15 +183,15 @@ class FibonacciHeap<V extends Comparable<V>> implements IPriorityQueue {
     }
 
     public void consolidate() {
-        int arraySize = ((int) Math.floor(Math.log(n) * oneOverLogPhi)) + 1;
-        List<FibonacciHeapNode<V>> arr = new ArrayList<>(arraySize);
+        int arraySize = ((int) Math.floor(Math.log(n) / Math.log((1.0 + Math.sqrt(5.0)) / 2.0))) + 1;
+        List<FibonacciHeapNode<K, V>> arr = new ArrayList<>(arraySize);
 
         for (int i = 0; i < arraySize; i++) {
             arr.add(null);
         }
 
         int numRoots = 0;
-        FibonacciHeapNode<V> x = min;
+        FibonacciHeapNode<K, V> x = min;
 
         if (x != null) {
             numRoots++;
@@ -213,22 +205,22 @@ class FibonacciHeap<V extends Comparable<V>> implements IPriorityQueue {
 
         while (numRoots > 0) {
             int d = x.degree;
-            FibonacciHeapNode<V> next = x.right;
+            FibonacciHeapNode<K, V> next = x.right;
 
             for (; ; ) {
-                FibonacciHeapNode<V> y = arr.get(d);
+                FibonacciHeapNode<K, V> y = arr.get(d);
                 if (y == null) {
                     break;
                 }
 
-                if (x.key > y.key) {
-                    FibonacciHeapNode<V> temp = y;
+                if (x.key.compareTo(y.key) > 0) {
+                    FibonacciHeapNode<K, V> temp = y;
                     y = x;
                     x = temp;
-                }else {
-                    if (x.key == y.key) {
+                } else {
+                    if (x.key.compareTo(y.key)  == 0) {
                         if (x.data.compareTo(y.data) > 0) {
-                            FibonacciHeapNode<V> temp = y;
+                            FibonacciHeapNode<K, V> temp = y;
                             y = x;
                             x = temp;
                         }
@@ -250,7 +242,7 @@ class FibonacciHeap<V extends Comparable<V>> implements IPriorityQueue {
         min = null;
 
         for (int i = 0; i < arraySize; i++) {
-            FibonacciHeapNode<V> y = arr.get(i);
+            FibonacciHeapNode<K, V> y = arr.get(i);
             if (y == null) {
                 continue;
             }
@@ -264,10 +256,10 @@ class FibonacciHeap<V extends Comparable<V>> implements IPriorityQueue {
                 min.right = y;
                 y.right.left = y;
 
-                if (y.key < min.key) {
+                if (y.key.compareTo((K) min.key) < 0) {
                     min = y;
                 } else {
-                    if (y.key == min.key) {
+                    if (y.key.compareTo((K) min.key) == 0) {
                         if (y.data.compareTo((V) min.data) < 0) {
                             min = y;
                         }
@@ -279,7 +271,7 @@ class FibonacciHeap<V extends Comparable<V>> implements IPriorityQueue {
         }
     }
 
-    public void fibHeapLink(FibonacciHeapNode<V> y, FibonacciHeapNode<V> x) {
+    public void fibHeapLink(FibonacciHeapNode<K, V> y, FibonacciHeapNode<K, V> x) {
         y.left.right = y.right;
         y.right.left = y.left;
 
@@ -301,7 +293,7 @@ class FibonacciHeap<V extends Comparable<V>> implements IPriorityQueue {
         y.mark = false;
     }
 
-    public void cut(FibonacciHeapNode<V> x, FibonacciHeapNode<V> y) {
+    public void cut(FibonacciHeapNode<K, V> x, FibonacciHeapNode<K, V> y) {
         x.left.right = x.right;
         x.right.left = x.left;
         y.degree--;
@@ -323,8 +315,8 @@ class FibonacciHeap<V extends Comparable<V>> implements IPriorityQueue {
         x.mark = false;
     }
 
-    public void cascadingCut(FibonacciHeapNode<V> y) {
-        FibonacciHeapNode<V> z = y.parent;
+    public void cascadingCut(FibonacciHeapNode<K, V> y) {
+        FibonacciHeapNode<K, V> z = y.parent;
 
         if (z != null) {
             if (!y.mark) {
@@ -340,21 +332,19 @@ class FibonacciHeap<V extends Comparable<V>> implements IPriorityQueue {
     public int size() {
         return n;
     }
-
-
 }
 
-class FibonacciHeapNode<V extends Comparable<V>> {
+class FibonacciHeapNode<K extends Comparable<K>, V extends Comparable<V>> {
     final V data;
-    FibonacciHeapNode<V> child;
-    FibonacciHeapNode<V> left;
-    FibonacciHeapNode<V> parent;
-    FibonacciHeapNode<V> right;
+    FibonacciHeapNode<K, V> child;
+    FibonacciHeapNode<K, V> left;
+    FibonacciHeapNode<K, V> parent;
+    FibonacciHeapNode<K, V> right;
     boolean mark;
-    double key;
+    K key;
     int degree;
 
-    public FibonacciHeapNode(V data, double key) {
+    public FibonacciHeapNode(V data, K key) {
         right = this;
         left = this;
         this.data = data;
