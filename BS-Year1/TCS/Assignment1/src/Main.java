@@ -8,15 +8,11 @@ import java.lang.*;
 public class Main {
     public static void main(String[] args) throws IOException {
         FSA<Object> test = new FSA<>();
-        // Input elements from file
         test.input();
-        // Move trans elements from the array to the Map in the Graph class
         test.transToGraph();
-
         if (test.Errors.isEmpty()) {
             test.check();
         }
-        // Output the answer to the file
         test.output();
     }
 }
@@ -273,7 +269,6 @@ class Graph<T> {
         return map.get(s).containsValue(d);
     }
 
-    // Check there are disjoint elements or not
     public boolean allIsJoin() {
         for (T key1 : map.keySet()) {
             for (T key2 : map.keySet()) {
@@ -285,7 +280,6 @@ class Graph<T> {
         return false;
     }
 
-    // Check if all states are reachable from the initial state
     public boolean isReachable(T initSt) {
         visited_states.add(initSt);
         dfs(initSt, null);
@@ -306,8 +300,6 @@ class Graph<T> {
         }
     }
 }
-
-// Implementing the Linked Circular Bounded Queue for using in Warnings
 
 interface ICircularBoundedQueue<T> {
     void offer(T value); // insert an element to the rear of the queue
