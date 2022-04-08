@@ -6,22 +6,32 @@ Email: r.molochkov@innopolis.university
  */
 
 import javafx.util.Pair;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class Main {
+
     // Milliseconds in a one day
     private static final long MS_IN_A_DAY = 1000 * 60 * 60 * 24;
 
-    public static Double getMax(List<Double> list) {
+    public static int get_days(int year, int month, int day) {
+        if (month < 3) {
+            year--;
+            month += 12;
+        }
+
+        return 365 * year + year / 4 - year / 100 + year / 400 + (153 * month - 457) / 5 + day - 306;
+    }
+
+    public static Integer getMax(List<Integer> list) {
         // initialize `min` to some maximum value
-        Double max = Double.MIN_VALUE;
+        Integer max = Integer.MIN_VALUE;
 
         // loop through every element in the list and
         // compare the minimum found so far with the current value
-        for (Double i: list)
-        {
+        for (Integer i : list) {
             // update min if found to be more than the current element
             if (max < i) {
                 max = i;
@@ -31,14 +41,13 @@ public class Main {
         return max;
     }
 
-    public static Double getMin(List<Double> list) {
+    public static Integer getMin(List<Integer> list) {
         // initialize `min` to some maximum value
-        Double min = Double.MAX_VALUE;
+        Integer min = Integer.MAX_VALUE;
 
         // loop through every element in the list and
         // compare the minimum found so far with the current value
-        for (Double i: list)
-        {
+        for (Integer i : list) {
             // update min if found to be more than the current element
             if (min > i) {
                 min = i;
@@ -58,112 +67,109 @@ public class Main {
         return new Date(date.getTime() - MS_IN_A_DAY);
     }
 
-    /* Merge function that merges two parts in the right order */
-    public static void Merge(Vector<Pair<Date, Double>> pairs, final int begin, final int mid, final int end) {
-        int len1 = mid - begin + 1; // Length of the left part
-        int len2 = end - mid; // Length of the right part
-        Vector<Pair<Date, Double>> L = new Vector<>(len1 + 1);
-        Vector<Pair<Date, Double>> R = new Vector<>(len2 + 1);
-
-        for (int i = 0; i < len1; ++i) {
-            L.add(i, pairs.get(begin + i));
-        }
-        for (int j = 0; j < len2; ++j) {
-            R.add(j, pairs.get(mid + j + 1));
+    /* Function of Counting Sort */
+    static void countSort(Vector<Pair<Date, Double>> pairs) {
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < pairs.size(); i++) {
+            list.add(i, get_days(pairs.get(i).getKey().getYear(), pairs.get(i).getKey().getMonth() + 1, pairs.get(i).getKey().getDate()));
         }
 
-        L.add(len1, new Pair<>(null, null));
-        R.add(len2, new Pair<>(null, null));
+        int min = getMin(list);
+        int max = getMax(list);
+        int n = max - min;
 
-        // Merging
-        int i = 0, j = 0;
-        for (int k = begin; k <= end; k++) {
-            if (R.get(j).getKey() != null && L.get(i).getKey() != null && (L.get(i).getKey().compareTo(R.get(j).getKey()) < 0 || L.get(i).getKey().compareTo(R.get(j).getKey()) == 0)) {
-                pairs.set(k, L.get(i));
-                i++;
-            } else if (R.get(j).getKey() == null) {
-                pairs.set(k, L.get(i));
-                i++;
+        Vector<Pair<Date, Double>> output = new Vector<>();
+        output.setSize(pairs.size());
+
+        int counting[] = new int[n + 1];
+
+
+        for (int i = 0; i < pairs.size(); ++i) {
+            ++counting[list.get(i) - min];
+        }
+
+        for (int i = 1; i <= n; ++i) {
+            counting[i] += counting[i - 1];
+        }
+
+        for (int i = pairs.size() - 1; i >= 0; i--) {
+            output.add(counting[list.get(i) - min] - 1, new Pair<Date, Double>(pairs.get(i).getKey(), pairs.get(i).getValue()));
+            output.remove(counting[list.get(i) - min]);
+            --counting[list.get(i) - min];
+        }
+
+        for (int i = 0; i < pairs.size(); i++) {
+            pairs.set(i, output.get(i));
+        }
+
+    }
+
+    /* Function Merge Sort */
+    public static void mergeSort(List<Double> numList) {
+        int mid;
+        List<Double> left = new ArrayList<>();
+        List<Double> right = new ArrayList<>();
+        if (numList.size() > 1) {
+            mid = numList.size() / 2;
+
+            for (int i = 0; i < mid; i++) {
+                left.add(numList.get(i));
+            }
+
+            for (int j = mid; j < numList.size(); j++) {
+                right.add(numList.get(j));
+            }
+
+            mergeSort(left);
+            mergeSort(right);
+            merge(numList, left, right);
+        }
+    }
+
+    /* Function of merging */
+    private static void merge(List<Double> numList, List<Double> left, List<Double> right) {
+        List<Double> temp = new ArrayList<>();
+
+        int numbersIndex = 0;
+        int leftIndex = 0;
+        int rightIndex = 0;
+        while (leftIndex < left.size() && rightIndex < right.size()) {
+            if (left.get(leftIndex) < right.get(rightIndex)) {
+                numList.set(numbersIndex, left.get(leftIndex));
+                leftIndex++;
             } else {
-                pairs.set(k, R.get(j));
-                j++;
+                numList.set(numbersIndex, right.get(rightIndex));
+                rightIndex++;
             }
-        }
-    }
-
-    /* Merge sort */
-    public static void MergeSort(Vector<Pair<Date, Double>> pairs, final int begin, final int end) {
-        if (begin < end) {
-            int mid = (begin + end) / 2; // Finding middle index
-
-            MergeSort(pairs, begin, mid); // Sorting left part
-            MergeSort(pairs, mid + 1, end); // Sorting right part
-            Merge(pairs, begin, mid, end); // Merging parts together
-        }
-    }
-
-    public static void InsertionSort(Vector<Double> arr){
-
-        int n = arr.size();
-        for (int i = 1; i < n; ++i) {
-            double key = arr.get(i);
-            int j = i - 1;
-
-            while (j >= 0 && arr.get(j) > key) {
-                arr.set(j+1,arr.get(j));
-                j = j - 1;
-            }
-            arr.set(j + 1, key);
+            numbersIndex++;
         }
 
-    }
-
-    public static void BucketSort(List<Double> tempList){
-        int n  = tempList.size();
-        double max = getMax(tempList);
-        double min = getMin(tempList);
-        double range = (max - min)/n;
-
-        Vector<Double>[] buckets = new Vector[n];
-
-        for (int i = 0; i < n; i++) {
-            buckets[i] = new Vector<Double>();
+        int tempIndex = 0;
+        if (leftIndex >= left.size()) {
+            temp = right;
+            tempIndex = rightIndex;
+        } else {
+            temp = left;
+            tempIndex = leftIndex;
         }
 
-        for (Double aDouble : tempList) {
-            double dif = (aDouble - min)/range - (int)((aDouble - min)/range);
-            if(dif == 0.0 && aDouble != min){
-                buckets[(int)((aDouble - min)/range) - 1].add(aDouble);
-            }
-            else{
-                buckets[(int)((aDouble - min)/range)].add(aDouble);
-            }
-        }
-
-        for (int i = 0; i < n; i++) {
-            InsertionSort(buckets[i]);
-        }
-
-
-        int index = 0;
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < buckets[i].size(); j++) {
-                tempList.set(index++,buckets[i].get(j));
-            }
+        for (int i = tempIndex; i < temp.size(); i++) {
+            numList.set(numbersIndex, temp.get(i));
+            numbersIndex++;
         }
     }
 
     /* Function finds median */
     public static double findMedian(LinkedCircularBoundedQueue<Double> queue) {
         LinkedCircularBoundedQueue<Double> tempQueue = new LinkedCircularBoundedQueue<>(queue);
-        List<Double> tempList = new ArrayList<>();
+        ArrayList<Double> tempList = new ArrayList<>();
 
         while (!tempQueue.isEmpty()) {
             tempList.add(tempQueue.peek());
             tempQueue.poll();
         }
 
-       BucketSort(tempList);
+        mergeSort(tempList);
 
         if (tempList.size() % 2 == 0) {
             return (tempList.get(tempList.size() / 2 - 1) + tempList.get(tempList.size() / 2)) / 2;
@@ -212,7 +218,7 @@ public class Main {
             if (!prevDate.equals(pairs.get(i).getKey()) && pairs.get(i).getValue() >= high) {
                 prevDate = pairs.get(i).getKey();
                 spent = pairs.get(i).getValue();
-                if(pairs.get(i).getValue() != 0 ) {
+                if (pairs.get(i).getValue() != 0) {
                     notifications += 1;
                 }
                 if (i == pairs.size() - 1 || !pairs.get(i + 1).getKey().equals(pairs.get(i).getKey())) {
@@ -237,6 +243,7 @@ public class Main {
                 }
             }
         }
+
         return notifications;
     }
 
@@ -261,6 +268,7 @@ public class Main {
 
             lines--;
         }
+
         return trailingDays;
     }
 
@@ -269,7 +277,8 @@ public class Main {
         Vector<Pair<Date, Double>> pairs = new Vector<>();
         int trailingDays = input(pairs); // Input
 
-        MergeSort(pairs, 0, pairs.size() - 1); // Sorting the vector by date
+        // Sorting the vector by date
+        countSort(pairs);
 
         int result = countNotifications(pairs, trailingDays); // Counting notifications
 
