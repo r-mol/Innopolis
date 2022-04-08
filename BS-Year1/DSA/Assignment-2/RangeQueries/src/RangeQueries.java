@@ -1,8 +1,43 @@
+/*
+@author Roman Molochkov
+Group #4
+Telegram: @roman_molochkov
+Email: r.molochkov@innopolis.university
+ */
+
 import javafx.util.Pair;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+
+public class RangeQueries {
+    public static void main(String[] args) throws ParseException {
+        RangeMap<Date, Integer> bt = new RangeMap<>();
+        Scanner scanner = new Scanner(System.in);
+        int N = Integer.parseInt(scanner.nextLine());
+        for (int i = 0; i < N; i++) {
+            String[] temp = scanner.nextLine().split(" ");
+            if (temp[0].equals("REPORT")) { // If the command is REPORT
+                Date date_from = new SimpleDateFormat("yyyy-MM-dd").parse(temp[2]);
+                Date date_to = new SimpleDateFormat("yyyy-MM-dd").parse(temp[4]);
+                Vector<Integer> range = bt.lookupRange(date_from, date_to);
+                int result = 0;
+                for (int a : range) {
+                    result += a;
+                }
+
+                System.out.println(result);
+
+            } else {
+                Date date = new SimpleDateFormat("yyyy-MM-dd").parse(temp[0]);
+                String command = temp[1];
+                int amount = Integer.parseInt(temp[2]);
+                bt.add(date, (command.equals("DEPOSIT")) ? amount : -amount);
+            }
+        }
+    }
+}
 
 interface IRangeMap<K, V> {
     int size();
@@ -17,216 +52,193 @@ interface IRangeMap<K, V> {
 
     List<V> lookupRange(K from, K to); // lookup values for a range of keys
 
-    Object remove(K key);
+    //Object remove(K key);
 }
 
+class RangeMap<K extends Comparable<K>, V extends Number> implements IRangeMap<K, V> {
+    private int mapSize = 0;
+    final int t = 2;
 
-class RangeMap<K extends Comparable<K>, V> implements IRangeMap<K, V> {
-    private int mapSize = 0; // Total number of keys in tree
+    Node root = new Node();
+    Node NULL = new Node();
 
-    /* Node class */
+
     class Node {
         int n = 0;
         boolean leaf = true;
 
-        Vector<Pair<K, V>> data = new Vector<>(3);
-        Vector<Node> children = new Vector<>(4);
+        ArrayList<Pair<K, V>> data = new ArrayList<>(2 * t);
+        ArrayList<Node> children = new ArrayList<>(2 * t + 1);
 
+        public Node() {
+            for (int i = 0; i < 2 * t; i++) {
+                this.data.add(i, (Pair<K, V>) new Pair<>(new Date(4000, 12, 31), 0));
+            }
+
+            for (int i = 0; i < 2 * t + 1; i++) {
+                this.children.add(i, null);
+            }
+        }
     }
 
-
-    Node root = new Node();
-
-    Node NIL = new Node();
-
-    /* Size function. Returns number of keys in tree */
     public int size() {
         return mapSize;
     }
 
-    /* Checks if the tree has no keys in it */
     public boolean isEmpty() {
         return mapSize == 0;
     }
 
-    /* Search function. Searches by given key */
-    public Pair search(Node x, K k) {
-        int i = 0;
-        while (i < x.n && k.compareTo(x.data.get(i).getKey()) < 0) i++;
+    public Pair<Node, Integer> search(Node x, K k) {
+        int i = 1;
+        while (i <= x.n && k.compareTo(x.data.get(i).getKey()) > 0) ++i;
 
-        if (i < x.n && k.compareTo(x.data.get(i).getKey())==0) { // Successful search
-            return new Pair <>(x, i);
+        if (i <= x.n && k.compareTo(x.data.get(i).getKey()) == 0) {
+            return new Pair<>(x, i);
         } else if (x.leaf) {
-            return new Pair <>(NIL, 0);
+            return new Pair<>(NULL, 0);
+        } else {
+            return search(x.children.get(i), k);
         }
-        return search(x.children.get(i), k);
     }
 
-    /* Return true if key is stored in tree */
     public boolean contains(K key) {
-        Pair<Node,Integer> result = search(root, key);
-        if (result.getKey() != NIL) {
+        Pair<Node, Integer> result = search(root, key);
+        if (result.getKey() != NULL) {
             return true;
+        } else {
+            return result.getKey() != NULL;
         }
-        return false;
     }
 
-    /* Searches for value corresponding to the given key */
     public V lookup(K key) {
-        Pair<Node,Integer> result = search(root, key);
+        Pair<Node, Integer> result = search(root, key);
         return result.getKey().data.get(result.getValue()).getValue();
     }
 
-    /* Splits the given node into two */
-   public void splitChild(Node x, int i) {
+    public void splitChild(Node x, int i) {
         mapSize++;
         Node z = new Node();
         Node y = x.children.get(i);
         z.leaf = y.leaf;
-        z.n = 1;
+        z.n = t - 1;
 
-        z.data.add(0, y.data.get(2));
+        for (int j = 1; j <= t - 1; ++j) {
+            z.data.set(j, y.data.get(j + t));
+        }
 
         if (!y.leaf) {
-            for (int j = 0; j < 2; ++j) {
-                z.children.set(j, y.children.get(j + 2));
+            for (int j = 1; j <= t; ++j) {
+                z.children.set(j, y.children.get(j + t));
             }
         }
-        y.n = 1;
 
-        for (int j = x.n; j >= i + 1; --j) {
-            x.children.add(j + 1, x.children.get(j));
-        }
-        x.children.add(i + 1, z);
+        y.n = t - 1;
 
-        for (int j = x.n - 1; j >= i; --j) {
-            x.data.set(j, x.data.get(j));
+        for (int j = x.n + 1; j >= i + 1; --j) {
+            x.children.set(j + 1, x.children.get(j));
         }
-        x.data.add(i, y.data.get(1));
+
+        x.children.set(i + 1, z);
+
+        for (int j = x.n; j >= i; --j) {
+            x.data.set(j + 1, x.data.get(j));
+        }
+
+        x.data.set(i, y.data.get(t));
         x.n++;
     }
 
-    /* Insert key with value into existing node */
     void addNonfull(Node x, Pair<K, V> k) {
-        int i = x.n - 1;
-        if (x.leaf) { // If x is leaf -> just insert new key
-            while (i >= 0 && k.getKey().compareTo(x.data.get(i).getKey()) < 0) {
-                x.data.set(i + 1, new Pair<>(x.data.get(i).getKey(),x.data.get(i + 1).getValue()));
+        int i = x.n;
+        if (x.leaf) {
+            while (i >= 1 && k.getKey().compareTo(x.data.get(i).getKey()) < 0) {
+                x.data.set(i + 1, new Pair<>(x.data.get(i).getKey(), x.data.get(i).getValue()));
                 --i;
             }
-            x.data.add(i + 1, k);
+
+            x.data.set(i + 1, k);
             x.n++;
-        } else { // Else go down the tree
-            while (i >= 0 && k.getKey().compareTo( x.data.get(i).getKey()) < 0) {}--i;
+        } else {
+            while (i >= 1 && k.getKey().compareTo(x.data.get(i).getKey()) < 0){
+                --i;
+            }
+
             ++i;
-            if (x.children.get(i).n == 3){ // If the child node is full -> split
+
+            if (x.children.get(i).n == 2 * t - 1) {
                 splitChild(x, i);
-                if (k.getKey().compareTo( x.data.get(i).getKey()) > 0) ++i;
+                if (k.getKey().compareTo(x.data.get(i).getKey()) > 0) {
+                    ++i;
+                }
             }
             addNonfull(x.children.get(i), k);
         }
     }
 
-    /* Insert key with value into tree */
     public void add(K key, V value) {
-        Pair<K, V> k =new Pair<>(key, value);
+        Pair<K, V> k = new Pair<>(key, value);
+        Pair<Node, Integer> tempPair = search(root, key);
 
-        // If the key is already in tree -> change existing value
-        Pair<K,V> tmp = search(root, key);
-        if (tmp.getKey() != NIL) {
-            ((Node)tmp.getKey()).data.set((Integer) tmp.getValue(),new Pair<K,V>(((Node)tmp.getKey()).data.get((Integer) tmp.getValue()).getKey(),sum(((Node)tmp.getKey()).data.get((Integer) tmp.getValue()).getValue(),value)));
+        if (tempPair.getKey() != NULL) {
+            tempPair.getKey().data.set(tempPair.getValue(), new Pair<K, V>(tempPair.getKey().data.get(tempPair.getValue()).getKey(), sum(tempPair.getKey().data.get(tempPair.getValue()).getValue(), value)));
             return;
         }
 
-        if (root.n == 3) { // If the root node is full
+        if (root.n == 2 * t - 1) {
             mapSize++;
             Node s = new Node();
             s.leaf = false;
-            s.children.add(0, root);
+            s.children.set(1, root);
             root = s;
-            splitChild(s, 0);
+
+            splitChild(s, 1);
             addNonfull(s, k);
         } else {
             addNonfull(root, k);
         }
     }
 
-    private V sum(V x, V y) {
+    public static <V extends Number> V sum(V x, V y) {
         if (x == null || y == null) {
             return null;
         }
 
         if (x instanceof Double) {
-            return (V) new Double(((Double) x).doubleValue() + ((Double) y).doubleValue());
+            return (V) new Double(x.doubleValue() + y.doubleValue());
         } else if (x instanceof Integer) {
-            return (V)new Integer(((Integer) x).intValue() + ((Integer) y).intValue());
+            return (V) new Integer(x.intValue() + y.intValue());
         } else {
             throw new IllegalArgumentException("Type " + x.getClass() + " is not supported by this method");
         }
     }
 
-    /* Lookup for the values under specific range of keys */
     public Vector<V> lookupRange(K from, K to) {
         Vector<V> range = new Vector<>();
 
-        /* Searching for the starting node in tree */
-        Pair<Node,Integer> tmp = search(root, from);
-        Node x = tmp.getKey();
-        K k = to;
-
-        /* Inorder traversal */
-        while (true) {
-            int i = 0;
-            while (i < x.n && k.compareTo(x.data.get(i).getKey())>0) {
-                range.add(x.data.get(i).getValue());
-                ++i;
-            }
-
-            if (i < x.n && k.compareTo(x.data.get(i).getKey())==0) {
-                range.add(x.data.get(i).getValue());
-                break;
-            } else if (x.leaf) {
-                break;
-            } else {
-                x = x.children.get(i);
-            }
-        }
-
+        inOrderTraversal(root, range, from, to);
         return range;
     }
 
-    @Override
-    public Object remove(K key) {
-        return null;
-    }
-}
-
-
-public class RangeQueries {
-    public static void main(String[] args) throws ParseException {
-        RangeMap<Date, Integer> bt = new RangeMap<>();
-        Scanner scanner = new Scanner(System.in);
-        int N = Integer.parseInt(scanner.nextLine());
-        for (int i = 0; i < N; i++) {
-            String[] temp = scanner.nextLine().split(" ");
-            if (temp[0].equals("REPORT")) { // If the command is REPORT
-                Date date_from = new SimpleDateFormat("yyyy-MM-dd").parse(temp[2]);
-                Date date_to = new SimpleDateFormat("yyyy-MM-dd").parse(temp[4]);
-                   Vector<Integer> range = bt.lookupRange(date_from, date_to);
-                   int result = 0;
-                   for(int a: range){
-                      result += a;
-                   }
-
-                System.out.println(result);
-
-            } else {
-                Date date = new SimpleDateFormat("yyyy-MM-dd").parse(temp[0]);
-                String command = temp[1];
-                int amount = Integer.parseInt(temp[2]);
-                bt.add(date, (command.equals("DEPOSIT")) ? amount : -amount);
+    void inOrderTraversal(Node x, Vector<V> range, K from, K to) {
+        if (x == null) return;
+        for (int i = 1; i <= x.n; ++i) {
+            if (!(x.data.get(i).getKey().compareTo(from) < 0) && !(x.data.get(i).getKey().compareTo(to) > 0)) {
+                range.add(x.data.get(i).getValue());
             }
+
+            if (i == 1 && !(from.compareTo(x.data.get(i).getKey()) < 0)) {
+                continue;
+            }
+
+            inOrderTraversal(x.children.get(i), range, from, to);
+
+            if (x.data.get(i).getKey().compareTo(to) > 0) {
+                break;
+            }
+        }
+        if (to.compareTo(x.data.get(x.n).getKey()) > 0) {
+            inOrderTraversal(x.children.get(x.n + 1), range, from, to);
         }
     }
 }
-
