@@ -20,7 +20,8 @@ trans=[s1>a>s2,...]	// s1,s2,...∈ states; a ∈ alpha
 Validation result:
 ***************************
 
-#Errors:
+Errors:
+-------
 
 E1: A state 's' is not in the set of states
 E2: Some states are disjoint
@@ -28,11 +29,13 @@ E3: A transition 'a' is not represented in the alphabet
 E4: Initial state is not defined
 E5: Input file is malformed
 
-#Report:
+Report:
+-------
 
 FSA is complete/incomplete
 
-#Warnings:
+Warnings:
+---------
 
 W1: Accepting state is not defined
 W2: Some states are not reachable from the initial state
