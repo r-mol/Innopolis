@@ -18,8 +18,8 @@ public class Main {
 }
 
 class FSA<T> {
-    File input = new File("input.txt");
-    //File input = new File("/Users/roman_molochkov/Developer/IdeaProjects/Innopolis/BS-Year1/TCS/Assignment1/src/input.txt");
+    //File input = new File("input.txt");
+    File input = new File("/Users/roman_molochkov/Developer/IdeaProjects/Innopolis/BS-Year1/TCS/Assignment1/src/input.txt");
     Scanner scanner = new Scanner(input);
     List<String> states = new ArrayList<>();
     protected static HashSet<String> alphabet = new HashSet<>();
@@ -53,7 +53,7 @@ class FSA<T> {
                 graph.addVertex(s);
             }
 
-            if(Objects.equals(ss[0], "")){
+            if (Objects.equals(ss[0], "")) {
                 Errors.offer("E0: Input file is malformed");
                 this.output();
                 System.exit(0);
@@ -179,7 +179,7 @@ class FSA<T> {
                 boolean flag = false;
                 List<String> temp = new ArrayList<>();
                 for (String destination : transitions.get(trans[i][0]).keySet()) {
-                    for(String transition : transitions.get(trans[i][0]).get(destination)) {
+                    for (String transition : transitions.get(trans[i][0]).get(destination)) {
                         if (temp.contains(transition)) {
                             if (!Warnings.isEmpty()) {
                                 Warnings.poll();
@@ -187,12 +187,11 @@ class FSA<T> {
                             Warnings.offer("E5: FSA is nondeterministic");
                             flag = true;
                             break;
-                        }
-                        else{
+                        } else {
                             temp.add(transition);
                         }
                     }
-                    if(flag){
+                    if (flag) {
                         break;
                     }
                 }
@@ -214,8 +213,8 @@ class FSA<T> {
     public void output() {
 
         try {
-            FileWriter writer = new FileWriter("output.txt");
-            //FileWriter writer = new FileWriter("/Users/roman_molochkov/Developer/IdeaProjects/Innopolis/BS-Year1/TCS/Assignment1/src/output.txt");
+            //FileWriter writer = new FileWriter("output.txt");
+            FileWriter writer = new FileWriter("/Users/roman_molochkov/Developer/IdeaProjects/Innopolis/BS-Year1/TCS/Assignment1/src/output.txt");
             if (!Errors.isEmpty()) {
                 writer.write("Error:\n");
                 int size = Errors.size();
@@ -247,15 +246,14 @@ class FSA<T> {
                 }
                 if (!check && count == graph.map.size()) {
                     if (!Warnings.isEmpty()) {
-                        if(!Warnings.peek().equals("{}")) {
+                        if (!Warnings.peek().equals("{}")) {
                             writer.write("Error:\n");
                         }
                         int size = Warnings.size();
                         for (int j = 0; j < size; j++) {
                             writer.write(Warnings.poll());
                         }
-                    }
-                    else{
+                    } else {
                         writer.write(toRegEx().toString());
                     }
                 } else if (!check) {
@@ -269,71 +267,72 @@ class FSA<T> {
         }
     }
 
-    public StringBuilder toRegEx(){
-        List<List<String>> oldMatrix= new ArrayList<>();
-        List<List<String>> newMatrix= new ArrayList<>();
-        for(int i = 0; i < transitions.size();i++){
-            oldMatrix.add(i,new ArrayList<>());
-            newMatrix.add(i,new ArrayList<>());
-            for(int j = 0; j < transitions.size(); j++){
-                oldMatrix.get(i).add(j,"{}");
-                newMatrix.get(i).add(j,"{}");
+    public StringBuilder toRegEx() {
+        List<List<String>> oldMatrix = new ArrayList<>();
+        List<List<String>> newMatrix = new ArrayList<>();
+
+        for (int i = 0; i < transitions.size(); i++) {
+            oldMatrix.add(i, new ArrayList<>());
+            newMatrix.add(i, new ArrayList<>());
+            for (int j = 0; j < transitions.size(); j++) {
+                oldMatrix.get(i).add(j, "{}");
+                newMatrix.get(i).add(j, "{}");
             }
         }
 
-        for(String vertex1: transitions.keySet()) {
+        for (String vertex1 : transitions.keySet()) {
             for (String vertex2 : transitions.get(vertex1).keySet()) {
-                for(String edge: transitions.get(vertex1).get(vertex2)){
-                    if(oldMatrix.get(states.indexOf(vertex1)).get(states.indexOf(vertex2)).equals("{}")) {
+                for (String edge : transitions.get(vertex1).get(vertex2)) {
+                    if (oldMatrix.get(states.indexOf(vertex1)).get(states.indexOf(vertex2)).equals("{}")) {
                         oldMatrix.get(states.indexOf(vertex1)).set(states.indexOf(vertex2), edge);
-                    }
-                    else{
+                    } else {
                         oldMatrix.get(states.indexOf(vertex1)).set(states.indexOf(vertex2), oldMatrix.get(states.indexOf(vertex1)).get(states.indexOf(vertex2)) + "|" + edge);
                     }
                 }
 
-                if(vertex1.equals(vertex2)){
+                if (vertex1.equals(vertex2)) {
                     oldMatrix.get(states.indexOf(vertex1)).set(states.indexOf(vertex2), oldMatrix.get(states.indexOf(vertex1)).get(states.indexOf(vertex2)) + "|eps");
                 }
             }
         }
 
-        for(String vertex1: states) {
+        for (String vertex1 : states) {
             for (String vertex2 : states) {
-                if(vertex1.equals(vertex2) && oldMatrix.get(states.indexOf(vertex1)).get(states.indexOf(vertex2)).equals("{}")){
+                if (vertex1.equals(vertex2) && oldMatrix.get(states.indexOf(vertex1)).get(states.indexOf(vertex2)).equals("{}")) {
                     oldMatrix.get(states.indexOf(vertex1)).set(states.indexOf(vertex2), "eps");
                 }
             }
         }
 
-        for(int i = 0 ; i < states.size(); i++){
-            for(String state1: states) {
+        for (int i = 0; i < states.size(); i++) {
+            for (String state1 : states) {
                 for (String state2 : states) {
                     String component1 = oldMatrix.get(states.indexOf(state1)).get(i);
                     String component2 = oldMatrix.get(i).get(i);
                     String component3 = oldMatrix.get(i).get(states.indexOf(state2));
                     String component4 = oldMatrix.get(states.indexOf(state1)).get(states.indexOf(state2));
 
-                    newMatrix.get(states.indexOf(state1)).set(states.indexOf(state2),"("+component1+")("+component2+")*("+component3+")|("+component4+")");
+                    newMatrix.get(states.indexOf(state1)).set(states.indexOf(state2), "(" + component1 + ")(" + component2 + ")*(" + component3 + ")|(" + component4 + ")");
                 }
             }
-            for(int j = 0 ; j < states.size(); j++){
-                for(int q = 0 ; q < states.size(); q++){
+
+            for (int j = 0; j < states.size(); j++) {
+                for (int q = 0; q < states.size(); q++) {
                     oldMatrix.get(j).set(q, newMatrix.get(j).get(q));
                 }
             }
         }
+
         StringBuilder result = new StringBuilder();
         boolean empty = true;
-        for(String fin: finSt){
-            for(String state1: states) {
+        for (String fin : finSt) {
+            for (String state1 : states) {
                 for (String state2 : states) {
-                    if(states.indexOf(state1) == states.indexOf(initSt) && states.indexOf(state2) == states.indexOf(fin)){
-                        if(empty) {
+                    if (states.indexOf(state1) == states.indexOf(initSt) && states.indexOf(state2) == states.indexOf(fin)) {
+                        if (empty) {
                             result.append(oldMatrix.get(states.indexOf(state1)).get(states.indexOf(state2)));
                             empty = false;
-                        }
-                        else{
+                        } else {
                             result.append("|").append(oldMatrix.get(states.indexOf(state1)).get(states.indexOf(state2)));
 
                         }
