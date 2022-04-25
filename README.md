@@ -8,11 +8,11 @@
 #### 📍[Assignments & Exams](BS-Year1/ITP-1/)
 ### 📌[DSA](BS-Year1/DSA)
 #### 📍 [Assignment-1 "Java"](BS-Year1/DSA/Assignment-1)
-#### 📍 [Assignment-2 "Java"](BS-Year1/DSA/Assignment-2)
+#### 📍 [Assignment-2 "Java"](BS-Year1/DSA/Assignment-2) - B-Tree / Fibonacci Heap / Graph / Prime's Algorithm 
 ### 📌[SSAD](BS-Year1/SSAD)
 #### 📍 [Assignment-1 "C++"](BS-Year1/SSAD/Assignment1)
 #### 📍 [Assignment-2 "C++"](BS-Year1/SSAD/Assignment2)
 #### 📍 [Assignment-3 "C++"](BS-Year1/SSAD/Assignment3)
 ### 📌[TCS](BS-Year1/TCS)
-#### 📍 [Assignment-1 "Java"](BS-Year1/TCS/Assignment1)
-#### 📍 [Assignment-2 "Java"](BS-Year1/TCS/Assignment2)
+#### 📍 [Assignment-1 "Java"](BS-Year1/TCS/Assignment1) - FSA validator
+#### 📍 [Assignment-2 "Java"](BS-Year1/TCS/Assignment2) - FSA to RegExp Translator
