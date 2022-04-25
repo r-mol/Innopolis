@@ -1,127 +1,155 @@
-/*
-@author Roman Molochkov
-Group #4
-Telegram: @roman_molochkov
-Email: r.molochkov@innopolis.university
+/**
+ * program for solving task C. Car rental company (min-heap test)
+ * print name of a minimum branch, using priority queue
+ * @author Kdrina Denisova
+ * Group №7
+ * TG: @karinadenisova
+ * Email: k.denisova@innopolis.university
  */
 
 import java.util.*;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int countOperations = Integer.parseInt(scanner.nextLine());
-        PriorityQueue<Double, String> queue = new PriorityQueue<>();
-        FibonacciHeapNode<Double, String> tempNode = null;
 
-        String tempString;
-        String[] splitString;
+    /**
+     * main function of a program
+     * @param args not used
+     */
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int count = Integer.parseInt(input.nextLine());
+        PriorityQueue<Double, String> priorityQueue = new PriorityQueue<>();
+        node<Double, String> tempNode;
+
+        String tmpstr;
+        String[] splitArray;
         String command;
-        String branchName;
+        String name;
         double penalty;
 
-        while (countOperations != 0) {
-            tempString = scanner.nextLine();
-            splitString = tempString.split(" ");
-            command = splitString[0];
+        while (count != 0) {
+            tmpstr = input.nextLine();
+            splitArray = tmpstr.split(" ");
+            command = splitArray[0];
 
+
+            // check for identify which command is in line. Then do operation depending on command
             switch (command) {
                 case "ADD":
-                    branchName = splitString[1];
-                    penalty = Double.parseDouble(splitString[2]);
-                    tempNode = new FibonacciHeapNode<>(branchName, penalty);
-                    queue.insert(tempNode);
+                    name = splitArray[1];
+                    penalty = Double.parseDouble(splitArray[2]);
+                    tempNode = new node<>(name, penalty);
+                    priorityQueue.insert(tempNode);
                     break;
                 case "PRINT_MIN":
-                    tempNode = queue.extractMin();
+                    tempNode = priorityQueue.extractMin();
                     System.out.println(tempNode.data);
                     break;
                 default:
                     break;
             }
 
-            countOperations--;
+            count--;
         }
     }
 }
 
+/**
+ * just given interface
+ * @param <K> key
+ * @param <V> value
+ */
 interface IPriorityQueue<K extends Comparable<K>, V extends Comparable<V>> {
-    void insert(FibonacciHeapNode<K, V> x);
+    void insert(node<K, V> x);
 
-    FibonacciHeapNode<K, V> findMin();
+    node<K, V> findMin();
 
-    FibonacciHeapNode<K, V> extractMin();
+    node<K, V> extractMin();
 
-    void decreaseKey(FibonacciHeapNode<K, V> x, K key);
+    void decreaseKey(node<K, V> x, K key);
 
-    void delete(FibonacciHeapNode<K, V> x);
+    void delete(node<K, V> x);
 
     void union(PriorityQueue<K, V> anotherQueue);
 }
 
-class PriorityQueue<K extends Comparable<K>, V extends Comparable<V>> implements IPriorityQueue {
-    private FibonacciHeapNode<K, V> min = null;
+/**
+ * Priority Queue(Fibonacci Heap), implementation taken from book
+ * @param <K> key
+ * @param <V> value
+ */
+class PriorityQueue<K extends Comparable<K>, V extends Comparable<V>> implements IPriorityQueue<K, V> {
+    private node<K, V> minRoot = null;
     private int n = 0;
 
     public PriorityQueue() {}
 
-    // Insert a new Node to the right side of min Node
+    /**
+     * methid for insertion( inserted to the right side min node) nodes in a heap
+     * @param x node to insert
+     */
     @Override
-    public void insert(FibonacciHeapNode x) {
-        if (min == null) {
-            min = x;
+    public void insert(node<K ,V> x) {
+        if (minRoot == null) {
+            minRoot = x;
         } else {
-            x.left = min;
-            x.right = min.right;
-            min.right = x;
-            x.right.left = x;
+            x.right = minRoot;
+            x.left = minRoot.left;
+            minRoot.left = x;
+            x.left.right = x;
 
-            if (x.key.compareTo(min.key) < 0 || (x.key == min.key && x.data.compareTo(min.data) < 0)) {
-                min = x;
+            if (x.key.compareTo(minRoot.key) < 0 || (x.key == minRoot.key && x.data.compareTo(minRoot.data) < 0)) {
+                minRoot = x;
             }
         }
         n++;
     }
 
+    /**
+     * method for finding min node
+     * @return min node
+     */
     @Override
-    // Find min of the heap by returning min Node
-    public FibonacciHeapNode<K, V> findMin() {
-        return min;
+    public node<K, V> findMin() {
+        return minRoot;
     }
 
+    /**
+     * method for extracting min node from fib. heap
+     * @return min element from fib. heap
+     */
     @Override
-    // Extract min from the heap
-    public FibonacciHeapNode<K, V> extractMin() {
-        FibonacciHeapNode<K, V> x = min;
+    public node<K, V> extractMin() {
+        node<K, V> x = minRoot;
 
         if (x != null) {
-            int numKids = x.degree;
-            FibonacciHeapNode<K, V> y = x.child;
-            FibonacciHeapNode<K, V> tempRight;
+            int kids = x.degree;
+            node<K, V> y = x.child;
+            node<K, V> tmpleft;
 
-            while (numKids > 0) {
-                tempRight = y.right;
+            while (kids > 0) {
+                tmpleft = y.left;
 
                 y.left.right = y.right;
                 y.right.left = y.left;
 
-                y.left = min;
-                y.right = min.right;
-                min.right = y;
-                y.right.left = y;
+                y.right = minRoot;
+                y.left = minRoot.left;
+                minRoot.left = y;
+                y.left.right = y;
 
                 y.parent = null;
-                y = tempRight;
-                numKids--;
+                y = tmpleft;
+                kids--;
             }
 
             x.left.right = x.right;
             x.right.left = x.left;
 
-            if (x == x.right) {
-                min = null;
+            if (x == x.left) {
+                minRoot = null;
             } else {
-                min = x.right;
+                minRoot = x.left;
                 consolidate();
             }
             n--;
@@ -129,89 +157,109 @@ class PriorityQueue<K extends Comparable<K>, V extends Comparable<V>> implements
         return x;
     }
 
+    /**
+     * method for decreasing key in case if new key <= key of given node
+     * @param x node in a heap
+     * @param key new key
+     */
     @Override
-    // If the new key is less or equal than key of the given node
-    public void decreaseKey(FibonacciHeapNode x, Comparable key) {
+    public void decreaseKey(node x, Comparable key) {
         if (key.compareTo(x.key) < 0 || key.compareTo(x.key) == 0) {
             x.key = key;
-            FibonacciHeapNode y = x.parent;
+            node<K, V> y = x.parent;
 
-            if ((y != null) && (x.key.compareTo(y.key) < 0 || x.key.compareTo(y.key) == 0)) {
+            if ((y != null) && (x.key.compareTo(y.key) <= 0)) {
                 cut(x, y);
                 cascadingCut(y);
             }
 
-            if (x.key.compareTo(min.key) < 0 || (x.key == min.key && x.data.compareTo(min.data) < 0)) {
-                min = x;
+            if (x.key.compareTo(minRoot.key) < 0 || (x.key == minRoot.key && x.data.compareTo(minRoot.data) < 0)) {
+                minRoot = x;
             }
         }
     }
 
+    /**
+     * method for deleting node from heap
+     * @param x node in a heap
+     */
     @Override
-    // Delete the node from the heap
-    public void delete(FibonacciHeapNode x) {
+    public void delete(node<K, V> x) {
         decreaseKey(x, Double.NEGATIVE_INFINITY);
         extractMin();
     }
 
+    /**
+     * method for merging two heaps
+     * @param anotherQueue another heap
+     */
     @Override
-    // Union of two Fibonacci Heaps
-    public void union(PriorityQueue anotherQueue) {
+    public void union(PriorityQueue<K, V> anotherQueue) {
         if (anotherQueue != null) {
-            if (min != null) {
-                if (anotherQueue.min != null) {
-                    min.right.left = anotherQueue.min.left;
-                    anotherQueue.min.left.right = min.right;
-                    min.right = anotherQueue.min;
-                    anotherQueue.min.left = min;
+            if (minRoot != null) {
+                if (anotherQueue.minRoot != null) {
+                    minRoot.left.right = anotherQueue.minRoot.left;
+                    anotherQueue.minRoot.right.left = minRoot.left;
+                    minRoot.left = anotherQueue.minRoot;
+                    anotherQueue.minRoot.right = minRoot;
 
-                    if (anotherQueue.min.key.compareTo(min.key) < 0 || (anotherQueue.min.key == min.key && anotherQueue.min.data.compareTo(min.data) < 0)) {
-                        min = anotherQueue.min;
+                    if (anotherQueue.minRoot.key.compareTo(minRoot.key) < 0 || (anotherQueue.minRoot.key == minRoot.key &&anotherQueue.minRoot.data.compareTo(minRoot.data) < 0)) {
+                        minRoot = anotherQueue.minRoot;
                     }
                 }
             } else {
-                min = anotherQueue.min;
+                minRoot = anotherQueue.minRoot;
             }
             n = n + anotherQueue.n;
         }
     }
 
-    // Consolidate the heap
+    /**
+     * consolidate nodes in a heap
+     */
     public void consolidate() {
-        int arraySize = ((int) Math.floor(Math.log(n) / Math.log((1.0 + Math.sqrt(5.0)) / 2.0))) + 1;
-        List<FibonacciHeapNode<K, V>> arr = new ArrayList<>(arraySize);
+        int arraySize = ((int) Math.ceil(Math.log(n) / Math.log(2))) + 1;
+        List<node<K, V>> arr = new ArrayList<>(arraySize);
 
         for (int i = 0; i < arraySize; i++) {
             arr.add(null);
         }
 
         int numRoots = 0;
-        FibonacciHeapNode<K, V> x = min;
+        node<K, V> x = minRoot;
 
         if (x != null) {
             numRoots++;
-            x = x.right;
+            x = x.left;
 
-            while (x != min) {
+            while (x != minRoot) {
                 numRoots++;
-                x = x.right;
+                x = x.left;
             }
         }
 
         while (numRoots > 0) {
             int d = x.degree;
-            FibonacciHeapNode<K, V> next = x.right;
+            node<K, V> next = x.left;
 
             for (; ; ) {
-                FibonacciHeapNode<K, V> y = arr.get(d);
+                node<K, V> y = arr.get(d);
                 if (y == null) {
                     break;
                 }
 
-                if (x.key.compareTo(y.key) > 0 || (x.key.compareTo(y.key)  == 0 && x.data.compareTo(y.data) > 0)) {
-                    FibonacciHeapNode<K, V> temp = y;
+                if (x.key.compareTo(y.key) > 0) {
+                    node<K, V> temp = y;
                     y = x;
                     x = temp;
+                } else {
+                    if (x.key.compareTo(y.key)  == 0) {
+                        if (x.data.compareTo(y.data) > 0) {
+                            node<K, V> temp = y;
+                            y = x;
+                            x = temp;
+                        }
+                    }
                 }
 
                 fibHeapLink(y, x);
@@ -226,60 +274,64 @@ class PriorityQueue<K extends Comparable<K>, V extends Comparable<V>> implements
             numRoots--;
         }
 
-        min = null;
+        minRoot = null;
 
         for (int i = 0; i < arraySize; i++) {
-            FibonacciHeapNode<K, V> y = arr.get(i);
+            node<K, V> y = arr.get(i);
             if (y == null) {
                 continue;
             }
 
-            if (min != null) {
+            if (minRoot != null) {
                 y.left.right = y.right;
                 y.right.left = y.left;
 
-                y.left = min;
-                y.right = min.right;
-                min.right = y;
-                y.right.left = y;
+                y.right = minRoot;
+                y.left = minRoot.left;
+                minRoot.left = y;
+                y.left.right = y;
 
-                if (y.key.compareTo(min.key) < 0 || (y.key == min.key && y.data.compareTo(min.data) < 0)) {
-                    min = y;
+                if (y.key.compareTo((K) minRoot.key) < 0 || (y.key.compareTo((K) minRoot.key) == 0 && y.data.compareTo((V) minRoot.data) < 0)) {
+                    minRoot = y;
                 }
             } else {
-                min = y;
+                minRoot = y;
             }
         }
     }
 
-    // Removing the Node x from the child of y Node and putting X Node to the right side of root
-    public void cut(FibonacciHeapNode<K, V> x, FibonacciHeapNode<K, V> y) {
+    /**
+     * remove the node x from the child of y node and putting x node to the left side of root
+     * @param x node, child of y
+     * @param y node
+     */
+    public void cut(node<K, V> x, node<K, V> y) {
         x.left.right = x.right;
         x.right.left = x.left;
         y.degree--;
 
         if (y.child == x) {
-            y.child = x.right;
+            y.child = x.left;
         }
 
         if (y.degree == 0) {
             y.child = null;
         }
 
-        x.left = min;
-        x.right = min.right;
-        min.right = x;
-        x.right.left = x;
+        x.right = minRoot;
+        x.left = minRoot.left;
+        minRoot.left = x;
+        x.left.right = x;
 
         x.parent = null;
         x.mark = false;
     }
 
-    /*
-     - First case, If from the Node x are not cut the child Node, than mark it
-     - Second case, If Node is marked, than cut it and make cascading cut to it's parent
+    /**
+     * cut until the node is not marked
+     * @param x node
      */
-    public void cascadingCut(FibonacciHeapNode<K, V> x) {
+    public void cascadingCut(node<K, V> x) {
 
         if (x.parent != null) {
             if (!x.mark) {
@@ -292,8 +344,12 @@ class PriorityQueue<K extends Comparable<K>, V extends Comparable<V>> implements
         }
     }
 
-    // Making the Node x a parent of Node y
-    public void fibHeapLink(FibonacciHeapNode<K, V> y, FibonacciHeapNode<K, V> x) {
+    /**
+     * makes the node x a parent of node y,
+     * @param y node
+     * @param x node
+     */
+    public void fibHeapLink(node<K, V> y, node<K, V> x) {
         y.left.right = y.right;
         y.right.left = y.left;
 
@@ -304,10 +360,10 @@ class PriorityQueue<K extends Comparable<K>, V extends Comparable<V>> implements
             y.right = y;
             y.left = y;
         } else {
-            y.left = x.child;
-            y.right = x.child.right;
-            x.child.right = y;
-            y.right.left = y;
+            y.right = x.child;
+            y.left = x.child.left;
+            x.child.left = y;
+            y.left.right = y;
         }
 
         x.degree++;
@@ -315,24 +371,32 @@ class PriorityQueue<K extends Comparable<K>, V extends Comparable<V>> implements
         y.mark = false;
     }
 
-    // Return size of the heap
+    /**
+     * @return size of neap
+     */
     public int size() {
         return n;
     }
+
+    /**
+     * @return empty or not
+     */
+    boolean isEmpty() {
+        return size() == 0;
+    }
 }
 
-// Fibonacci Heap Node
-class FibonacciHeapNode<K extends Comparable<K>, V extends Comparable<V>> {
-    final V data;
-    FibonacciHeapNode<K, V> child;
-    FibonacciHeapNode<K, V> left;
-    FibonacciHeapNode<K, V> parent;
-    FibonacciHeapNode<K, V> right;
+class node<K extends Comparable<K>, V extends Comparable<V>> {
+    V data;
+    node<K, V> child;
+    node<K, V> left;
+    node<K, V> parent;
+    node<K, V> right;
     boolean mark;
     K key;
     int degree;
 
-    public FibonacciHeapNode(V data, K key) {
+    public node(V data, K key) {
         right = this;
         left = this;
         this.data = data;
