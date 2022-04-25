@@ -7,12 +7,12 @@
 ### 📌[ITP-1](BS-Year1/ITP-1)
 #### 📍[Assignments & Exams](BS-Year1/ITP-1/)
 ### 📌[DSA](BS-Year1/DSA)
-#### 📍 [Assignment-1 "Java"](BS-Year1/DSA/Assignment-1)
+#### 📍 [Assignment-1 "Java"](BS-Year1/DSA/Assignment-1) - 
 #### 📍 [Assignment-2 "Java"](BS-Year1/DSA/Assignment-2) - B-Tree / Fibonacci Heap / Graph / Prime's Algorithm 
 ### 📌[SSAD](BS-Year1/SSAD)
-#### 📍 [Assignment-1 "C++"](BS-Year1/SSAD/Assignment1)
-#### 📍 [Assignment-2 "C++"](BS-Year1/SSAD/Assignment2)
-#### 📍 [Assignment-3 "C++"](BS-Year1/SSAD/Assignment3)
+#### 📍 [Assignment-1 "C++"](BS-Year1/SSAD/Assignment1) - Largest sum / Linked List / Substring
+#### 📍 [Assignment-2 "C++"](BS-Year1/SSAD/Assignment2) - Inverse of 3x3 matrix / Determenant of any matrix
+#### 📍 [Assignment-3 "C++"](BS-Year1/SSAD/Assignment3) - Inverse of any matrix
 ### 📌[TCS](BS-Year1/TCS)
 #### 📍 [Assignment-1 "Java"](BS-Year1/TCS/Assignment1) - FSA validator
 #### 📍 [Assignment-2 "Java"](BS-Year1/TCS/Assignment2) - FSA to RegExp Translator
