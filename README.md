@@ -7,7 +7,7 @@
 ### 📌[ITP-1](BS-Year1/ITP-1)
 #### 📍[Assignments & Exams](BS-Year1/ITP-1/)
 ### 📌[DSA](BS-Year1/DSA)
-#### 📍 [Assignment-1 "Java"](BS-Year1/DSA/Assignment-1) - 
+#### 📍 [Assignment-1 "Java"](BS-Year1/DSA/Assignment-1) - Hash Set / Bounded Stack / Circular Bounded Queue
 #### 📍 [Assignment-2 "Java"](BS-Year1/DSA/Assignment-2) - B-Tree / Fibonacci Heap / Graph / Prime's Algorithm 
 ### 📌[SSAD](BS-Year1/SSAD)
 #### 📍 [Assignment-1 "C++"](BS-Year1/SSAD/Assignment1) - Largest sum / Linked List / Substring
