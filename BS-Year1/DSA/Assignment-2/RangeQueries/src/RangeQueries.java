@@ -168,11 +168,11 @@ class RangeMap<K extends Comparable<K>, V extends Number> implements IRangeMap<K
      */
     @Override
     public List<V> lookupRange(K from, K to) {
-        List<V> vectorOfValues = new ArrayList<>();
+        List<V> listOfValues = new ArrayList<>();
 
-        inTraversal(root, vectorOfValues, from, to);
+        inTraversal(root, listOfValues, from, to);
 
-        return vectorOfValues;
+        return listOfValues;
     }
 
     /**
