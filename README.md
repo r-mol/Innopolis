@@ -1,5 +1,9 @@
 # 📕Innopolis (2021 - ...)
-## Here I will post programs from University Education
+## 📌[BS-Year 1](BS-Year1/)
+## 📌[BS-Year 2](BS-Year2/)
+## 📌[BS-Year 3](BS-Year3/)
+## 📌[BS-Year 4](BS-Year4/)
+===========================
 ## 📌[ITP-1](BS-Year1/ITP-1)
 ### 📍Assignments & Exams
 #### • [Hexadecimal sort "C"](BS-Year1/ITP-1/Assignment1/HexadecimalSort.c)
