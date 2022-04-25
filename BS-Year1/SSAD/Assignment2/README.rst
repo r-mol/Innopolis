@@ -41,7 +41,9 @@ Write a C++ Program that Inverse any 3*3 Matrix.
 What need to do is to read the matrix from input.txt and Write the inverted matrix in output.txt 
 please note that following when writing to the output file:
  ∙ The matrix must be printed as 3*3 with 1 space between neighbour numbers
+ 
  ∙ Always show the only 2 decimal numbers after the decimal point and truncate the rest e.g 1.1912345 become 1.19
+ 
  ∙ You can use this function to help you with the formatting and truncation printf("%.2f ", number)
 
 Example 1
@@ -57,7 +59,7 @@ output.txt
 .. code:: text
 
      0.58 0.17 -1.25
-    -1.00 0.00 2.00
+     -1.00 0.00 2.00
      0.33 -0.33 0.00
      
 Example 2
