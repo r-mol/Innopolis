@@ -12,7 +12,7 @@
 ### 📌[SSAD](BS-Year1/SSAD)
 #### 📍 [Assignment-1 "C++"](BS-Year1/SSAD/Assignment1) - Largest sum / Linked List / Substring
 #### 📍 [Assignment-2 "C++"](BS-Year1/SSAD/Assignment2) - Inverse of 3x3 matrix / Determenant of any matrix
-#### 📍 [Assignment-3 "C++"](BS-Year1/SSAD/Assignment3) - Inverse of any matrix
+#### 📍 [Assignment-3 "C++"](BS-Year1/SSAD/Assignment3/Roman) - Inverse of any matrix
 ### 📌[TCS](BS-Year1/TCS)
 #### 📍 [Assignment-1 "Java"](BS-Year1/TCS/Assignment1) - FSA validator
 #### 📍 [Assignment-2 "Java"](BS-Year1/TCS/Assignment2) - FSA to RegExp Translator
