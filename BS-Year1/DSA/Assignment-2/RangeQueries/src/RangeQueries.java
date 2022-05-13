@@ -66,7 +66,7 @@ interface IRangeMap<K, V> {
 
     List<V> lookupRange(K from, K to); // lookup values for a range of keys
 
-    //Object remove(K key);
+    Object remove(K key);
 }
 
 class RangeMap<K extends Comparable<K>, V extends Number> implements IRangeMap<K, V> {
@@ -173,6 +173,12 @@ class RangeMap<K extends Comparable<K>, V extends Number> implements IRangeMap<K
         inTraversal(root, listOfValues, from, to);
 
         return listOfValues;
+    }
+
+    //TODO realize remove method
+    @Override
+    public Object remove(K key) {
+        return null;
     }
 
     /**
