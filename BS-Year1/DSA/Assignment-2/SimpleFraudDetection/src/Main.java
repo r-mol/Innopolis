@@ -12,11 +12,8 @@ import java.util.*;
 
 public class Main {
 
-    /**
-     * Milliseconds in a one day
-     */
     private static final long MS_IN_A_DAY = 1000 * 60 * 60 * 24;
-
+    static int trailingDays = 0;
     /**
      * The main function, which use methods:
      *  <pre>        1. input()
@@ -29,13 +26,13 @@ public class Main {
         Vector<Pair<Date, Double>> pairs = new Vector<>();
 
         // Input
-        int trailingDays = input(pairs);
+        input(pairs);
 
         // Sorting the vector by date
         countingSort(pairs);
 
         // Counting of a notifications
-        int result = countNotifications(pairs, trailingDays);
+        int result = countNotifications(pairs);
 
         // Output the result
         System.out.println(result);
@@ -44,16 +41,15 @@ public class Main {
     /**
      * Function read input, by using String.
      * @param pairs Vector of pairs: Key - Date and Value - Double.
-     * @return Integer variable of trailingDays.
      * @throws ParseException  When there is error of parsing String to class Date.
      */
-    public static int input(Vector<Pair<Date, Double>> pairs) throws ParseException {
+    public static void input(Vector<Pair<Date, Double>> pairs) throws ParseException {
         Scanner scanner = new Scanner(System.in);
 
         // Scan and parse the first line of the input
         String[] tempStr = scanner.nextLine().split(" ");
         int lines = Integer.parseInt(tempStr[0]);
-        int trailingDays = Integer.parseInt(tempStr[1]);
+        trailingDays = Integer.parseInt(tempStr[1]);
 
         // Filling the Vector with Pairs
         while (lines > 0) {
@@ -67,8 +63,6 @@ public class Main {
 
             lines--;
         }
-
-        return trailingDays;
     }
 
     /**
@@ -84,7 +78,7 @@ public class Main {
 
         // Add all converted days to list
         for (int i = 0; i < pairs.size(); i++) {
-            listOfDays.add(i, convertToDays(pairs.get(i).getKey().getYear(), pairs.get(i).getKey().getMonth() + 1, pairs.get(i).getKey().getDate()));
+            listOfDays.add(i, convertToDays(pairs.get(i).getKey()));
         }
 
         int minimumElement = getMin(listOfDays);
@@ -122,82 +116,107 @@ public class Main {
     }
 
     /**
-     * Function counts the number of notifications.
-     * @param pairs Vector of pairs: Key - Date and Value - Double.
-     * @param numberTrailingDays Integer which contains number of trailing days in which range we should look up.
-     * @return Integer number of Notifications.
+     * function that count the number of alerts the Bank sent to the client.
+     * @param pairs array list that keep pair of variable - date and count of money
+     * @return contain number of notification the Bank sent to client (include "empty" days)
      */
-    public static int countNotifications(Vector<Pair<Date, Double>> pairs, int numberTrailingDays) {
-        LinkedCircularBoundedQueue<Double> queueOfSpending = new LinkedCircularBoundedQueue<>(numberTrailingDays);
-        Date prevDate = null;
+    public static int countNotifications(List<Pair<Date, Double>> pairs) {
+        LinkedCircularBoundedQueue<Double> queueOfSpending = new LinkedCircularBoundedQueue<>(trailingDays);
+        int alerts;
+        int index;
 
-        double spent = 0;
-        int notifications = 0;
-        int count = 0;
+        fillDays(pairs);
 
-        // Add to vector dates with zero spent
+        index = firstFillOfQueue(pairs,queueOfSpending);
+
+        alerts = mainCountingOfAlerts(index,pairs,queueOfSpending);
+
+        return alerts;
+    }
+
+    /**
+     * fill the list with pairs by days with the spending 0 which where are not in list.
+     * @param pairs array list that keep pair of variable - date and count of money
+     */
+    public static void fillDays(List<Pair<Date, Double>> pairs){
+        Date previous = null;
         for (int i = 0; i < pairs.size(); i++) {
-            Date date = pairs.get(i).getKey();
-            if (!(prevDate == null || prevDate.compareTo(findPrevDate(date)) == 0 || prevDate.compareTo(date) == 0)) {
-                while (prevDate.compareTo(findPrevDate(date)) != 0) {
-                    prevDate = findNextDate(prevDate);
-                    pairs.add(i, new Pair<>(prevDate, (double) 0));
+            Date day = pairs.get(i).getKey();
+            if (!(previous == null || previous.compareTo(findPrevDate(day)) == 0 || previous.compareTo(day) == 0)) {
+                while (previous.compareTo(findPrevDate(day)) != 0) {
+                    previous = findNextDate(previous);
+                    pairs.add(i, new Pair<>(previous, (double) 0));
                     i++;
                 }
             }
-            prevDate = date;
+            previous = day;
         }
+    }
 
-        // First filling of the queue
-        int i;
-        for (i = 0; count < numberTrailingDays && i < pairs.size() - 1; i++) {
-            if (pairs.get(i).getKey().equals(pairs.get(i + 1).getKey())) {
-                spent += pairs.get(i).getValue();
+    /**
+     * fill queue with the spending in a range of the number of the trailing days.
+     * @param pairs array list that keep pair of variable - date and count of money
+     * @param queueOfSpending contain amount of spent by client money, sorted by days(that function also sorted it by money), for trailing days that Bank tracking
+     * @return last index
+     */
+    public static int firstFillOfQueue(List<Pair<Date, Double>> pairs, LinkedCircularBoundedQueue<Double> queueOfSpending){
+        double spending = 0;
+        int count = 0;
+        int index;
+
+        for (index = 0; count < trailingDays && index < pairs.size() - 1; index++) {
+            if (pairs.get(index).getKey().equals(pairs.get(index + 1).getKey())) {
+                spending += pairs.get(index).getValue();
             } else {
-                spent += pairs.get(i).getValue();
-                queueOfSpending.offer(spent);
-                spent = 0;
+                spending += pairs.get(index).getValue();
+                queueOfSpending.offer(spending);
+                spending = 0;
                 count++;
             }
         }
+        return index;
+    }
 
-        spent = 0;
-        prevDate = pairs.get(numberTrailingDays - 1).getKey();
-        Date initDate = null;
-        for (; i < pairs.size(); i++) {
-            double limitOfSpending = 2 * findMedian(queueOfSpending);
-            initDate = pairs.get(i).getKey();
+    /**
+     * the main function which count amount of alerts in a queue of days
+     * @param index index from which program should begin work
+     * @param pairs array list that keep pair of variable - date and count of money
+     * @param queueOfSpending contain amount of spent by client money, sorted by days(that function also sorted it by money), for trailing days that Bank tracking
+     * @return the amount of alerts
+     */
+    public static int mainCountingOfAlerts(int index,List<Pair<Date, Double>> pairs, LinkedCircularBoundedQueue<Double> queueOfSpending){
+        Date previous = pairs.get(trailingDays - 1).getKey();
+        Date initial ;
+        double spending = 0;
+        int alerts = 0;
+        for (; index < pairs.size(); index++) {
+            double limit = 2 * findMedian(queueOfSpending);
+            initial = pairs.get(index).getKey();
 
-            /*
-            - First case, if the previous date is not equal to initial date and if spending is grater then limit
-            - Second case, if the previous date is equal to initial date
-            - Default case
-             */
-            if (!prevDate.equals(initDate) && pairs.get(i).getValue() >= limitOfSpending) {
-                prevDate = initDate;
-                spent = pairs.get(i).getValue();
+            if (!previous.equals(initial) && pairs.get(index).getValue() >= limit) {
+                previous = initial;
+                spending = pairs.get(index).getValue();
 
-                if (pairs.get(i).getValue() != 0) {
-                    notifications += 1;
+                if (pairs.get(index).getValue() != 0) {
+                    alerts += 1;
                 }
-            } else if (prevDate.equals(initDate)) {
-                spent += pairs.get(i).getValue();
+            } else if (previous.equals(initial)) {
+                spending += pairs.get(index).getValue();
 
-                if (spent >= limitOfSpending) {
-                    notifications += 1;
+                if (spending >= limit) {
+                    alerts += 1;
                 }
             } else {
-                prevDate = initDate;
-                spent = pairs.get(i).getValue();
+                previous = initial;
+                spending = pairs.get(index).getValue();
             }
 
-            if (i == pairs.size() - 1 || !pairs.get(i + 1).getKey().equals(initDate)) {
-                queueOfSpending.offer(spent);
-                spent = 0;
+            if (index == pairs.size() - 1 || !pairs.get(index + 1).getKey().equals(initial)) {
+                queueOfSpending.offer(spending);
+                spending = 0;
             }
         }
-
-        return notifications;
+        return alerts;
     }
 
     /**
@@ -262,7 +281,7 @@ public class Main {
      * @param right List of the right side of the chosen range.
      */
     public static void merge(List<Double> tempList, List<Double> left, List<Double> right) {
-        List<Double> temp = new ArrayList<>();
+        List<Double> temp;
 
         int numbersIndex = 0;
         int leftIndex = 0;
@@ -279,7 +298,7 @@ public class Main {
             numbersIndex++;
         }
 
-        int tempIndex = 0;
+        int tempIndex;
         if (leftIndex >= left.size()) {
             temp = right;
             tempIndex = rightIndex;
@@ -296,18 +315,11 @@ public class Main {
 
     /**
      * Function converts the date from standard class Date to the days.
-     * @param year The year of this date.
-     * @param month The month of this date.
-     * @param day The day of this date.
-     * @return One Integer number of the this date.
+     * @param date The day of this date.
+     * @return One Integer number of the date.
      */
-    public static int convertToDays(int year, int month, int day) {
-        if (month < 3) {
-            year--;
-            month += 12;
-        }
-
-        return 365 * year + year / 4 - year / 100 + year / 400 + (153 * month - 457) / 5 + day - 306;
+    public static int convertToDays(Date date) {
+        return (int) (date.getTime() / 1000 / 60 / 60 / 24);
     }
 
     /**
@@ -335,7 +347,7 @@ public class Main {
      */
     public static Integer getMax(List<Integer> list) {
         // Initialize `min` to some maximum value.
-        Integer max = Integer.MIN_VALUE;
+        int max = Integer.MIN_VALUE;
 
         // Loop through every element in the list and compare the minimum found so far with the current value.
         for (Integer i : list) {
@@ -355,7 +367,7 @@ public class Main {
      */
     public static Integer getMin(List<Integer> list) {
         // Initialize `min` to some maximum value.
-        Integer min = Integer.MAX_VALUE;
+        int min = Integer.MAX_VALUE;
 
         // Loop through every element in the list and compare the minimum found so far with the current value.
         for (Integer i : list) {
@@ -431,7 +443,7 @@ class LinkedCircularBoundedQueue<T> implements ICircularBoundedQueue<T> {
     3. Standart insert to the rear.
      */
     public void offer(T value) { // O(1)
-        Node<T> node = new Node(value);
+        Node<T> node = new Node<>(value);
         if (this.isEmpty()) {
             this.rear = node;
             this.front = node;
