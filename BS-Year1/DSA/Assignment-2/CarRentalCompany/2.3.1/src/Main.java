@@ -21,7 +21,7 @@ public class Main {
             countOperations = Integer.parseInt(line);
         }
         PriorityQueue<Double, String> queue = new PriorityQueue<>();
-        FibonacciHeapNode<Double, String> tempNode = null;
+        FibonacciHeapNode<Double, String> tempNode;
 
         String tempString = null;
         String[] splitString;
