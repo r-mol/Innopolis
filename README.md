@@ -1,48 +1,18 @@
 # 📕Innopolis (2021 - ...)
-## Here I will post programs from University Education
-## 📌[ITP-1](BS-Year1/ITP-1)
-### 📍Assignments & Exams
-#### • [Hexadecimal sort "C"](BS-Year1/ITP-1/Assignment1/HexadecimalSort.c)
-#### • [Ski resort "C"](BS-Year1/ITP-1/Assignment2/SkiResort/SkiResort.c)
-#### • [Text justification #1 "C"](BS-Year1/ITP-1/Assignment2/TextJustification/TextJustification.c)
-#### • [Inside box "Java"](BS-Year1/ITP-1/Assignment3/HandsOfaClock/src/Main.java)
-#### • [Hands of inv clock "Java"](BS-Year1/ITP-1/Assignment3/InsideBox/src/Main.java)
-#### • [Text justification #2 "Java"](BS-Year1/ITP-1/Assignment4/TextJustification2/src/TextJustification2.java)
-#### • [Examination System "Java"](BS-Year1/ITP-1/Assignment5/ExaminationSystem/src/)
-#### • [Operations On Number "Java"](BS-Year1/ITP-1/Assignment5/OperationsOnNumber/src/)
-### 📍 C - Language
-#### • [Lab-1](BS-Year1/ITP-1/Lab-1)
-#### • [Lab-2](BS-Year1/ITP-1/Lab-2)
-#### • [Lab-3](BS-Year1/ITP-1/Lab-3)
-#### • [Lab-4](BS-Year1/ITP-1/Lab-4)
-### 📍 Java - Language
-#### • [Lab-5](BS-Year1/ITP-1/Lab-5)
-#### • [Lab-6](BS-Year1/ITP-1/Lab-6)
-#### • [Lab-7](BS-Year1/ITP-1/Lab-7)
-#### • [Lab-8](BS-Year1/ITP-1/Lab-8)
-#### • [Lab-9](BS-Year1/ITP-1/Lab-9)
-#### • [Lab-11](BS-Year1/ITP-1/Lab-11)
-#### • [Lab-13](BS-Year1/ITP-1/Lab-11)
-## 📌[DSA](BS-Year1/DSA)
-### 📍Assignments & Exams
-#### • [Assignment-1 "Java"](BS-Year1/DSA/Assignment-1)
-### 📍 C++ - Language
-#### • [Lab-1](BS-Year1/DSA/Lab-1)
-#### • [Lab-2](BS-Year1/DSA/Lab-2)
-#### • [Lab-3](BS-Year1/DSA/Lab-3)
-### 📍 Java - Language
-####
-## 📌[SSAD](BS-Year1/SSAD)
-### 📍Assignments & Exams
-#### • [Assignment-1 "Java"](BS-Year1/SSAD/Assignment1)
-### 📍 C++ - Language
-#### • [Lab-2](BS-Year1/SSAD/Lab-2)
-#### • [Lab-3](BS-Year1/SSAD/Lab-3)
-#### • [Lab-4](BS-Year1/SSAD/Lab-4)
-#### • [Lab-5](BS-Year1/SSAD/Lab-5)
-### 📍 Java - Language
-####
-## 📌[TCS](BS-Year1/TCS)
-### 📍Assignments & Exams
-#### • [Assignment-1 "Java"](BS-Year1/TCS/Assignment1/src)
-### 📍 Java - Language
+## 📌 [BS - Year 1](BS-Year1/) - DSA / SSAD / TCS / ITP-1
+## 📌 [BS - Year 2](BS-Year2/)
+## 📌 [BS - Year 3](BS-Year3/)
+## 📌 [BS - Year 4](BS-Year4/)
+
+### 📌 [Data Structures & Algorithms](BS-Year1/DSA)
+####  📍 [Assignment-1 "Java"](BS-Year1/DSA/Assignment-1) - Hash Set / Bounded Stack / Circular Bounded Queue
+####  📍 [Assignment-2 "Java"](BS-Year1/DSA/Assignment-2) - B-Tree / Fibonacci Heap / Graph / Prime's Algorithm 
+### 📌 [Software Systems Analysis & Design](BS-Year1/SSAD)
+####  📍 [Assignment-1 "C++"](BS-Year1/SSAD/Assignment1) - Largest sum / Linked List / Substring
+####  📍 [Assignment-2 "C++"](BS-Year1/SSAD/Assignment2) - Inverse of 3x3 matrix / Determenant of any matrix
+####  📍 [Assignment-3 "C++"](BS-Year1/SSAD/Assignment3/Roman) - Inverse of any matrix
+### 📌 [Theoretical Computer Science](BS-Year1/TCS)
+####  📍 [Assignment-1 "Java"](BS-Year1/TCS/Assignment1) - FSA validator
+####  📍 [Assignment-2 "Java"](BS-Year1/TCS/Assignment2) - FSA to RegExp Translator
+### 📌 [Introduction to Programming 1](BS-Year1/ITP-1)
+####  📍[Assignments & Exams](BS-Year1/ITP-1/)
