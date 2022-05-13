@@ -27,12 +27,14 @@ public class EXGraph {
         BufferedReader bi = new BufferedReader(new InputStreamReader(System.in));
         Map<String, Vertex> map = new HashMap<>();
         Graph graph = new Graph();
+
         String tempString = null;
         String[] splitString;
         String branchName1;
         String branchName2;
         String command;
         String line;
+
         int countOperations = 0;
         int distance;
         int penalty;
@@ -50,19 +52,23 @@ public class EXGraph {
             splitString = tempString.split(" ");
             command = splitString[0];
 
-            if (command.equals("ADD")) {
-                branchName1 = splitString[1];
-                penalty = Integer.parseInt(splitString[2]);
-                map.put(branchName1, graph.insertVertex(new V(branchName1, penalty)));
-            } else if (command.equals("CONNECT")) {
-                branchName1 = splitString[1];
-                branchName2 = splitString[2];
-                distance = Integer.parseInt(splitString[3]);
-                Vertex vertex1 = map.get(branchName1);
-                Vertex vertex2 = map.get(branchName2);
-                graph.insertEdge(vertex1, vertex2, new E(distance / (vertex1.v.getPenalty() + vertex2.v.getPenalty())));
-            } else if (command.equals("PRINT_MIN")) {
-                System.out.println(graph.primMST() + "\n");
+            switch (command) {
+                case "ADD" :
+                    branchName1 = splitString[1];
+                    penalty = Integer.parseInt(splitString[2]);
+                    map.put(branchName1, graph.insertVertex(new V(branchName1, penalty)));
+                    break;
+                case "CONNECT" :
+                    branchName1 = splitString[1];
+                    branchName2 = splitString[2];
+                    distance = Integer.parseInt(splitString[3]);
+                    Vertex vertex1 = map.get(branchName1);
+                    Vertex vertex2 = map.get(branchName2);
+                    graph.insertEdge(vertex1, vertex2, new E(distance / (vertex1.v.getPenalty() + vertex2.v.getPenalty())));
+                    break;
+                case "PRINT_MIN" :
+                    System.out.println(graph.primMST() + "\n");
+                    break;
             }
 
             countOperations--;
@@ -144,7 +150,6 @@ class E {
 class Vertex {
     V v;
     int index;
-    boolean Null = false;
     int degree = 0;
 
     /**
@@ -233,11 +238,9 @@ class Graph implements IGraph {
         this.edges.add(edge);
 
         adjacentMatrix.get(from.index).set(to.index, edge);
-        from.Null = true;
         from.degree++;
 
         adjacentMatrix.get(to.index).set(from.index, edge);
-        to.Null = true;
         to.degree++;
 
         return edge;
@@ -328,7 +331,7 @@ class Graph implements IGraph {
                 result.append(edge.from.v.getName()).append(":").append(edge.to.v.getName()).append(" ");
             }
 
-            if (vertex.Null) {
+            if (vertex.degree != 0) {
                 for (Edge z : adjacentMatrix.get(vertex.index)) {
                     if (deg == vertex.degree) {
                         break;
@@ -360,13 +363,7 @@ class Graph implements IGraph {
      */
     @Override
     public int degree(Vertex vertex) {
-        int count = 0;
-        for (Edge edge : adjacentMatrix.get(vertex.index)) {
-            if (edge != null) {
-                count++;
-            }
-        }
-        return count;
+        return vertex.degree;
     }
 }
 
