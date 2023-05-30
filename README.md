@@ -1,4 +1,4 @@
-# 📕Innopolis (2021 - ...)
+# 📕Innopolis (2021 - 2025)
 ## 📌 [BS - Year 1](BS-Year1/) - DSA / SSAD / TCS / ITP-1
 ## 📌 [BS - Year 2](BS-Year2/)
 ## 📌 [BS - Year 3](BS-Year3/)
