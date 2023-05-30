@@ -1,0 +1,9 @@
+00000000-0000ffff : pcie@10000000
+00001000-0000107f : 0000:00:01.0
+
+I get this result because I use ubuntu on docker and it does not have I/O
+devices.
+
+dma1: Direct-Addressable Memory Access controller - is a characteristic of computer systems that enables specific hardware components to access main system memory without the need for the CPU. 
+pic1: Programmable Interrupt controller - is an integrated circuit that aids a microprocessor's (or CPU's) management of simultaneous interrupt requests from many sources.
+timer1: Programmable Interval Timer - is a counter that generates an output signal when it reaches a programmed count.

@@ -1,0 +1,17 @@
+- Recovery strategy:
+Deadlock is detected and the system is brought back to a safe state
+Such a method performs well when deadlocks are few in the system.
+Resources are easy for processes to seek and obtain.
+Process initialization happens immediately, which is an additional benefit.
+
+- Prevention strategy:
+Deadlock is prevented from occurring in the first place
+The tactic is applicable to systems where deadlocks must be prevented at any costs.
+In some situations, putting such a system into place might be challenging.
+Such a system may also experience some performance loss.
+
+- Avoidance strategy:
+Deadlock is avoided by limiting the resources that can be requested by a process
+This method may be used concurrently and is less constricting than a preventative plan.
+This method is not appropriate, though, when the resource needs aren't known in advance.
+Another issue is that while waiting for the resource to become available, a process may be blocked for a considerable amount of time.
