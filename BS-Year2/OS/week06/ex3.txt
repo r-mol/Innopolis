@@ -1,0 +1,5 @@
+The difference between FCFS, SJF and Round Robin, that first one just take the processes in order it comes. Second,
+at first it sorts processes by arrival time and after by burst time. And it chooses the process with the shortest burst time in
+an available set of processes. But as for Round Robin, it executes processes in quantum every time. That is why, it works like
+queue, because it executes all processes sequentially. This scheduler is also dependent on quantum on your machine
+because it divides all processes on quantum interval.

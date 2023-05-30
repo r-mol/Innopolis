@@ -1,0 +1,4445 @@
+    1  xcode-select install
+    2  xcode-select-install
+    3  xcode-select --install
+    4  gcc
+    5  xcode-select--instal
+    6  java - jar /Users/roman_molochkov/Downloads/JFLAP7.1.jar 
+    7  java -jar /Users/roman_molochkov/Downloads/JFLAP7.1.jar 
+    8  say roma
+    9  say roma
+   10  say rrrrrrrrrrr
+   11  ls
+   12  cd Applications
+   13  cd ..
+   14  git
+   15  snow
+   16  python
+   17  python3
+   18  clear
+   19  run snow
+   20  snow
+   21  cd
+   22  ls
+   23  cd Coding
+   24  ls
+   25  J
+   26  cd J
+   27  cd Jflap
+   28  ls
+   29  java -jar JFLAP
+   30  java -jar JFLAP.jar
+   31  java -jar JFLAP7.1.jar
+   32  clear
+   33  ls
+   34  clear
+   35  cd ..
+   36  cd /
+   37  ls
+   38  cd Users
+   39  ls
+   40  cd roman_molochkov
+   41  ls
+   42  $
+   43  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   44  clear
+   45  clear
+   46  brew install opera
+   47  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   48  ls
+   49  cd /
+   50  ls
+   51  bin/
+   52  ls
+   53  cd bin/
+   54  ls
+   55  From https://github.com/Homebrew/homebrew-core
+   56  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   57  brew
+   58  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/roman_molochkov/.zprofile
+   59  eval "$(/opt/homebrew/bin/brew shellenv)"
+   60  exit
+   61  open ~/.zshrc
+   62  brew
+   63  brew install --cask iterm2
+   64  exit
+   65  ls
+   66  sh -c "$(curl -fsSL  https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+   67  clear
+   68  hyu
+   69  ls
+   70  cd Applications
+   71  ls
+   72  cd ..
+   73  ls
+   74  Coding/
+   75  ls
+   76  Jflap/
+   77  ls
+   78  java -jar JFLAP7.1.jar
+   79  ls
+   80  A
+   81  Applications
+   82  cd /
+   83  ls
+   84  User/
+   85  Users/
+   86  cd roman_molochkov/Applications/JetBrains\ Toolbox
+   87  ls
+   88  ./CLion.app
+   89  cd..
+   90  cd/
+   91  clear
+   92  cd ..
+   93  open
+   94  open -a CLion
+   95  open -a 
+   96  clear
+   97  cd /
+   98  open -a Safari
+   99  ls
+  100  cd Coding/Jflap
+  101  ls
+  102  open -a zoom.us
+  103  clear\\nclear
+  104  clear
+  105  cd /
+  106  ls
+  107  defaults write com.apple.dock autohide -delay -float 0
+  108  killall Dock
+  109  clear
+  110  open -a Safari
+  111  brew install fish
+  112  brew install --cask mpv
+  113  brew install --cask monitorcontrol
+  114  brew install --cask transmission
+  115  brew help
+  116  brew list
+  117  brew uninstall fish
+  118  open -a Transmission
+  119  clear
+  120  brew uninstall monitorcontrol
+  121  open -a CLion
+  122  brew install vscode
+  123  brew install --cask visual-studio-code
+  124  open -a Visual Studio Code
+  125  open Applications/list
+  126  clean
+  127  cd clean
+  128  wim Downloads/config.seb
+  129  nano Downloads/config.seb
+  130  brew install cmatrix
+  131  cmatrix
+  132  cmatrix -r
+  133  brew install htop
+  134  htop
+  135  git config --glaobal user.name "r-mol"
+  136  git config --global user.name "r-mol"
+  137  git config --global user.email "molochkov2017@gmail.com"
+  138  git init gg
+  139  git fetch Innopolis
+  140  brew install --cask appcleaner
+  141  brew 
+  142  brew list
+  143  cmatrix
+  144  brew install --cask appcleaner
+  145  brew list
+  146  brew uninstall htop
+  147  brew list
+  148  brew uninstall ncurses
+  149  brew uninstall pcre2
+  150  brew uninstall visual-studio-code
+  151  brew install --cask appcleaner
+  152  brew list
+  153  cmatrix
+  154  pwd
+  155  ls
+  156  cd Public/Drop\ Box
+  157  man ls
+  158  man ls 
+  159  /~
+  160  CD
+  161  \tcd
+  162  cd /Users/roman_molochkov
+  163  cd Downloads
+  164  cd/~
+  165  cd /~
+  166  cd
+  167  cd /.
+  168  cd /~
+  169  cd
+  170  ps
+  171  clear
+  172  ps -f
+  173  top
+  174  ps
+  175  clear
+  176  cmatrix
+  177  top
+  178  cmatrix
+  179  exit
+  180  list
+  181  clear
+  182  ls
+  183  cd Applications/
+  184  -open JetBrains\ Toolbox/IntelliJ\ IDEA\ Ultimate.app
+  185  ope JetBrains\ Toolbox/IntelliJ\ IDEA\ Ultimate.app
+  186  cd -open JetBrains\ Toolbox/IntelliJ\ IDEA\ Ultimate.app
+  187  open JetBrains\ Toolbox/IntelliJ\ IDEA\ Ultimate.app
+  188  exit
+  189  git
+  190  git init
+  191  clear
+  192  exit
+  193  git clone git@github.com:r-mol/Sorting.git
+  194  git 
+  195  git help
+  196  exit
+  197  brew install gh
+  198  gh auth login
+  199  git auth
+  200  git --help
+  201  gh repo clone r-mol/Sorting
+  202  gh repo list
+  203  gh repo Sorting 
+  204  gh repo view 
+  205  gh repo edit
+  206  gh repo edit Sorting
+  207  gh codespace
+  208  git clone git@github.com:r-mol/Sorting.git
+  209  ll
+  210  clear
+  211  cd Sorting
+  212  ll
+  213  cd Sorting
+  214  cd Sorting/
+  215  cd Bubble_Sort
+  216  vim Bubble_Sort.java
+  217  git commit -am "Add"
+  218  git push
+  219  vim Bubble_Sort.java
+  220  git commit -am "Add2"
+  221  git push
+  222  exit
+  223  clear
+  224  exit
+  225  clear
+  226  exit
+  227  brew install --cask mactex
+  228  cd
+  229  ls
+  230  App
+  231  cd Applications/ls
+  232  cd Applications
+  233  ls
+  234  clear
+  235  echo 'hello world'
+  236  ls
+  237  cd
+  238  ~/
+  239  ls Desktop
+  240  cd Desktop
+  241  ls
+  242  open Screenshot\ 2022-04-26\ at\ 07.46.41.png
+  243  ~/
+  244  ls
+  245  cd Developer
+  246  ls
+  247  ~/
+  248  ls -a
+  249  cd Applications
+  250  ls -a
+  251  ~/
+  252  open Developer
+  253  cd/
+  254  cd /
+  255  ls
+  256  cd Applications
+  257  ls
+  258  open Microsoft\ Teams.app
+  259  close Microsoft\ Teams.app
+  260  cd /
+  261  ls
+  262  cd Users
+  263  ls
+  264  cd roman_molochkov
+  265  ls
+  266  cd Desktop
+  267  mkdir temp
+  268  remdir temp
+  269  rmdir temp
+  270  man
+  271  1
+  272  man
+  273  2
+  274  man 3
+  275  man 1
+  276  man
+  277  1
+  278  man 2
+  279  man
+  280  2
+  281  man
+  282  3
+  283  2
+  284  3
+  285  4
+  286  5
+  287  11
+  288  1
+  289  0
+  290  man 
+  291  1
+  292  cd /
+  293  nano
+  294  brew install neovim
+  295  vim
+  296  nvim
+  297  nvim ~/.zshrc
+  298  clear
+  299  ~/.zshrc
+  300  nvim ~/.zshrc
+  301  vim ~/.zshrc
+  302  nvim
+  303  nvim ~/.zshrc
+  304  . ./.zshrc
+  305  vim
+  306  . ./.zshrc
+  307  nvim ~/.zshrc
+  308  . ./.zshrc
+  309  ./.zshrc
+  310  vim
+  311  \vim
+  312  curl https://raw.githubusercontent.com/rwu823/afloat/sierra/install.sh | sh
+  313  curl https://raw.githubusercontent.com/rwu823/afloat/master/install.sh | sh
+  314  vim .vimrc
+  315  nvim
+  316  vim
+  317  \vim
+  318  vim
+  319  mkdir -p .config/nvim
+  320  nvim .config/nvim/init.vim
+  321  vim .config/nvim/init.vim
+  322  cd .config/nvim
+  323  mkdir autoload
+  324  cd autoload
+  325  curl https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  326  curl https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim -o plug,vim
+  327  ls
+  328  ls -la
+  329  less plug,vim
+  330  cd ..
+  331  vim init.vim
+  332  clear
+  333  cd ..
+  334  cd..
+  335  ~/
+  336  cd .config
+  337  ls
+  338  nvim
+  339  cd nvim
+  340  ld
+  341  ls
+  342  cd autoload
+  343  ls
+  344  open plug,vim
+  345  cd ..
+  346  open init.vim
+  347  ls
+  348  open init.vim
+  349  nvim
+  350  cleE
+  351  clear
+  352  ls
+  353  pushd 
+  354  ls
+  355  ~/
+  356  ls
+  357  cd Downloads
+  358  ls
+  359  cd TelegramDownloads
+  360  ls
+  361  ls -lah | grep "init|\n|
+  362  ls -lah | grep "init"\n|
+  363  ls -lah | ggrep "init"\n|
+  364  ls -lah | grep "init"\n|
+  365  ls -lah || grep "init"\n|
+  366  pwd
+  367  popd
+  368  dirs
+  369  popd 1
+  370  popd
+  371  pwd
+  372  mv /Users/roman_molochkov/Downloads/TelegramDownloads/init.vim 
+  373  mv /Users/roman_molochkov/Downloads/TelegramDownloads/init.vim .
+  374  ls
+  375  nvim init.vim
+  376  mv init.vim init1.vim
+  377  nvim init1.vim
+  378  clear
+  379  ~/
+  380  cd /
+  381  ope 
+  382  cd A
+  383  cd Applications
+  384  open Yandex\ Music\ Unofficial.app/
+  385  cd
+  386  nvim .zsh
+  387  uptime
+  388  $ git config --global user.name "Roman Molochkov"
+  389  clear
+  390  cmatrix
+  391  brew install haskell-stack
+  392  stack --version
+  393  stack new my-project simple
+  394  brew install vscode
+  395  brew install --cask visual-studio-code
+  396  cd
+  397  ls
+  398  /
+  399  ls
+  400  cd Applications/Visual\ Studio\ Code.app
+  401  oen
+  402  open
+  403  open -a
+  404  cd
+  405  .. 
+  406  cd ..
+  407  cd Applications
+  408  open Visual\ Studio\ Code.app
+  409  /
+  410  curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+  411  run
+  412  stack ghci
+  413  run
+  414  stack ghci
+  415  ls .
+  416  ls
+  417  cd Users/roman_molochkov/my-project
+  418  ls
+  419  stack ghci
+  420  ghci
+  421  stack ghci
+  422  stack Main
+  423  stack src
+  424  ls
+  425  cd src
+  426  stack Main
+  427  stack ghci
+  428  runhaskell
+  429  /
+  430  brew --uninstall
+  431  brew list
+  432  brew --uninstall haskell-stack
+  433  brew help
+  434  brew uninstall haskell-stack
+  435  brew list
+  436  cd Users/roman_molochkov
+  437  curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+  438  stack --version
+  439  brew install haskell-stack
+  440  stack --version
+  441  cd Coding
+  442  ls
+  443  cd
+  444  cd Developer
+  445  ls
+  446  mkdir <haskell>
+  447  mkdir haskell
+  448  cd haskell
+  449  stack new my-project simple
+  450  ls
+  451  curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+  452  ghc --version
+  453  ghci --version
+  454  stack ghci
+  455  cd my-project
+  456  stack Main
+  457  stack ghc
+  458  ghc --version
+  459  stack ghc --version
+  460  Run ghc
+  461  stack runghc
+  462  stack ghci
+  463  cd Developer/haskell/my-project
+  464  stack ghci
+  465  /
+  466  stack ghci
+  467  cd Developer/haskell/my-project
+  468  stack ghci
+  469  cmatrix
+  470  git --verstion
+  471  git --version
+  472  branch help
+  473  brash help
+  474  brew help
+  475  brew update git
+  476  brew install git
+  477  git --version
+  478  cd Developer/IdeaProjects/tfs/
+  479  .git
+  480  cd .git
+  481  ls .
+  482  cd src
+  483  ls .
+  484  cd
+  485  cd Developer/IdeaProjects/tfs/
+  486  cd ..
+  487  cd tfs/gg
+  488  cd .git
+  489  ls .
+  490  cd ..
+  491  cd src
+  492  ls .
+  493  git status
+  494  cd 
+  495  cd Developer/IdeaProjects
+  496  mkdir Test
+  497  cd Test
+  498  git init
+  499  ls
+  500  cd .git
+  501  ls
+  502  cd ..
+  503  git status
+  504  git add Main.java
+  505  git status
+  506  git commit -b "first commit"
+  507  git commit -m "first commit"
+  508  git status
+  509  git help
+  510  git add .idea/.gitignore
+  511  git status
+  512  git commit -m "Add : file .gitignore"
+  513  git status
+  514  git add .gitignore
+  515  git commit -m "Update : file .gitignore"
+  516  git .idea/.gitignore
+  517  git add .idea/.gitignore
+  518  git commit -m "Update : file .gitignore"
+  519  git status
+  520  clear
+  521  git branch test
+  522  git branch
+  523  git branch -D test
+  524  git branch readme
+  525  git checkout -m readme
+  526  git checkout -
+  527  git checkout -m readme
+  528  git branch
+  529  git status
+  530  git add README.md
+  531  git status
+  532  git commit -m "Add : README.md file"
+  533  git status
+  534  git branch master
+  535  git checkout master
+  536  git status
+  537  git merge readme
+  538  git branch -D readme
+  539  clear
+  540  git config --global user.name
+  541  git config --global user.email
+  542  git remote add origin https://github.com/r-mol/Test.git
+  543  git push
+  544  git push -u origin master
+  545  git status
+  546  git add .
+  547  git commit -m "Update : README.md file"
+  548  git push
+  549  clear
+  550  vim Main.java
+  551  git status
+  552  vim Main.java
+  553  git status
+  554  git add Main.java
+  555  git commit -m "Update : Main.java file"
+  556  git push
+  557  cd ..
+  558  mkdir Git
+  559  cd Git
+  560  git init
+  561  cd ..
+  562  cd test
+  563  git status
+  564  git add .idea/.gitignore
+  565  git commit -m "Edit : .gitignore file"
+  566  git add Main.java
+  567  git commit -m "Edit : file Main.java add the main method"
+  568  git status
+  569  git push
+  570  cd ..
+  571  cd Git
+  572  ls
+  573  rm Main.java
+  574  ls
+  575  mkdir Main.java
+  576  ls
+  577  rm Main.java
+  578  rmdir Main.java
+  579  touch Main.java
+  580  ls
+  581  touch .gitignore
+  582  ls
+  583  ls .
+  584  open .gitignore
+  585  git status
+  586  cd .idea
+  587  ls
+  588  git status
+  589  cd ./
+  590  cd ..
+  591  cd ./
+  592  git status
+  593  git add Main.java
+  594  git commit -m "Edit : Main.java"
+  595  git add .idea/.gitignore
+  596  git commit -m "Add : .gitignore file"
+  597  git status
+  598  clear
+  599  cd /
+  600  cd Developer/IdeaProjects/LeetCodee
+  601  git status
+  602  mkdir 647
+  603  ls
+  604  cd ..
+  605  cd /
+  606  ls
+  607  cd Users/roman_molochkov
+  608  cd Developer/IdeaProjects
+  609  mkdir LeetCode
+  610  git init
+  611  git remote add origin https://github.com/r-mol/LeetCode.git
+  612  git help
+  613  cd LeetCode
+  614  git init
+  615  git clone https://github.com/r-mol/LeetCode.git
+  616  git status
+  617  git add .idea/.gitignore
+  618  git commit -m "Edit : .gitignore file"
+  619  git status
+  620  cd .DS_Store
+  621  open .DS_Store
+  622  git status
+  623  git add .gitignore
+  624  git commit -m "Refactor .gitignore file"
+  625  git status
+  626  git add LeetCode/Tasks/647.Palindromic_Substrings/src/Main.java
+  627  git status
+  628  git add .gitignore
+  629  git status
+  630  git commit -m "Refactor of file .gitignore"
+  631  git add .
+  632  git status
+  633  git commit -m "Add : all files of project"
+  634  git status
+  635  git commit -a
+  636  git add LeetCode
+  637  git status
+  638  git add ..
+  639  git add *
+  640  git status
+  641  git commit -m "Add : all files of project"
+  642  git add
+  643  git add LeetCode
+  644  git status
+  645  cd Developer/IdeaProjects/LeetCode
+  646  git status
+  647  git pull
+  648  git branch --set-upstream-to=<remote>/<branch> master
+  649  git branch --set-upstream-to=<remote>/<branch> origin
+  650  git pull -u origin main
+  651  git pull origin main
+  652  git pull main origin
+  653  git pull https://github.com/r-mol/LeetCode.git main
+  654  git status
+  655  git add /~/Developer/IdeaProjects/LeetCode/LeetCode
+  656  git add ~/Developer/IdeaProjects/LeetCode/LeetCode
+  657  git status
+  658  cd Developer/haskell/my-project
+  659  ls
+  660  stack ghci
+  661  stack setup
+  662  stack ghc
+  663  cd ~
+  664  curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+  665  cabal --version
+  666  ghc --version
+  667  stack exec -- which ghc
+  668  which ghc
+  669  haskell-language-server --version
+  670  ghcup list
+  671  cabal clean
+  672  cabal build --ghc-options=-freverse-errors
+  673  cabal configure --enable-tests
+  674  ghcup set ghc 8.10.4
+  675  ghcup set ghc 8.10.7
+  676  cabal clean
+  677  cabal configure --enable-tests
+  678  cabal install ormolu hlint stan ghcid haskell-ci cabal-fmt hkgr --allow-newer --overwrite-policy=always
+  679  which hlint
+  680  git clone https://github.com/phadej/cabal-extras\ncd cabal-extras/cabal-docspec\ncabal install cabal-docspec:exe:cabal-docspec --allow-newer --overwrite-policy=always\ncd ../cabal-deps\ncabal install cabal-deps:exe:cabal-deps --allow-newer --overwrite-policy=always
+  681  curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+  682  which cabal
+  683  cabal --version
+  684  ghc --version
+  685  cd ~
+  686  cd Developer/haskell
+  687  mkdir haskell-codeworld-template
+  688  cd haskell-codeworld-template
+  689  git init
+  690  git clone https://github.com/fizruk/haskell-codeworld-template.git
+  691  cabal v2-run --disable-tests
+  692  cabal v2-test
+  693  ghcup list
+  694  stack run
+  695  cabal run
+  696  haskell-language-server --version
+  697  ghc --version
+  698  ghcup toi
+  699  ghcup tui
+  700  cabal run
+  701  cabal run : Project.hs
+  702  cabal run Project.hs
+  703  cabal run :Project.hs
+  704  cabal run :all
+  705  cabal init
+  706  stack init
+  707  stack build
+  708  stack run
+  709  ghcup set ghc 8.10.7
+  710  stack run
+  711  stack --version
+  712  stack --help
+  713  stack uninstall
+  714  cd ~
+  715  rmdir .stack
+  716  rm -rf .stack
+  717  ls
+  718  cd /
+  719  ls
+  720  cd bin
+  721  ls
+  722  ls -1
+  723  ls -1| grep stack
+  724  cd /
+  725  cd ~
+  726  stack --version
+  727  ghc --version
+  728  cabal version
+  729  cabal --version
+  730  ghcup --version
+  731  stack run
+  732  ghc --version
+  733  ghc-8.10.7
+  734  cabal v2-run --disable-tests
+  735  cd Developer/haskell
+  736  mkdir \nhaskell-codeworld-template
+  737  cd haskell-codeworld-template
+  738  git init
+  739  git clone https://github.com/fizruk/haskell-codeworld-template.git
+  740  cd haskell-codeworld-template
+  741  cabal v2-run --disable-tests
+  742  brew install llvm
+  743  cabal v2-run --disable-tests
+  744  llvm -v
+  745  brew install llvm
+  746  llvm-v
+  747  llvm --version
+  748  llvm-config --version
+  749  zsh
+  750  llvm-config --version
+  751  brew search llvm
+  752  brew uninstall llvm@12
+  753  brew info llvm
+  754  clear
+  755  brew info llvm
+  756  brew install cmake
+  757  brew reinstall llvm
+  758  zsh
+  759  llvm-gcc
+  760  brew update
+  761  brew upgrade
+  762  arch -arm64 brew install llvm@11
+  763  LLVM_CONFIG="/opt/homebrew/Cellar/llvm@11/11.1.0_4/bin/llvm-config" arch -arm64 pip install llvmlite
+  764  arch -arm64 brew install llvm@11\nLLVM_CONFIG="/opt/homebrew/Cellar/llvm@11/11.1.0_4/bin/llvm-config" arch -arm64 pip install llvmlite
+  765  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+  766  cabal v2-run --disable-tests
+  767  llvm-config -v
+  768  llvm-config --version
+  769  llvm -v
+  770  zsh
+  771  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+  772  llvm-config --version
+  773  stack run
+  774  cabal v2-build
+  775  cabal v2-test
+  776  cabal run
+  777  cabal v2-run --disable-tests
+  778  stack new vscode-haskell-config
+  779  cd vscode-haskell-config
+  780  stack setup
+  781  ghc --version
+  782  clear
+  783  cd ..
+  784  mkdir lab1
+  785  cd lab1
+  786  git init
+  787  cd ..
+  788  rmdir lab1
+  789  rm -rf lab1
+  790  stack new my-project simple
+  791  stack new lab1 simple
+  792  cabal v2-run --disable-tests
+  793  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+  794  cabal v2-run --disable-tests
+  795  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+  796  cabal v2-run --disable-tests
+  797  cd lab1
+  798  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+  799  cabal v2-run --disable-tests
+  800  llvm-
+  801  stack run
+  802  stack :load main
+  803  stack ghci
+  804  stack run
+  805  cabal v2-run --disable-tests
+  806  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+  807  cabal v2-run --disable-tests
+  808  llvm-config
+  809  llvm-config --version
+  810  cabal v2-run --disable-tests
+  811  cd ..
+  812  ls
+  813  mkdir Haskell_Elective
+  814  cd Haskell_Elective
+  815  git init
+  816  git clone https://github.com/r-mol/Haskell_Elective.git
+  817  git branch lab1
+  818  git branch
+  819  cd Haskell_Elective/
+  820  git branch
+  821  git branch lab1
+  822  git checkout lab1
+  823  cd src
+  824  vim Project.hs
+  825  git status
+  826  git add Project.hs
+  827  git commit -m "Solve the first task of the lab1"
+  828  git push
+  829  git push --set-upstream origin lab1
+  830  cabal v2-run --disable-tests
+  831  clera
+  832  clear
+  833  cd ..
+  834  git branch ht1
+  835  git checkout ht1
+  836  cabal v2-run --disable-tests
+  837  git checkout ht1
+  838  cabal v2-run --disable-tests
+  839  git checkout lab1
+  840  ls
+  841  cd src
+  842  ls
+  843  cabal v2-run --disable-tests
+  844  cd..
+  845  cd ..
+  846  cabal v2-run --disable-tests 
+  847  cd src
+  848  vim Project.hs
+  849  cabal v2-run --disable-tests
+  850  clear
+  851  cabal v2-run --disable-tests
+  852  clear
+  853  cabal v2-run --disable-tests
+  854  cd ..
+  855  git branch
+  856  git checkout ht1
+  857  cd src
+  858  vim Project.hs
+  859  cd ..
+  860  git push
+  861  git add src/Project.hs 
+  862  git committ -m "ht1"
+  863  git commit -m "ht1"
+  864  git push
+  865  git push --set-upstream origin ht1
+  866  cabal v2-run --disable-tests
+  867  git push --set-upstream origin ht1
+  868  cabal v2-run --disable-tests
+  869  git branch
+  870  git add src/Project.hs
+  871  git commit -m "solve the home task 1"
+  872  git push
+  873  cabal v2-run --disable-tests
+  874  git branch -a ht1-2
+  875  git branch
+  876  git branch ht1-2
+  877  git checkout ht1
+  878  git checkout ht1-2
+  879  git checkout ht1
+  880  git checkout ht1-2
+  881  git checkout lab1
+  882  git checkout ht1
+  883  git add src/Project.hs
+  884  git commit -m "Edit : commets of code"
+  885  git push
+  886  git checkout ht1-2
+  887  git checkout ht1
+  888  git checkout ht1-2
+  889  vim src/Project.hs
+  890  git branch ht1
+  891  git checkout ht1
+  892  git stash
+  893  git checkout ht1
+  894  cabal v2-run --disable-tests
+  895  git checkout ht1-2
+  896  git unstash
+  897  git --help
+  898  git help
+  899  cabal v2-run --disable-tests
+  900  git checkout ht1
+  901  git stash
+  902  git checkout ht1
+  903  cabal v2-run --disable-tests
+  904  git checkout ht1-2
+  905  git unstash
+  906  git stash pop
+  907  git checkout ht1
+  908  cabal v2-run --disable-tests
+  909  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+  910  cabal v2-run --disable-tests
+  911  cd ..
+  912  cd Haskell_Innopolis
+  913  git init
+  914  git add Ht1-1/
+  915  git add Ht1-2/
+  916  git add Lab1/
+  917  git commit -m "Initial commit"
+  918  git remote add origin https://github.com/r-mol/Haskell_Innopolis.git
+  919  git push -u origin master
+  920  git remote add origin https://github.com/r-mol/Haskell_Innopolis.git
+  921  git push -u origin master
+  922  git status
+  923  git add Ht1-1/
+  924  git add Ht1-2/
+  925  git commit -m "Initial Commit"
+  926  git push -u origin master
+  927  git init
+  928  git add Lab1/
+  929  git commit -m "add : lab1"
+  930  git remote add origin https://github.com/r-mol/Haskell_Innopolis.git
+  931  git push -u origin main
+  932  git help
+  933  git remote add origin https://github.com/r-mol/Haskell_Innopolis.git
+  934  git push -u origin master
+  935  cd ..
+  936  cd Ht1-2
+  937  cd src
+  938  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+  939  cabal v2-run --disable-tests
+  940  cd ..
+  941  cabal init
+  942  cabal v2-run --disable-tests
+  943  cd ..
+  944  cd Ht1-1
+  945  cabal v2-run --disable-tests
+  946  cd ..
+  947  cd Lab1/
+  948  cabal v2-run --disable-tests
+  949  cd ..
+  950  cd Ht1-2
+  951  cabal init
+  952  cabal v2-run --disable-tests
+  953  cd src
+  954  open Project.hs
+  955  cabal v2-run --disable-tests
+  956  cd ..
+  957  cabal v2-run --disable-tests
+  958  cabal init
+  959  cabal v2-run --disable-tests
+  960  cd ..
+  961  cd Ht1-1
+  962  cabal v2-run --disable-tests
+  963  clear
+  964  cd Ht1-2
+  965  cabal init
+  966  cd ..
+  967  cd Ht1-2
+  968  cabal v2-run --disable-tests
+  969  cabal build
+  970  cd ..
+  971  cd untitled\ folder
+  972  cd ..
+  973  stack new t simple
+  974  cd t
+  975  cabal v2-run --disable-tests
+  976  cabal build
+  977  cd src
+  978  ls .
+  979  cd ..
+  980  cd `\n:q\nq\nexit\n:e
+  981  cd ~
+  982  cd Developer/haskell/Haskell_Innopolis/Ht1-1\ copy
+  983  cabal v2-run --disable-tests
+  984  cd Developer/haskell/Haskell_Innopolis/Ht1-1\ copy
+  985  cabal v2-run --disable-tests
+  986  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+  987  cabal v2-run --disable-tests
+  988  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+  989  cabal v2-run --disable-tests
+  990  clear
+  991  cd ..
+  992  cd Developer/haskell/Haskell_Innopolis/
+  993  git init
+  994  cd ..
+  995  mkidir test
+  996  mkdir test
+  997  git init
+  998  cd test
+  999  git add
+ 1000  cd ..
+ 1001  cd test
+ 1002  git add *
+ 1003  git commit -m "initial commit"
+ 1004  git remote add origin https://github.com/r-mol/test.git
+ 1005  git -u origin master
+ 1006  git push -u origin master
+ 1007  cabal v2-run --disable-tests
+ 1008  cd ..
+ 1009  cd Haskell_Innopolis
+ 1010  git init
+ 1011  git add *
+ 1012  git commit -m "Initial Commit"
+ 1013  git remote add origin https://github.com/r-mol/Haskell_Innopolis.git
+ 1014  git push -u origin master
+ 1015  cd Ht1-1
+ 1016  cd ..
+ 1017  cd Ht1-2
+ 1018  cd src
+ 1019  open Project.hs
+ 1020  cd ..
+ 1021  git add Ht1-2/
+ 1022  git commit -m "Solve the extra task of the first home task."
+ 1023  git push
+ 1024  cd Lab1
+ 1025  cd src
+ 1026  open Project.hs
+ 1027  cd ..
+ 1028  cd Ht1-1
+ 1029  cd src
+ 1030  open Project.hs
+ 1031  cd ..
+ 1032  git status
+ 1033  git add Ht1-2/
+ 1034  git commit -m "Solve the extra task of the first home task."
+ 1035  git add Ht1-1/
+ 1036  git commit -m "Add comment of the task of the first home task."
+ 1037  git push
+ 1038  cd Developer/haskell/Haskell_Innopolis/Ht1-1/src
+ 1039  cabal v2-run --disable-tests
+ 1040  cd ..
+ 1041  cabal init
+ 1042  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1043  cabal v2-run --disable-tests
+ 1044  cd ..
+ 1045  cd Lab1
+ 1046  cabal v2-run --disable-tests
+ 1047  cabal init
+ 1048  cabal v2-run --disable-tests
+ 1049  cd ..
+ 1050  cd Ht1-1
+ 1051  cabal v2-run --disable-tests
+ 1052  cd Ht2
+ 1053  git init
+ 1054  git help
+ 1055  cd ..
+ 1056  git add
+ 1057  git status
+ 1058  git add Ht1-1/
+ 1059  git commit -m "Create cross walk for cycles"
+ 1060  git add Lab1/
+ 1061  git commit -m "Create datas to the program"
+ 1062  git add Lab2/
+ 1063  git commit -m "Delete Lab2"
+ 1064  git push
+ 1065  git pull
+ 1066  git push
+ 1067  git push -u origin master
+ 1068  git pull Ht1-1
+ 1069  cd ..
+ 1070  cd my-project
+ 1071  stack run
+ 1072  stack ghci
+ 1073  stack run
+ 1074  stack ghci
+ 1075  stack run
+ 1076  stack ghci
+ 1077  stack run
+ 1078  stack ghci
+ 1079  cabal v2-run --disable-tests
+ 1080  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1081  cabal v2-run --disable-tests
+ 1082  cabal init
+ 1083  cabal v2-run --disable-tests
+ 1084  cd ..
+ 1085  cd haskell-codeworld-template/haskell-codeworld-template/src
+ 1086  open Project.hs
+ 1087  cabal v2-run --disable-tests
+ 1088  cabal init
+ 1089  cabal v2-run --disable-tests
+ 1090  cd ..
+ 1091  cd Haskell_Innopolis
+ 1092  mkdir test
+ 1093  cd test
+ 1094  cabal init
+ 1095  cabal v2-run --disable-tests
+ 1096  cd ..
+ 1097  cd Ht1-1
+ 1098  cabal v2-run --disable-tests
+ 1099  cd ..
+ 1100  cd test
+ 1101  cabal v2-run --disable-tests
+ 1102  cd ..
+ 1103  cd Ht1-1
+ 1104  cd src
+ 1105  open Project.hs
+ 1106  cd ..
+ 1107  git status
+ 1108  git add Ht1-1/
+ 1109  git commit -m "Refactor code"
+ 1110  git push
+ 1111  cd ..
+ 1112  mkdir
+ 1113  mkdir Haskell
+ 1114  cd Haskell
+ 1115  git init
+ 1116  mkdir Ht1-1
+ 1117  cd Ht1-1/
+ 1118  cabal v2-run --disable-tests
+ 1119  cd ..
+ 1120  cd Ht1-2
+ 1121  cabal v2-run --disable-tests
+ 1122  cd ..
+ 1123  cd Ht1-1
+ 1124  cabal v2-run --disable-tests
+ 1125  cabal build
+ 1126  cabal v2-run --disable-tests
+ 1127  cabal build
+ 1128  cabal v2-run --disable-tests
+ 1129  cabal build
+ 1130  cd ..
+ 1131  cd..
+ 1132  cd ..
+ 1133  cd Developer/haskell/Haskell/
+ 1134  cabal build
+ 1135  cd Developer/haskell/Haskell/
+ 1136  cabal v2-run --disable-tests
+ 1137  git remote add origin https://github.com/r-mol/Haskell.git
+ 1138  git push -u origin master
+ 1139  git init
+ 1140  git remote add origin https://github.com/r-mol/Haskell.git
+ 1141  git clone https://github.com/r-mol/Haskell.git
+ 1142  git push -u origin master
+ 1143  cabal v2-run --disable-tests
+ 1144  git init
+ 1145  git status
+ 1146  git add *
+ 1147  cd ..
+ 1148  mkdir Haskell_Ellective
+ 1149  cd Haskell_Ellective
+ 1150  echo "# Haskell" >> README.md\ngit init\ngit add README.md\ngit commit -m "first commit"\ngit branch -M main\ngit remote add origin https://github.com/r-mol/Haskell.git\ngit push -u origin main
+ 1151  git status
+ 1152  git add *
+ 1153  git add Code/
+ 1154  git add Code/Haskell/
+ 1155  git status
+ 1156  git commit -m ""
+ 1157  git add *
+ 1158  git commit -m "Initial commit"
+ 1159  git push
+ 1160  cd ..
+ 1161  mkdir Inno
+ 1162  cd ..
+ 1163  mkdir Haskell
+ 1164  cd Haskell
+ 1165  mkdir Ht1-1
+ 1166  mkdir Ht1-2
+ 1167  mkdir Ht2
+ 1168  echo "# Haskell_Inno" >> README.md\ngit init\ngit add README.md\ngit commit -m "first commit"\ngit branch -M main\ngit remote add origin https://github.com/r-mol/Haskell_Inno.git\ngit push -u origin main
+ 1169  git add *
+ 1170  git commit -m "Add Ht directories"
+ 1171  git branch
+ 1172  git commit -main "Add Ht directories"
+ 1173  git commit -m "Add Ht directories"
+ 1174  git status
+ 1175  cd ..
+ 1176  cd Haskell
+ 1177  git init
+ 1178  git remote add origin https://github.com/r-mol/Haskell_Inno.git
+ 1179  mkdir Ht1-1
+ 1180  mkdir Ht1-2
+ 1181  mkdir Ht2
+ 1182  git status
+ 1183  git add
+ 1184  git add *
+ 1185  git commit -m "Initial commit"
+ 1186  cabal init
+ 1187  git init
+ 1188  cd ..
+ 1189  cd Haskel
+ 1190  git init
+ 1191  git push
+ 1192  git status
+ 1193  cd ..
+ 1194  cd Haskell
+ 1195  git status
+ 1196  git add *
+ 1197  git commit -m "ff"
+ 1198  git push
+ 1199  git remote add origin https://github.com/r-mol/Haskell_Inno.git
+ 1200  git push -u origin master
+ 1201  cabal v2-run --disable-tests
+ 1202  cd ..
+ 1203  cd Haskell
+ 1204  cabal init
+ 1205  cabal v2-run --disable-tests
+ 1206  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1207  cabal v2-run --disable-tests
+ 1208  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1209  cabal v2-run --disable-tests
+ 1210  ghcup list
+ 1211  cd ..
+ 1212  cd haskel
+ 1213  ls
+ 1214  cd Haskell
+ 1215  ls
+ 1216  code .
+ 1217  cat package.yaml 
+ 1218  cd ..\n: 1654009160:0;cd ..
+ 1219  stack new new-proj
+ 1220  cp haskell-codeworld-template/stack.yaml new-proj
+ 1221  cd new-proj/
+ 1222  stack setup
+ 1223  rmdir Haskell
+ 1224  stack new Haskell
+ 1225  cabal init
+ 1226  cabal v2-run --disable-tests
+ 1227  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1228  cabal v2-run --disable-tests
+ 1229  cd HaskellProjects
+ 1230  cd Ellective/Road
+ 1231  cd ..
+ 1232  stack new road
+ 1233  stack new Tree
+ 1234  stack new TileGame
+ 1235  cabal v2-run --disable-tests
+ 1236  cd ..
+ 1237  cd Haskell
+ 1238  git init
+ 1239  git status
+ 1240  git add *
+ 1241  git status
+ 1242  git add .
+ 1243  git status
+ 1244  git commit -m "Initial commit"
+ 1245  git remote add origin https://github.com/r-mol/Haskell_Template.git\ngit push -u origin master
+ 1246  git add Haskell.cabal
+ 1247  git commit -m "Edit Haskell.cabal file"
+ 1248  git push
+ 1249  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1250  cabal v2-run --disable-tests
+ 1251  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1252  cabal v2-run --disable-tests
+ 1253  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1254  cabal v2-run --disable-tests
+ 1255  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1256  cabal v2-run --disable-tests
+ 1257  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1258  cabal v2-run --disable-tests
+ 1259  cd ..
+ 1260  cd HaskellProjects/
+ 1261  git status
+ 1262  cd Ellective/
+ 1263  git status
+ 1264  cd ..
+ 1265  git init
+ 1266  git status
+ 1267  git add Ellective/Road/
+ 1268  git commit -m "Initial commit of the project road"
+ 1269  git remote add origin https://github.com/r-mol/HaskellProjects.git
+ 1270  git push -u origin master
+ 1271  cabal v2-run --disable-tests
+ 1272  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1273  cabal v2-run --disable-tests
+ 1274  git push -u origin master
+ 1275  git add Ellective/Road/
+ 1276  git commit -m "Initial commit of the project road"
+ 1277  git push -u origin master
+ 1278  git reset --hard HEAD~1
+ 1279  git add Ellective/Road/
+ 1280  git commit -m "Initial commit of the project road"
+ 1281  git push -u origin master
+ 1282  git delete
+ 1283  git --help
+ 1284  git reset --hard HEAD~1
+ 1285  git reset --hard HEAD
+ 1286  git add Ellective/Road/
+ 1287  git commit -m "Initial commit of the project road"
+ 1288  git push -u origin master
+ 1289  cabal v2-run --disable-tests
+ 1290  git reset --hard HEAD
+ 1291  git add Ellective/Road/
+ 1292  git commit -m "Initial commit of the project road"
+ 1293  git push -u origin master
+ 1294  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1295  cabal v2-run --disable-tests
+ 1296  cd ..
+ 1297  cd Lift
+ 1298  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1299  cd Lift
+ 1300  cabal v2-run --disable-tests
+ 1301  cd ..
+ 1302  cd HaskellProjects
+ 1303  git init
+ 1304  cd Road
+ 1305  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1306  cabal v2-run --disable-tests
+ 1307  cd ..
+ 1308  git add Road/
+ 1309  git commit -m "Initial commit of the project road"
+ 1310  git remote add origin https://github.com/r-mol/HaskellProjects.git
+ 1311  git push -u origin master
+ 1312  cd ..
+ 1313  cd HaskellProjects
+ 1314  cd TileGame
+ 1315  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1316  cabal v2-run --disable-tests
+ 1317  cd ..
+ 1318  cd Road
+ 1319  cabal v2-run --disable-tests
+ 1320  git add TileGame/
+ 1321  git commit -m "Initial commit of the project TileGame"
+ 1322  git push
+ 1323  git status 
+ 1324  git add Road/
+ 1325  git commit -m "Change : dist-newstyle directory"
+ 1326  git push
+ 1327  cd ..
+ 1328  cd Tree
+ 1329  cabal v2-run --disable-tests
+ 1330  git add Tree/
+ 1331  git commit -m "Initial commit of the project Tree"
+ 1332  git push
+ 1333  git add Lift/
+ 1334  git commit -m "Initial commit of the project Lift"
+ 1335  git push
+ 1336  git add FSM/
+ 1337  git commit -m "Initial commit of the project Lift"
+ 1338  git push
+ 1339  cabal v2-run --disable-tests
+ 1340  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1341  cabal v2-run --disable-tests
+ 1342  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1343  cabal v2-run --disable-tests
+ 1344  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1345  cabal v2-run --disable-tests
+ 1346  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1347  cabal v2-run --disable-tests
+ 1348  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1349  cabal v2-run --disable-tests
+ 1350  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1351  export PATH="/opt/homebrew/opt/llvm@11/bin:$PATH"
+ 1352  cabal v2-run --disable-tests
+ 1353  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1354  cabal v2-run --disable-tests
+ 1355  cd `\n:q\nq\n:q\n:exit\nq\nq\nq\nq\nq\nw\nw\ne
+ 1356  cd ~
+ 1357  ls
+ 1358  ls .
+ 1359  ls.
+ 1360  ls ~/.config | grep zsh
+ 1361  ls-a  ~/.config | grep zsh
+ 1362  ls -lah  ~/.config | grep zsh
+ 1363  ls -lah  ~/ | grep zsh
+ 1364  echo $PATH
+ 1365  cabal v2-run --disable-tests
+ 1366  ghcup -help
+ 1367  cabal v2-run --disable-tests
+ 1368  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1369  cabal v2-run --disable-tests
+ 1370  llvm
+ 1371  llvm -g
+ 1372  brew -help
+ 1373  cd /
+ 1374  clear
+ 1375  brew -help
+ 1376  brew --help
+ 1377  brew list
+ 1378  brew uninstall llvm@11
+ 1379  llvm
+ 1380  cabal v2-run --disable-tests
+ 1381  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1382  cabal v2-run --disable-tests
+ 1383  llvm-config
+ 1384  llvm-config --version
+ 1385  export PATH="/usr/local/opt/llvm/bin:$PATH"\nexport PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+ 1386  cabal v2-run --disable-tests
+ 1387  cabal v2-run --disable-tests -vvv
+ 1388  cabal v2-run --disable-tests -v
+ 1389  llvm-config --version
+ 1390  which llvm-config
+ 1391  export PATH="/usr/local/opt/llvm/bin:$PATH"
+ 1392  export PATH="/usr/local/opt/llvm/bin:$PATH"\nexport PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+ 1393  cabal v2-run --disable-tests
+ 1394  llvm-config --version
+ 1395  brew list
+ 1396  brew uninstall llvm
+ 1397  llvm-config --version
+ 1398  cabal v2-run --disable-tests
+ 1399  brew install llvm
+ 1400  brew uninstall llvm
+ 1401  brew install llvm@12
+ 1402  brew reinstall llvm@12
+ 1403  HOMEBREW_NO_INSTALL_CLEANUP
+ 1404  man brew
+ 1405  llvm-config --version
+ 1406  zsh
+ 1407  cabal v2-run --disable-tests
+ 1408  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1409  cabal v2-run --disable-tests
+ 1410  echo 'export PATH="/usr/local/opt/llvm/bin:$PATH"' >> ~/.bash_profile
+ 1411  export LDFLAGS="-L/usr/local/opt/llvm/lib"\nexport CPPFLAGS="-I/usr/local/opt/llvm/include"
+ 1412  cabal v2-run --disable-tests
+ 1413  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1414  cabal v2-run --disable-tests
+ 1415  cd ..
+ 1416  cd FSM
+ 1417  cd src
+ 1418  open Project.hs
+ 1419  cd ..
+ 1420  cd Lift
+ 1421  cd ..
+ 1422  git status
+ 1423  git add Lift/
+ 1424  git commit -m "Refactor some lines"
+ 1425  git push
+ 1426  cabal v2-run --disable-tests
+ 1427  cabal init
+ 1428  cd Lift
+ 1429  cabal v2-run --disable-tests
+ 1430  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1431  cabal v2-run --disable-tests
+ 1432  cd ..
+ 1433  git add Lift/
+ 1434  git commit -m "Add : solution2"
+ 1435  git push
+ 1436  cd Lift
+ 1437  cabal v2-run --disable-tests
+ 1438  echo $PATH
+ 1439  cd ~
+ 1440  chsh -s /bin/zsh
+ 1441  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1442  cabal v2-run --disable-tests
+ 1443  cd ..
+ 1444  git
+ 1445  git status
+ 1446  git add Lift/
+ 1447  git commit -m "Add : solution3"
+ 1448  git push
+ 1449  git add FSM/
+ 1450  git commit -m "Change : .DS_Store"
+ 1451  git push
+ 1452  git status
+ 1453  cabal v2-run --disable-tests
+ 1454  cd ..
+ 1455  git status
+ 1456  git add TileGame/
+ 1457  git commit -m "Change : .DS_Store"
+ 1458  git push
+ 1459  cd Lift
+ 1460  cabal v2-run --disable-tests
+ 1461  cd ..
+ 1462  git status
+ 1463  git add Lift/
+ 1464  git commit -m "Add : Solution 4 for task Lift"
+ 1465  git push
+ 1466  cd Lift
+ 1467  cabal v2-run --disable-tests
+ 1468  cd ..
+ 1469  cd TileGame
+ 1470  cabal v2-run --disable-tests
+ 1471  cd ..
+ 1472  cd TileGame/src
+ 1473  open Project.hs
+ 1474  cd ..
+ 1475  git status
+ 1476  git add Lift/
+ 1477  git commit -m "Add : Comments to a code"
+ 1478  git push
+ 1479  git add TileGame/
+ 1480  git commit -m "Add : Start screen and reset of a game"
+ 1481  git push
+ 1482  cd TileGame
+ 1483  cabal v2-run --disable-tests
+ 1484  cd ..
+ 1485  cd Lift
+ 1486  cabal v2-run --disable-tests
+ 1487  brew cask install skim
+ 1488  brew install skim
+ 1489  cd Desktop
+ 1490  cd latex\ project
+ 1491  ecnl
+ 1492  echo myfile.txt
+ 1493  echo jfklsddjkf > myfile.txt
+ 1494  cabal v2-run --disable-tests
+ 1495  cd ..
+ 1496  cd TileGame
+ 1497  cabal v2-run --disable-tests
+ 1498  cd ..
+ 1499  git add Lift/
+ 1500  git comment -m "Refactor code"
+ 1501  git commit -m "Refactor code"
+ 1502  git push
+ 1503  git add TileGame/
+ 1504  git commit -m "Add : locat difenitions"
+ 1505  git push
+ 1506  cd ..
+ 1507  cd untitled\ folder
+ 1508  cabal init
+ 1509  cabal run
+ 1510  stack run
+ 1511  ghc run
+ 1512  cabal ghci
+ 1513  cabal __help
+ 1514  stack ghci
+ 1515  cabal --help
+ 1516  ghci project
+ 1517  ghci Main
+ 1518  ghci run
+ 1519  ghci Project
+ 1520  cd src
+ 1521  cd ..
+ 1522  cd I:O/src
+ 1523  ghci Project
+ 1524  whereis ghcup
+ 1525  ghcup list
+ 1526  ls /usr/bin/ghcup
+ 1527  brew help
+ 1528  brew list ghcup
+ 1529  brew list
+ 1530  cd ~
+ 1531  brew install ghcup
+ 1532  whereis ghcup
+ 1533  ghci Project
+ 1534  whereis ghcup
+ 1535  cd Desktop/Assignment\ 3
+ 1536  touch assignmen_3.tex
+ 1537  cd ..
+ 1538  cd ~
+ 1539  sudo apt install python3-venv
+ 1540  brew install mysql
+ 1541  mysql -uroot
+ 1542  mysql -uroot -p
+ 1543  /opt/homebrew/opt/mysql/bin/mysqld_safe --datadir=/opt/homebrew/var/mysql
+ 1544  cd ..
+ 1545  /opt/homebrew/opt/mysql/bin/mysql -u root -p
+ 1546  mysql -u root
+ 1547  /opt/homebrew/opt/mysql/support-files/mysql.server stop
+ 1548  /opt/homebrew/opt/mysql/bin/mysqld_safe --skip-grant-tables
+ 1549  cd ~
+ 1550  /opt/homebrew/opt/mysql/bin/mysql -u root
+ 1551  sudo systemctl restart mysql
+ 1552  cd ~
+ 1553  sudo systemctl restart mysql
+ 1554  /opt/homebrew/opt/mysql/support-files/mysql.server stop
+ 1555  /opt/homebrew/opt/mysql/bin/mysql -u root -p
+ 1556  /opt/homebrew/opt/mysql/bin/mysql -u root
+ 1557  /opt/homebrew/opt/mysql/bin/mysql -u root -p
+ 1558  brew services start mysql
+ 1559  /opt/homebrew/opt/mysql/bin/mysql -u root -p
+ 1560  ghci Project
+ 1561  cd src
+ 1562  ghci Project
+ 1563  cd ..
+ 1564  cd Tic_Tac_Toe
+ 1565  cd src
+ 1566  cabal v2-run --disable-tests
+ 1567  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1568  cabal v2-run --disable-tests
+ 1569  cd Developer/HaskellProjects
+ 1570  git add I:O/
+ 1571  git commit -m "Add : code of lab tasks"
+ 1572  git push
+ 1573  git add Tic_Tac_Toe/
+ 1574  git commit -m "Inittial commit of the game tic_tac_toe"
+ 1575  git push
+ 1576  cmatrix
+ 1577  cabal v2-run --disable-tests
+ 1578  cd ..
+ 1579  git add Tic_Tac_Toe/
+ 1580  git commit -m "Add : Functions of drawing a board & put mark at"
+ 1581  git push
+ 1582  cabal v2-run --disable-tests
+ 1583  cd Tic_Tac_Toe
+ 1584  cabal v2-run --disable-tests
+ 1585  /opt/homebrew/opt/mysql/bin/mysql -u root -p
+ 1586  cd ..
+ 1587  git add Tic_Tac_Toe/
+ 1588  git commit -m "Edit: Refactor code and push final version of game"
+ 1589  git push
+ 1590  cabal v2-run --disable-tests
+ 1591  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1592  cabal v2-run --disable-tests
+ 1593  ghc run
+ 1594  cabal ghc
+ 1595  ghci Project
+ 1596  htop
+ 1597  ps aux | grep -i sql
+ 1598  kill 13456
+ 1599  kill 822
+ 1600  ps aux | grep -i sql
+ 1601  kill 32894
+ 1602  ps aux | grep -i sql
+ 1603  /opt/homebrew/opt/mysql/bin/mysql -u root -p
+ 1604  /opt/homebrew/opt/mysql/support-files/mysql.server stop
+ 1605  /opt/homebrew/opt/mysql/bin/mysql -u root -p
+ 1606  /opt/homebrew/opt/mysql/support-files/mysql.server stop
+ 1607  cd src
+ 1608  ghci Project
+ 1609  /opt/homebrew/opt/mysql/bin/mysql -u root -p
+ 1610  /opt/homebrew/opt/mysql/support-files/mysql.server stop
+ 1611  cd Developer/FinalProject
+ 1612  git init
+ 1613  git clone https://github.com/Demezy/liquid-simulation.git
+ 1614  cabal v2-run --disable-tests
+ 1615  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1616  cabal v2-run --disable-tests
+ 1617  cd src
+ 1618  cabal v2-run --disable-tests
+ 1619  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1620  cabal v2-run --disable-tests
+ 1621  cabal init
+ 1622  cabal v2-run --disable-tests
+ 1623  cd ..
+ 1624  git pull
+ 1625  cd liquid-simulation
+ 1626  cabal init
+ 1627  cabal v2-run --disable-tests
+ 1628  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1629  cabal v2-run --disable-tests
+ 1630  cabal init
+ 1631  cabal v2-run --disable-tests
+ 1632  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1633  cabal v2-run --disable-tests
+ 1634  cabal init
+ 1635  cabal v2-run --disable-tests
+ 1636  cabal run SPHSimulation-exe
+ 1637  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1638  cabal run SPHSimulation-exe
+ 1639  stack run
+ 1640  cabal run SPHSimulation-exe
+ 1641  cd ..
+ 1642  cd FinalProject
+ 1643  git init
+ 1644  git clone https://github.com/Demezy/SPHSimulation.git
+ 1645  cabal run SPHSimulation-exe
+ 1646  cd ..
+ 1647  cd SPHSimulation
+ 1648  cabal run SPHSimulation-exe
+ 1649  nvim
+ 1650  clear
+ 1651  brew info nvim
+ 1652  brew install neovim
+ 1653  nvim
+ 1654  cd ~/.config/nvim
+ 1655  ls
+ 1656  v init1.vim
+ 1657  nvim init1.vim
+ 1658  mv init1.vim init.vim
+ 1659  nvim
+ 1660  sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \\n       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+ 1661  nvim
+ 1662  xukas
+ 1663  clear
+ 1664  nvim
+ 1665  ls
+ 1666  cp ~/Downloads/TelegramDownloads/init.vim
+ 1667  cp ~/Downloads/TelegramDownloads/init.vim ./
+ 1668  nvim
+ 1669  clear
+ 1670  cd ~/Developer
+ 1671  ls
+ 1672  cd FinalProject/SPHSimulation/src
+ 1673  ls
+ 1674  nvim Objects.hs
+ 1675  cp ~/Downloads/TelegramDownloads/compe.lua ~/.config/nvim/
+ 1676  cd ~/.config/nvim
+ 1677  ls
+ 1678  mkdir lua
+ 1679  mkdir lua/lsp
+ 1680  mv compe.lua lua/lsp
+ 1681  nvim ~/Developer/FinalProject/SPHSimulation/src/Objects.hs
+ 1682  nvim ~/Downloads/TelegramDownloads/init\ \(1\).vim
+ 1683  nvim init.vim
+ 1684  nvim ~/Developer/FinalProject/SPHSimulation/src/Objects.hs
+ 1685  nvim init.vim
+ 1686  nvim ~/Developer/FinalProject/SPHSimulation/src/Objects.hs
+ 1687  nvim ~/Developer/IdeaProjects/Sorting/sorting/src/Bubble_Sort/Bubble_Sort.java
+ 1688  nvim ~/Developer/FinalProject/SPHSimulation/src/Objects.hs
+ 1689  nvim init.vim
+ 1690  cd 
+ 1691  ls
+ 1692  ls -lah
+ 1693  nvim ~/Developer/FinalProject/SPHSimulation/src/Objects.hs
+ 1694  nvim ~/Developer/FinalProject/SPHSimulation/src/Lib.hs
+ 1695  cd Developer/FinalProject/SPHSimulation/src/cd ..
+ 1696  cd Developer/FinalProject/SPHSimulation
+ 1697  cabal run SPHSimulation-exe
+ 1698  cd Downloads/Postman\ Agent.app/cd ..
+ 1699  cd Developer/FinalProject/SPHSimulation/test/
+ 1700  cd ..
+ 1701  cabal run SPHSimulation-exe
+ 1702  cd 
+ 1703  nvim init.vim
+ 1704  clear
+ 1705  nvim init.vim
+ 1706  nvim ~/Downloads/TelegramDownloads/init\ \(1\).vim
+ 1707  ls
+ 1708  cd ~/.config/nvim
+ 1709  nvim init.vim
+ 1710  cd ..
+ 1711  nvim ~/Developer/FinalProject/SPHSimulation/src/Lib.hs
+ 1712  nvim ~/Developer/FinalProject/SPHSimulation/src/Objects.hs
+ 1713  cd Developer/FinalProject/SPHSimulation
+ 1714  git pull
+ 1715  nvim src/Objects.hs
+ 1716  nvim init.vim
+ 1717  cd ~/.config/nvim
+ 1718  nvim init.vim
+ 1719  nvim ~/Developer/FinalProject/SPHSimulation/src/Objects.hs
+ 1720  cd ~
+ 1721  cd Developer/FinalProject/SPHSimulation/
+ 1722  cd src
+ 1723  touch ParticleModule.hs
+ 1724  ls
+ 1725  nvim ParticleModule.hs
+ 1726  nvim Lib.hs
+ 1727  cd ..
+ 1728  git add src/ParticleModule.hs
+ 1729  git commit -m "feat: add ParticleModule.hs"
+ 1730  git push
+ 1731  nvim src/Lib.hs
+ 1732  nvim src/ParticleModule.hs
+ 1733  nvim src/Lib.hs
+ 1734  clear
+ 1735  nvim src/ParticleModule.hs
+ 1736  nvim src/Lib.hs
+ 1737  cabal run SPHSimulation-exe
+ 1738  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1739  cabal run SPHSimulation-exe
+ 1740  nvim src/Lib.hs
+ 1741  nvim src/ParticleModule.hs
+ 1742  nvim src/Objects.hs
+ 1743  nvim src/Lib.hs
+ 1744  cabal run SPHSimulation-exe
+ 1745  cabal run SPHSimulation-exe -v
+ 1746  cd src
+ 1747  cabal run SPHSimulation-exe -v
+ 1748  cd ..
+ 1749  cabal run SPHSimulation-exe
+ 1750  nvim src/Lib.hs
+ 1751  cabal run SPHSimulation-exe
+ 1752  nvim src/Lib.hs
+ 1753  cabal run SPHSimulation-exe
+ 1754  nvim src/Lib.hs
+ 1755  cabal run SPHSimulation-exe
+ 1756  nvim src/ParticleModule.hs
+ 1757  nvim src/Objects.hs
+ 1758  nvim src/ParticleModule.hs
+ 1759  nvim src/Lib.hs
+ 1760  cabal run SPHSimulation-exe
+ 1761  nvim src/Objects.hs
+ 1762  cabal run SPHSimulation-exe
+ 1763  git add src/ParticleModule.hs
+ 1764  git commit -m "feat: realize functions of rendering Particle"
+ 1765  git add src/Objects.hs
+ 1766  git commit -m "feat: delete function of particle rendering from object"
+ 1767  git add src/Lib.hs
+ 1768  git commit -m "feat: test the rendering of particle"
+ 1769  git push
+ 1770  nvim src/Objects.hs
+ 1771  nvim src/ParticleModule.hs
+ 1772  cd Developer/FinalProject/SPHSimulation/
+ 1773  nvim src/ParticleModule.hs
+ 1774  cabal run SPHSimulation-exe
+ 1775  git add src/
+ 1776  git commit -m "feat: add coloring of Particle"
+ 1777  git push
+ 1778  nvim src/Objects.hs
+ 1779  nvim src/Lib.hs
+ 1780  cabal run SPHSimulation-exe
+ 1781  gti 
+ 1782  git add src/Objects.hs
+ 1783  git commit -m "feat: implement the universe type"
+ 1784  git push
+ 1785  nvim src/Lib.hs
+ 1786  clear
+ 1787  cd ~/.comfig/nvim
+ 1788  cd ~/.config/nvim
+ 1789  nvim init.vim
+ 1790  nvim ~/Developer/FinalProject/SPHSimulation/src/Objects.hs
+ 1791  cd ..
+ 1792  cd Developer/FinalProject/SPHSimulation/
+ 1793  git restore src/Objects.hs
+ 1794  git status
+ 1795  cabal run SPHSimulation-exe
+ 1796  git add .
+ 1797  git status
+ 1798  git commit -m "feat: add ParticleModule.hs into files"
+ 1799  git push
+ 1800  nvim src/Objects.hs
+ 1801  nvim src/ParticleModule.hs
+ 1802  nvim src/Objects.hs
+ 1803  cabal run SPHSimulation-exe
+ 1804  nvim src/ParticleModule.hs
+ 1805  cabal run SPHSimulation-exe
+ 1806  nvim src/Lib.hs
+ 1807  cabal run SPHSimulation-exe
+ 1808  nvim src/Lib.hs
+ 1809  cabal run SPHSimulation-exe
+ 1810  nvim src/ParticleModule.hs
+ 1811  nvim src/Objects.hs
+ 1812  nvim src/ParticleModule.hs
+ 1813  nvim src/Lib.hs
+ 1814  cabal run SPHSimulation-exe
+ 1815  nvim src/Lib.hs
+ 1816  cabal run SPHSimulation-exe
+ 1817  nvim src/Lib.hs
+ 1818  nvim src/ParticleModule.hs
+ 1819  nvim src/Lib.hs
+ 1820  nvim src/Objects.hs
+ 1821  cabal run SPHSimulation-exe
+ 1822  git status
+ 1823  git add *
+ 1824  git add .
+ 1825  git commit -m "refactor: change data of Particle"
+ 1826  git push
+ 1827  git status
+ 1828  nvim src/Objects.hs
+ 1829  git add src/Objects.hs
+ 1830  git commit -m "refactor: data type of Universe"
+ 1831  git push
+ 1832  git add src/Objects.hs
+ 1833  git status
+ 1834  nvim src/Objects.hs
+ 1835  git status
+ 1836  git add src/Objects.hs
+ 1837  git commit -m "refactor: rebase mass of particle"
+ 1838  git push
+ 1839  cabal run SPHSimulation-exe
+ 1840  nvim src/ParticleModule.hs
+ 1841  nvim src/Lib.hs
+ 1842  cabal run SPHSimulation-exe
+ 1843  git add src/Lib.hs
+ 1844  git commit -m "refactor: rebase mass of particle"
+ 1845  git push
+ 1846  cabal run SPHSimulation-exe
+ 1847  git status
+ 1848  nvim src
+ 1849  cabal run SPHSimulation-exe
+ 1850  rm src/ParticleModule.hs
+ 1851  ls src/
+ 1852  cabal run SPHSimulation-exe
+ 1853  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1854  cabal run SPHSimulation-exe
+ 1855  nvim src
+ 1856  cabal run SPHSimulation-exe
+ 1857  git status
+ 1858  git add SPHSimulation.cabal app/Main.hs src/
+ 1859  git status
+ 1860  git commit -m "refactor: program by new data types"
+ 1861  git push
+ 1862  git pull
+ 1863  git config pull.rebase false
+ 1864  git pull
+ 1865  git push
+ 1866  cabal run SPHSimulation-exe
+ 1867  nvim src
+ 1868  cd src
+ 1869  ls
+ 1870  touch RenderingOfUniverse.hs
+ 1871  ls
+ 1872  cd ..
+ 1873  cabal run SPHSimulation-exe
+ 1874  nvim src
+ 1875  cd Developer/FinalProject/SPHSimulation/
+ 1876  git add src/Objects.hs
+ 1877  git commit -m "refactor: add dependeces of new type in module"
+ 1878  git push
+ 1879  git add SPHSimulation.cabal app/ src/
+ 1880  git commit -m "feat: prepare workplace for develop particle  rendering
+ 1881  git commit -m "feat: prepare workplace for develop particle rendering"
+ 1882  git push
+ 1883  git status
+ 1884  cabal run SPHSimulation-exe
+ 1885  nvim src
+ 1886  cabal run SPHSimulation-exe
+ 1887  :wq
+ 1888  nvim src
+ 1889  cabal run SPHSimulation-exe
+ 1890  nvim src
+ 1891  cabal run SPHSimulation-exe
+ 1892  git status
+ 1893  git add src/
+ 1894  git commit -m "feat: develop rendering of particle without interpolation"
+ 1895  git pull
+ 1896  git push
+ 1897  nvim src
+ 1898  git pull
+ 1899  nvim src
+ 1900  cd ..
+ 1901  cd
+ 1902  cd Developer/FinalProject/SPHSimulation
+ 1903  nvim src
+ 1904  git pull
+ 1905  git status
+ 1906  git add dist-newstyle/
+ 1907  git pull
+ 1908  git add -f  dist-newstyle/
+ 1909  git commit -m "feat: dist-newstyle/"
+ 1910  git push
+ 1911  git pull
+ 1912  git config pull.rebase true
+ 1913  git pull
+ 1914  git status
+ 1915  nvim src
+ 1916  use add/rm 
+ 1917  git use add/rm dist-newstyle
+ 1918  git add/rm dist-newstyle
+ 1919  git status
+ 1920  git add/rm dist-newstyle/
+ 1921  git pull --rebase
+ 1922  git config --global pull.rebase true
+ 1923  git status
+ 1924  git config --global pull.rebase true
+ 1925  git pull
+ 1926  git add dist-newstyle/
+ 1927  git config advice.addIgnoredFile false
+ 1928  git add dist-newstyle/
+ 1929  git status
+ 1930  git pull
+ 1931  git add 
+ 1932  git push
+ 1933  git add .
+ 1934  git commit -m "refactor: problems with git"
+ 1935  git push
+ 1936  git pull
+ 1937  git status
+ 1938  cabal run SPHSimulation-exe
+ 1939  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1940  cabal run SPHSimulation-exe
+ 1941  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1942  cabal run SPHSimulation-exe
+ 1943  clear
+ 1944  nvim src
+ 1945  cabal run SPHSimulation-exe
+ 1946  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 1947  cabal run SPHSimulation-exe
+ 1948  nvim src
+ 1949  cabal run SPHSimulation-exe
+ 1950  cd src
+ 1951  ls
+ 1952  touch UsefulFunctions.hs
+ 1953  nvim UsefulFunctions.hs
+ 1954  cabal run SPHSimulation-exe
+ 1955  git status
+ 1956  git add src/ app/Main.hs SPHSimulation.cabal
+ 1957  git commit -m "feat: create new file for the different useful functions"
+ 1958  git push
+ 1959  git status
+ 1960  git config advice.addIgnoredFile false
+ 1961  git status
+ 1962  git config advice.addIgnoredFile true
+ 1963  git status
+ 1964  clear
+ 1965  nvim RenderingOfUniverse.hs
+ 1966  cabal run SPHSimulation-exe
+ 1967  clear
+ 1968  git add src/
+ 1969  git commit -m "refactor: add comments and split function in two different"
+ 1970  git push
+ 1971  git pull
+ 1972  git push
+ 1973  git pull
+ 1974  git config --global pull.rebase true
+ 1975  git pull
+ 1976  git config --global pull.rebase false
+ 1977  git pull
+ 1978  git status
+ 1979  git rm -r --cached .
+ 1980  git status
+ 1981  git checkout d7704ac
+ 1982  git status
+ 1983  git pull
+ 1984  git restore --staged .
+ 1985  git status
+ 1986  git pull
+ 1987  git restore dist-newstyle/
+ 1988  git status
+ 1989  git pull
+ 1990  cabal run SPHSimulation-exe
+ 1991  nvim SimulationModule.hs
+ 1992  nvim
+ 1993  nvim Objects.hs
+ 1994  cabal run SPHSimulation-exe
+ 1995  git push
+ 1996  nvim RenderingOfUniverse.hs
+ 1997  cabal run SPHSimulation-exe
+ 1998  git add src/RenderingOfUniverse.hs
+ 1999  git commit -m "feat: develop rendering of any solids type."
+ 2000  git add src/
+ 2001  git commit -m "refactor: change placeholders from '_' to 'undefinded'."
+ 2002  git push
+ 2003  nvim Objects.hs
+ 2004  cabal run SPHSimulation-exe
+ 2005  git add src/Objects.hs
+ 2006  git commit -m "refactor: reduce redundant code and make the code more beutiful."
+ 2007  git push
+ 2008  nvim src/Lib.hs
+ 2009  nvim Lib.hs
+ 2010  git push
+ 2011  cabal run SPHSimulation-exe
+ 2012  git add src/Lib.hs
+ 2013  git commit -m "feat: create test element of wall"
+ 2014  git add src/Objects.hs
+ 2015  git commit -m "refactor: change type of shape from 'Bool' to 'Path'"
+ 2016  git add src/RenderingOfUniverse.hs
+ 2017  git commit -m "feat: add Solids rendering to the function of Universe rendering"
+ 2018  git push
+ 2019  git status
+ 2020  cd 
+ 2021  ~/.config/nvim
+ 2022  nvim init.vim
+ 2023  nvim
+ 2024  nvim src/Lib.hs
+ 2025  nvim init.vim
+ 2026  nvim src/Lib.hs
+ 2027  nvim init.vim
+ 2028  nvim src/Lib.hs
+ 2029  nvim init.vim
+ 2030  nvim src/Lib.hs
+ 2031  nvim init.vim
+ 2032  git status
+ 2033  nvim .gitignore
+ 2034  git status
+ 2035  git add .gitignore
+ 2036  git commit -m "modified .gitignore"
+ 2037  git status
+ 2038  git push
+ 2039  git status
+ 2040  nvim .gitignore
+ 2041  git status
+ 2042  git restore dist-newstyle/
+ 2043  git status
+ 2044  cabal run SPHSimulation-exe
+ 2045  cd 
+ 2046  cd Developer/FinalProject/SPHSimulation/
+ 2047  nvim src/Objects.hs
+ 2048  nvim src/Si
+ 2049  nvim src/SimulationModule.hs
+ 2050  cabal run SPHSimulation-exe
+ 2051  git status
+ 2052  rm src/Si
+ 2053  git status
+ 2054  clear
+ 2055  git status
+ 2056  git pull
+ 2057  git rm --cached -r dist-newstyle/
+ 2058  git status
+ 2059  ls
+ 2060  git stash
+ 2061  git pull
+ 2062  ls
+ 2063  git status
+ 2064  git stash drop
+ 2065  cabal run SPHSimulation-exe
+ 2066  nvim src/SimulationModule.hs
+ 2067  cd
+ 2068  ~/.config/nvim
+ 2069  nvim init.vim
+ 2070  cd 
+ 2071  cd Developer
+ 2072  clear
+ 2073  cd FinalProject
+ 2074  cd SPHSimulation
+ 2075  nvim src/TimeModule.hs
+ 2076  nvim src/
+ 2077  git pull
+ 2078  nvim src/
+ 2079  git pull
+ 2080  nvim src/
+ 2081  cabal run SPHSimulation-exe
+ 2082  nvim src/
+ 2083  cabal run SPHSimulation-exe
+ 2084  nvim src/
+ 2085  cd Developer/FinalProject/SPHSimulation
+ 2086  cabal run SPHSimulation-exe
+ 2087  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 2088  cabal run SPHSimulation-exe
+ 2089  git status
+ 2090  git push
+ 2091  git pull
+ 2092  git add src/Lib.hs
+ 2093  git commit -m "feat: develop the running of the simulation"
+ 2094  git pull
+ 2095  cabal run SPHSimulation-exe
+ 2096  git push
+ 2097  cabal run SPHSimulation-exe
+ 2098  nvim src/
+ 2099  cabal run SPHSimulation-exe
+ 2100  git add src/UsefulFunctions.hs
+ 2101  git commit -m "refactor: delete unused library"
+ 2102  nvim src/
+ 2103  git add src/RenderingOfUniverse.hs
+ 2104  git commit -m "refactor: delete redundant comments and sort libraries"
+ 2105  nvim src/
+ 2106  git add src/SimulationModule.hs
+ 2107  git commit -m "refactor: sort libraries"
+ 2108  nvim src/
+ 2109  git add src/Lib.hs
+ 2110  git commit -m "refactor: code"
+ 2111  git push
+ 2112  git pull
+ 2113  cd
+ 2114  cd ~/.comfig/nvim
+ 2115  cd ~/.config/nvim
+ 2116  nvim init.vim
+ 2117  nvim src/
+ 2118  cabal run SPHSimulation-exe
+ 2119  nvim src/
+ 2120  cabal run SPHSimulation-exe
+ 2121  git pull
+ 2122  git status
+ 2123  nvim src/
+ 2124  git dif
+ 2125  git diff
+ 2126  git add src/Lib.hs
+ 2127  git commit -m "refactor: change velosity of particles"
+ 2128  git pull
+ 2129  git push
+ 2130  nvim src/
+ 2131  cd ..
+ 2132  cd Developer/FinalProject/SPHSimulation/
+ 2133  cabal run SPHSimulation-exe
+ 2134  git add src/Lib.hs
+ 2135  git commit -m "refactor: apply gravity on particles"
+ 2136  git push
+ 2137  cd 
+ 2138  cd ~/.config/nvim
+ 2139  nvim init.vim
+ 2140  /Users/roman_molochkov/Downloads/TelegramDownloads/init\ \(1\).vim; exit
+ 2141  cd
+ 2142  nvim ~/Downloads/TelegramDownloads/init\ \(1\).vim
+ 2143  cd ~/.config/nvim
+ 2144  nvim init.vim
+ 2145  nvim src/
+ 2146  git status
+ 2147  clear
+ 2148  nvim init.vim
+ 2149  cd
+ 2150  brew install go
+ 2151  cd Developer
+ 2152  ls
+ 2153  mkdir temp
+ 2154  cd temp
+ 2155  touch main.go
+ 2156  nvim main.go
+ 2157  rm main.go
+ 2158  mkdir Go/src/golang-book/chapter2
+ 2159  mkdir Go/src/golang-book/chapter2 -p
+ 2160  mkdir -p  Go/src/golang-book/chapter2
+ 2161  cd Go/src/golang-book/chapter2
+ 2162  nvim main.go
+ 2163  go run main.go
+ 2164  nvim main.go
+ 2165  brew install npm
+ 2166  nvim main.go
+ 2167  nvim
+ 2168  ls
+ 2169  cd -
+ 2170  cd Developer/temp/Go/src/golang-book/chapter2
+ 2171  nvim main.go
+ 2172  go run main.go
+ 2173  nvim main.go
+ 2174  go run main.go
+ 2175  cd ..
+ 2176  ls
+ 2177  cd -p
+ 2178  ls
+ 2179  cd ..
+ 2180  rmdir -p
+ 2181  clear
+ 2182  cd 
+ 2183  cd -
+ 2184  cd Go/src/golang-book/chapter2
+ 2185  go run main.go
+ 2186  pushd 
+ 2187  popd
+ 2188  cd ..
+ 2189  rmdir -p
+ 2190  ls
+ 2191  rmdir -- -p
+ 2192  ls
+ 2193  cd ..
+ 2194  cd HaskellProjects
+ 2195  ls
+ 2196  git status
+ 2197  cd 
+ 2198  cd ~/.config/nvim
+ 2199  ls
+ 2200  cd autoload
+ 2201  ls
+ 2202  cd ..
+ 2203  cd lua
+ 2204  ls
+ 2205  nvim lsp/compe.lua
+ 2206  cd lsp
+ 2207  cd ..
+ 2208  ls
+ 2209  nvim init.vim
+ 2210  cd ~/.config/nvim
+ 2211  cd plugged
+ 2212  ls
+ 2213  cd 
+ 2214  cd Developer/FinalProject/SPHSimulation/src
+ 2215  nvim Lib.hs
+ 2216  nvim init.vim
+ 2217  cd ..
+ 2218  cd 
+ 2219  brew -help
+ 2220  brew --help
+ 2221  brew list
+ 2222  brew uninstall llvm@12
+ 2223  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+ 2224  ~/.zshrc
+ 2225  cd ~/.zshrc
+ 2226  brew uninstall mysql
+ 2227  brew list
+ 2228  brew uninstall cmatrix
+ 2229  rm -rf ~/.oh-my-zsh\nrm ~/.zshrc\ncp ~/.zshrc.pre-oh-my-zsh ~/.zshrc\nsource ~/.zshrc
+ 2230  ls
+ 2231  cd /
+ 2232  rm -rf ~/.oh-my-zsh\nrm ~/.zshrc\ncp ~/.zshrc.pre-oh-my-zsh ~/.zshrc\nsource ~/.zshrc
+ 2233  rm -rf ~/.oh-my-zsh
+ 2234  rm ~/.zshrc
+ 2235  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+ 2236  cd ~/.zshrc
+ 2237  ~/.zshrc
+ 2238  ZSH_THEME="agnoster"
+ 2239  ZSH_THEME="solorized"
+ 2240  nano ~/.zshrc
+ 2241  git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+ 2242  nano ~/.zshrc
+ 2243  cd Developer
+ 2244  cd FinalProject/SPHSimulation/src
+ 2245  clear
+ 2246  cd ..
+ 2247  cd 
+ 2248  nano ~/.zshrc
+ 2249  cd .zshrc
+ 2250  ~/.zshrc
+ 2251  cd ~/.zshrc
+ 2252  cd Developer/FinalProject/SPHSimulation/src
+ 2253  nvim Lib.hs
+ 2254  cd ..
+ 2255  cabal run SPHSimulation-exe
+ 2256  cd
+ 2257  brew install ghc
+ 2258  brew install cabal
+ 2259  cd Developer/FinalProject/SPHSimulation/src
+ 2260  cd ..
+ 2261  cabal run SPHSimulation-exe
+ 2262  cd ..
+ 2263  brew list
+ 2264  cd ..
+ 2265  cd 
+ 2266  nano ~/.zsh
+ 2267  nano ~/.zshrc
+ 2268  brew uninstall ghc
+ 2269  brew uninstall cabal
+ 2270  brew list
+ 2271  cabal --help
+ 2272  $HOME/.cabal/bin
+ 2273  $HOME/.cabal/
+ 2274  cd
+ 2275  cd Developer/FinalProject/SPHSimulation/
+ 2276  cabal run SPHSimulation-exe
+ 2277  cd
+ 2278  export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
+ 2279  cd Developer/FinalProject/SPHSimulation/
+ 2280  cabal run SPHSimulation-exe
+ 2281  clear
+ 2282  cd ..
+ 2283  cd test
+ 2284  cd temp
+ 2285  cd Go/src/golang-book/chapter2
+ 2286  nvim main.go
+ 2287  go main.go 
+ 2288  go run main.go
+ 2289  cd 
+ 2290  cd ~/.config/nvim
+ 2291  nvim init.vim
+ 2292  clear
+ 2293  nvim init.vim
+ 2294  cd 
+ 2295  cd Go/src/golang-book/chapter2
+ 2296  cd Developer/temp/Go/src/golang-book/chapter2
+ 2297  go run main.go
+ 2298  cd 
+ 2299  cd Developer/temp/Go/src/golang-book/chapter2
+ 2300  clear
+ 2301  cd ..
+ 2302  cd src
+ 2303  nvim
+ 2304  ls
+ 2305  nvim Project.hs
+ 2306  cd ..
+ 2307  cabal v2-run --disable-tests
+ 2308  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 2309  cabal v2-run --disable-tests
+ 2310  nvim src/Project.hs
+ 2311  cabal v2-run --disable-tests
+ 2312  nvim src/Project.hs
+ 2313  cabal v2-run --disable-tests
+ 2314  nvim src/Project.hs
+ 2315  cabal v2-run --disable-tests
+ 2316  nvim src/Project.hs
+ 2317  cd 
+ 2318  cd Developer/temp/Go/src/golang-book/chapter2
+ 2319  nvim main.go
+ 2320  go run main.go
+ 2321  nvim main.go
+ 2322  go run main.go
+ 2323  nvim main.go
+ 2324  go run main.go
+ 2325  nvim main.go
+ 2326  go run main.go
+ 2327  nvim main.go
+ 2328  clear
+ 2329  nvim main.go
+ 2330  go run main.go
+ 2331  nvim main.go
+ 2332  go run main.go
+ 2333  nvim main.go
+ 2334  go run main.go
+ 2335  nvim main.go
+ 2336  go run main.go
+ 2337  clear
+ 2338  св 
+ 2339  cd
+ 2340  cd Developer/HaskellProjects
+ 2341  cd Lab
+ 2342  nvim src/Project.hs
+ 2343  ghc src/Project.hs
+ 2344  nvim src/Project.hs
+ 2345  cabal v2-run --disable-tests
+ 2346  export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
+ 2347  cabal v2-run --disable-tests
+ 2348  nvim src/Project.hs
+ 2349  cabal v2-run --disable-tests
+ 2350  clear
+ 2351  nvim src/Project.hs
+ 2352  cabal v2-run --disable-tests
+ 2353  nvim src/Project.hs
+ 2354  cabal v2-run --disable-tests
+ 2355  clear
+ 2356  nvim src/Project.hs
+ 2357  cabal v2-run --disable-tests
+ 2358  nvim src/Project.hs
+ 2359  cabal v2-run --disable-tests
+ 2360  nvim src/Project.hs
+ 2361  cabal v2-run --disable-tests
+ 2362  nvim src/Project.hs
+ 2363  cd Developer/FinalProject/SPHSimulation/
+ 2364  clear
+ 2365  cabal v2-run --disable-tests
+ 2366  clear
+ 2367  nvim src/Project.hs
+ 2368  cabal v2-run --disable-tests
+ 2369  cd ..
+ 2370  cd 
+ 2371  cd Developer/HaskellProjects/Lab
+ 2372  cabal v2-run --disable-tests
+ 2373  ls
+ 2374  export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
+ 2375  cabal v2-run --disable-tests
+ 2376  nvim src/Project.hs
+ 2377  cabal v2-run --disable-tests
+ 2378  nvim src/Project.hs
+ 2379  cabal v2-run --disable-tests
+ 2380  cd 
+ 2381  cd ~/.config/nvim
+ 2382  nvim init.vim
+ 2383  nvim src/Project.hs
+ 2384  ls
+ 2385  cd plugged
+ 2386  ls
+ 2387  cd
+ 2388  cd ~/.config/nvim
+ 2389  cd  lua
+ 2390  ;s
+ 2391  ls
+ 2392  cs lsp
+ 2393  cd lsp
+ 2394  ls
+ 2395  nvim compe.lua
+ 2396  cd ..
+ 2397  cd 
+ 2398  nvim ~/.zshrc
+ 2399  cabal v2-run --disable-tests
+ 2400  export GOPATH=~/go\nexport GOPATH=~/gocode\nexport GOPATH=~/Devel/go\nexport GOPATH=~/Projects/go
+ 2401  export GOPATH=~/go
+ 2402  export GOPATH=~/gocode
+ 2403  export GOPATH=~/Devel/go
+ 2404  export GOPATH=~/Projects/go
+ 2405  echo "export GOPATH=~/go" >> ~/.profile
+ 2406  export PATH=$PATH:$GOPATH/bin
+ 2407  brew install golangci-lint
+ 2408  brew upgrade golangci-lint
+ 2409  golangci-lint run
+ 2410  cd
+ 2411  golangci-lint run
+ 2412  cd -
+ 2413  golangci-lint run
+ 2414  brew install bash-completion@2\necho 'export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"' >>~/.bashrc\necho '[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"' >>~/.bashrc\nexec bash # reload and replace (if it was updated) shell\ntype _init_completion && echo "completion is OK" # verify that bash-completion v2 is correctly installed
+ 2415  echo 'source <(golangci-lint completion bash)' >>~/.bashrc\nsource ~/.bashrc
+ 2416  exec bash
+ 2417  golangci-lint run
+ 2418  exec bash
+ 2419  golangci-lint help linters
+ 2420  golangci-lint run
+ 2421  cd .github/workflows/
+ 2422  golangci-lint run
+ 2423  cd
+ 2424  cd -
+ 2425  cd ..
+ 2426  golangci-lint run .golangci.yml
+ 2427  golangci-lint run
+ 2428  golangci-lint run mainhw1/main.go
+ 2429  golangci-lint run -p bugs -p error
+ 2430  cd Developer/FinalProject/SPHSimulation
+ 2431  nvim src/Lib.hs
+ 2432  brew list
+ 2433  ghcup 
+ 2434  ghcup list
+ 2435  ghcup rm hls
+ 2436  ghcup rm hls 1.7.0.0
+ 2437  ghcup list
+ 2438  nvim src/Lib.hs
+ 2439  cd ~/.config/nvim
+ 2440  ls
+ 2441  cd ..
+ 2442  find | grep lsp_servers
+ 2443  find . | grep lsp_servers
+ 2444  x.local/share/nvim/lsp_servers
+ 2445  cd .local/share/nvim/lsp_servers
+ 2446  ls
+ 2447  cd haskell
+ 2448  ls
+ 2449  cd bin
+ 2450  ls
+ 2451  ./haskell-language-server-wrapper
+ 2452  cd 
+ 2453  cd ~/.config/nvim
+ 2454  cd 
+ 2455  nvim .zshrc
+ 2456  cd Developer/FinalProject/SPHSimulation
+ 2457  nvim src/Lib.hs
+ 2458  zsh
+ 2459  ls  ~/.local/share/nvim/lsp_servers/haskell/bin
+ 2460  zsh
+ 2461  cd 
+ 2462  nvim .zshrc
+ 2463  cd ~/user/local/bin
+ 2464  cd user/local/bin
+ 2465  cd /user/local/bin
+ 2466  brew install haskell-language-server
+ 2467  cd Developer/FinalProject/SPHSimulation/src
+ 2468  nvim Lib.hs
+ 2469  zsh
+ 2470  nvim Lib.hs
+ 2471  cd ..
+ 2472  cabal run SPHSimulation-exe
+ 2473  nvim Lib.hs
+ 2474  nvim src/Lib.hs
+ 2475  cd ..
+ 2476  cd HaskellProjects
+ 2477  cd Lab
+ 2478  nvim src/Project.hs
+ 2479  cd 
+ 2480  nvim .zshrc
+ 2481  zsh
+ 2482  cd Developer/Haskell/src/
+ 2483  nvim Project.hs
+ 2484  cd 
+ 2485  brew list
+ 2486  brew info haskell-language-server
+ 2487  nvim .zshrc
+ 2488  which haskell-language-server-wrapper
+ 2489  nvim .zshrc
+ 2490  zsh
+ 2491  nvim 1.hs
+ 2492  cd Developer/FinalProject/SPHSimulation/
+ 2493  nvim src/Lib.hs
+ 2494  cabal run SPHSimulation-exe
+ 2495  nvim src/Lib.hs
+ 2496  git status
+ 2497  ls
+ 2498  rm Lib.hs
+ 2499  git status
+ 2500  cabal run SPHSimulation-exe
+ 2501  nvim src/Lib.hs
+ 2502  cabal run SPHSimulation-exe
+ 2503  brew list
+ 2504  brew uninstall haskell-language-server
+ 2505  brew install haskell-language-server
+ 2506  nvim src/Lib.hs
+ 2507  brew list
+ 2508  ghcup list
+ 2509  ghcup install hls
+ 2510  nvim src/Lib.hs
+ 2511  ghcup list
+ 2512  cd 
+ 2513  find . | grepp ghc
+ 2514  find . | grep ghc
+ 2515  cd -
+ 2516  cabal -h
+ 2517  cabal clean
+ 2518  cabal run SPHSimulation-exe
+ 2519  nvim src/Lib.hs
+ 2520  ghcup -h
+ 2521  nvim src/Lib.hs
+ 2522  cd 
+ 2523  nvim .zshrc
+ 2524  cd -
+ 2525  nvim src/Lib.hs
+ 2526  cd -
+ 2527  nvim .zshrc
+ 2528  cd /opt/homebrew/bin
+ 2529  ls
+ 2530  cd haskell-language-server-wrapper
+ 2531  cd 
+ 2532  which haskell-language-server
+ 2533  which haskell-language-server-wrapper
+ 2534  nvim .zshrc
+ 2535  cd -
+ 2536  cd Developer/FinalProject/SPHSimulation/
+ 2537  cabal build
+ 2538  nvim src/Lib.hs
+ 2539  cabal -h
+ 2540  cd /Users/roman_molochkov/.cabal/config
+ 2541  cd /Users/roman_molochkov/.cabal
+ 2542  nvim config
+ 2543  cd 
+ 2544  cabal configure set --compiler ghc-8.10.7
+ 2545  exec cabal --config-file=$HOME/.cabal-ghc-8.10.7/config "$@"
+ 2546  cabal
+ 2547  find . | grep ghc 
+ 2548  cd Developer/FinalProject/SPHSimulation/
+ 2549  nvim src/Lib.hs
+ 2550  cabal init
+ 2551  find . | grep ghc 
+ 2552  cd 
+ 2553  find . | grep ghcide 
+ 2554  cd ./.local/share/nvim/plugged/nvim-lspconfig/lua/lspconfig/server_configurations/
+ 2555  nvim ghcide.lua
+ 2556  ls
+ 2557  hls.lus
+ 2558  hls.lua
+ 2559  nvim hls.lua
+ 2560  cd 
+ 2561  cd Developer/FinalProject/SPHSimulation/
+ 2562  nivm src/Lib.hs
+ 2563  nvim src/Lib.hs
+ 2564  nvim src
+ 2565  ghcup -h
+ 2566  ghcup rm hls 1.7.0.0
+ 2567  nvim src
+ 2568  ghcup list
+ 2569  clear
+ 2570  cabal run SPHSimulation-exe
+ 2571  nvim src/Lib.hs
+ 2572  cabal run SPHSimulation-exe
+ 2573  nvim src/Lib.hs
+ 2574  cabal -h
+ 2575  cabal check
+ 2576  cabal -v
+ 2577  cabal --version
+ 2578  ghc --version
+ 2579  ghc 9.0
+ 2580  ghc -h
+ 2581  ghc --help
+ 2582  ghcup set ghc 8.10.7
+ 2583  cabal config set resolver ghc-9.2.3
+ 2584  y
+ 2585  cabal configure set resolver ghc-9.2.3
+ 2586  nvim src/Lib.hs
+ 2587  zsh
+ 2588  nvim src/Lib.hs
+ 2589  clear
+ 2590  cd 
+ 2591  cd /usr/local/go
+ 2592  which user/local/
+ 2593  cd/
+ 2594  cd /
+ 2595  cd user
+ 2596  cd user/
+ 2597  cd usr/
+ 2598  cd local/
+ 2599  cd go/
+ 2600  ls
+ 2601  cd bin
+ 2602  ls
+ 2603  cd 
+ 2604  source ~/.bashrc
+ 2605  go version
+ 2606  cd ~/.zshrc
+ 2607  nvim .zshrc
+ 2608  ls
+ 2609  cd ~/homebrew
+ 2610  cd /
+ 2611  which homebrew
+ 2612  cd
+ 2613  nvim .zshrc
+ 2614  cd /opt/homebrew
+ 2615  ls
+ 2616  cd opt
+ 2617  ls
+ 2618  nvim .zshrc
+ 2619  zsh
+ 2620  cd 
+ 2621  cd go
+ 2622  ls
+ 2623  cd
+ 2624  nvim .zshrc
+ 2625  zsh
+ 2626  nvim .zshrc
+ 2627  cd /usr/local/
+ 2628  ls
+ 2629  zsh
+ 2630  ls
+ 2631  nvim .zshrc
+ 2632  zsh
+ 2633  nvim .zshrc
+ 2634  cd
+ 2635  cd Developer/GoLib
+ 2636  go get github.com/nsf/gocode
+ 2637  cd 
+ 2638  cd /opt/homebrew/Cellar/go/1.18.3/bin
+ 2639  cd ..
+ 2640  ls
+ 2641  zsh
+ 2642  nvim .zshrc
+ 2643  ls .
+ 2644  ls.
+ 2645  ls
+ 2646  zsh
+ 2647  cd Applications
+ 2648  cd 
+ 2649  zsh
+ 2650  nvim .zshrc
+ 2651  zsh
+ 2652  nvim .zshrc
+ 2653  nivm -h
+ 2654  cd 
+ 2655  nvim .zshrc
+ 2656  zsh
+ 2657  nvim .zshrc
+ 2658  cd .config/nvim
+ 2659  nvim init.vim
+ 2660  cd 
+ 2661  nvim .zshrc
+ 2662  zsh
+ 2663  nvim .zshrc
+ 2664  zsh
+ 2665  nvim .zshrc
+ 2666  cd Developer/GoLib/
+ 2667  go get github.com/nsf/gocode
+ 2668  go get -u github.com/nsf/gocod
+ 2669  go get -u github.com/nsf/gocode
+ 2670  go install -u github.com/nsf/gocode
+ 2671  go -h
+ 2672  nvim .zshrc
+ 2673  zsh
+ 2674  go get -u github.com/nsf/gocode
+ 2675  go env -w GO111MODULE=off
+ 2676  go get -u github.com/nsf/gocode
+ 2677  ls
+ 2678  mkdir pkg
+ 2679  rm -r pkg
+ 2680  cd Developer/GoLib/
+ 2681  rmdir pkg
+ 2682  rmdir -r pkg
+ 2683  rmdir -p pkg
+ 2684  find . | grep misc/vim 
+ 2685  find . | grep misc
+ 2686  cd 
+ 2687  find . | grep misc
+ 2688  #!/bin/sh\nmkdir -p "$HOME/.vim/autoload"\nmkdir -p "$HOME/.vim/ftplugin/go"\ncp "${0%/*}/autoload/gocomplete.vim" "$HOME/.vim/autoload"\ncp "${0%/*}/ftplugin/go/gocomplete.vim" "$HOME/.vim/ftplugin/go"
+ 2689  cd 
+ 2690  rmdir .vim
+ 2691  cd .vim/
+ 2692  cd .config/nvim
+ 2693  nvim init.vim
+ 2694  cd .config/nvim
+ 2695  ls
+ 2696  find . | grep .vimrc
+ 2697  cd plugged/delimitMate/
+ 2698  nvim basic_vimrc
+ 2699  cd 
+ 2700  find . | grep .vimrc
+ 2701  nvim init.vim
+ 2702  cd Developer/temp/Go/src/golang-book/chapter2
+ 2703  nvim main.go
+ 2704  ls
+ 2705  cd ..
+ 2706  ls
+ 2707  cd ..
+ 2708  ls
+ 2709  cd ..
+ 2710  ls
+ 2711  cd 
+ 2712  cd Developer/GolandProjects/golang/mainhw1
+ 2713  nvim main.go
+ 2714  cd 
+ 2715  brew install koekeishiya/formulae/yabai
+ 2716  cp /opt/homebrew/opt/yabai/share/yabai/examples/yabairc ~/.yabairc\n  cp /opt/homebrew/opt/yabai/share/yabai/examples/skhdrc ~/.skhdrc
+ 2717  brew install jq
+ 2718  brew install koekeishiya/formulae/skhd
+ 2719  mkdir Git-Repos
+ 2720  ls
+ 2721  cd ..
+ 2722  ls
+ 2723  make
+ 2724  ls
+ 2725  ln -s /path/to/bin/limelight /usr/local/bin/limelight
+ 2726  killall limelight &> /dev/null\nlimelight &> /dev/null &
+ 2727  cd 
+ 2728  cd .config
+ 2729  ls
+ 2730  mkdir yabai
+ 2731  cd yabai
+ 2732  mkdir yabairc
+ 2733  cd ..
+ 2734  ls\\nQ
+ 2735  ls
+ 2736  cd nvim
+ 2737  ls
+ 2738  cd ..
+ 2739  cd raycast
+ 2740  ls
+ 2741  cd ..
+ 2742  cd yabai/
+ 2743  rmdir yabairc
+ 2744  touch yabairc
+ 2745  nvim yabairc
+ 2746  cd 
+ 2747  touch ~/.config/skhd/skhdrc\nchmod +x ~/.config/skhd/skhdrc
+ 2748  cd .config/
+ 2749  mkdir skhd
+ 2750  touch ~/.config/skhd/skhdrc\nchmod +x ~/.config/skhd/skhdrc
+ 2751  chmod +x ~/.config/skhd/skhdrc
+ 2752  nvim skhd/skhdrc
+ 2753  mkdir limelight
+ 2754  touch ~/.config/limelight/limelightrc\nchmod +x ~/.config/limelight/limelightrc
+ 2755  limelight --config ~/.config/limelight/limelightrc
+ 2756  nvim limelight/limelightrc
+ 2757  limelight --config ~/.config/limelight/limelightrc
+ 2758  zsh
+ 2759  limelight --config ~/.config/limelight/limelightrc
+ 2760  cd limelight
+ 2761  limelight --config ~/.config/limelight/limelightrc
+ 2762  cd 
+ 2763  nvim .zshrc
+ 2764  brew services start yabai
+ 2765  brew services start skhd
+ 2766  brew services stop yabai
+ 2767  brew services stop skhd
+ 2768  limelight --config ~/.config/limelight/limelightrc
+ 2769  cd .config
+ 2770  cd 
+ 2771  cd Git-Repos/limelight-master
+ 2772  make
+ 2773  brew services stop skhd
+ 2774  brew services stop yabai
+ 2775  cd 
+ 2776  cd Developer/FinalProject/SPHSimulation/
+ 2777  git status
+ 2778  git differ
+ 2779  git diff
+ 2780  git add src/Lib.hs
+ 2781  git commit -m "refactor: change mass"
+ 2782  git pull
+ 2783  git status
+ 2784  git pull --rebase
+ 2785  git push
+ 2786  git switch master
+ 2787  git rebase --quit
+ 2788  git status
+ 2789  git switch master
+ 2790  git merge
+ 2791  git add src/Lib.hs
+ 2792  git commit -m " "
+ 2793  git commit -m "refactor: change mass"
+ 2794  git rebase --quit
+ 2795  git switch master
+ 2796  git status
+ 2797  git pull
+ 2798  git branches
+ 2799  git branch
+ 2800  git add src/Lib.hs
+ 2801  git commit -m "refactor: change mass"
+ 2802  git rebase 6dafd74
+ 2803  git rebase 
+ 2804  git rebase --skip
+ 2805  git status
+ 2806  git merge
+ 2807  git push
+ 2808  cabal run SPHSimulation-exe
+ 2809  nvim src/Lib.hs
+ 2810  cabal run SPHSimulation-exe
+ 2811  git add src/Lib.hs 
+ 2812  git commit -m "refactor: rebasing"
+ 2813  git push
+ 2814  cabal
+ 2815  cabal run SPHSimulation-exe
+ 2816  nvim src/Lib.hs
+ 2817  nvim src/RenderingOfUniverse.hs
+ 2818  cabal run SPHSimulation-exe
+ 2819  cd 
+ 2820  cd Developer/GolandProjects
+ 2821  cd awesomeProject
+ 2822  nvim main.go
+ 2823  cd ..
+ 2824  cd GoTutorials
+ 2825  git init
+ 2826  git branch
+ 2827  git branch develop
+ 2828  git checkout develop
+ 2829  git checkout branck develop
+ 2830  git checkout branch develop
+ 2831  git checkout -b develop
+ 2832  git switch master
+ 2833  git branch
+ 2834  git switch master
+ 2835  git checkout -b develop
+ 2836  git checkout -b master
+ 2837  git branch -a
+ 2838  git remote add origin https://github.com/r-mol/GoTutorials.git
+ 2839  git pull
+ 2840  git branch -a
+ 2841  ls
+ 2842  git switch main origin/main
+ 2843  git switch main main
+ 2844  cd ..
+ 2845  cd GoTutorials
+ 2846  git init
+ 2847  echo "# goTutorial" >> README.md\ngit init\ngit add README.md\ngit commit -m "first commit"\ngit branch -M main\ngit remote add origin https://github.com/r-mol/goTutorial.git\ngit push -u origin main
+ 2848  git brabch -a
+ 2849  git branch -a
+ 2850  cd ..
+ 2851  cd FinalProject/SPHSimulation
+ 2852  git brabch -a
+ 2853  git branch -a
+ 2854  cd ..
+ 2855  cd .
+ 2856  cd ..
+ 2857  cd GolandProjects
+ 2858  cd GoTutorials
+ 2859  nvim Tasks/tasks.go
+ 2860  go run main.go
+ 2861  go run tasks.go
+ 2862  go run tasks/tasks.go
+ 2863  nvim Tasks/tasks.go
+ 2864  git status
+ 2865  nvim .DS_Store
+ 2866  nvim .gitignore
+ 2867  git status
+ 2868  git add .gitignore
+ 2869  git commit -m "feat: init .gitignore"
+ 2870  git add Makefile
+ 2871  git commit -m "feat: init Makefile"
+ 2872  git add .golangci.yml
+ 2873  git commit -m "feat: init .golangci.yml"
+ 2874  git add README.md
+ 2875  git commit -m "feat: init .README.md"
+ 2876  git add go.mod
+ 2877  git commit -m "feat: init .go.mod"
+ 2878  git add .github/
+ 2879  git commit -m "feat: init .github"
+ 2880  git add Tasks/tasks.go
+ 2881  git commit -m "feat: main file of program\nq
+ 2882  git commit -m "feat: main file of program"
+ 2883  git status
+ 2884  git push
+ 2885  clear
+ 2886  nvim Tasks/tasks.go
+ 2887  cd Developer/GolandProjects/GoTutorials/Tasks
+ 2888  go tasks.go
+ 2889  go run tasks/tasks.go
+ 2890  go run tasks.go
+ 2891  :w
+ 2892  go run tasks.go
+ 2893  cd Documents/Education/Innopolis/SSAD/Assignment\ 5
+ 2894  touch assigment_5
+ 2895  rm assigment_5
+ 2896  touch assigment_5.tex
+ 2897  cd Developer/HaskellProjects/Monoids
+ 2898  nvim src/Project.hs
+ 2899  clear
+ 2900  cd ..
+ 2901  cd CLionProjects
+ 2902  cd ..
+ 2903  cd FinalProject/SPHSimulation/
+ 2904  git status
+ 2905  nvim src/RenderingOfUniverse.hs
+ 2906  git add src/RenderingOfUniverse.hs
+ 2907  git commit -m "refactor: change expression of rendering"
+ 2908  git pull
+ 2909  git push
+ 2910  git pull
+ 2911  git push
+ 2912  cabal run SPHSimulation-exe
+ 2913  nvim src/Lib.hs
+ 2914  cabal run SPHSimulation-exe
+ 2915  nvim src/Lib.hs
+ 2916  cabal run SPHSimulation-exe
+ 2917  nvim app/Main.hs
+ 2918  cd Developer/HaskellProjects/Monoids
+ 2919  cabal v2-run --disable-tests
+ 2920  /Users/roman_molochkov/Downloads/haskell-codeworld-template-main/haskell-codeworld-template.cabal; exit
+ 2921  cd 
+ 2922  cd Downloads/haskell-codeworld-template-main
+ 2923  nvim haskell-codeworld-template.cabal
+ 2924  cd ..
+ 2925  cd Developer/FinalProject/SPHSimulation/
+ 2926  git status
+ 2927  nvim src/Lib.hs
+ 2928  git diff
+ 2929  nvim src/Lib.hs
+ 2930  git diff
+ 2931  git status
+ 2932  git pull
+ 2933  cabal run SPHSimulation-exe
+ 2934  nvim src/Lib.hs
+ 2935  cabal run SPHSimulation-exe
+ 2936  nvim src/Lib.hs
+ 2937  cabal run SPHSimulation-exe
+ 2938  nvim src/Lib.hs
+ 2939  cabal run SPHSimulation-exe
+ 2940  nvim src/Lib.hs
+ 2941  cabal run SPHSimulation-exe
+ 2942  nvim src/Lib.hs
+ 2943  cabal run SPHSimulation-exe
+ 2944  nvim src/Lib.hs
+ 2945  cabal run SPHSimulation-exe
+ 2946  nvim src/Lib.hs
+ 2947  cabal run SPHSimulation-exe
+ 2948  nvim src/Lib.hs
+ 2949  cabal run SPHSimulation-exe
+ 2950  nvim src/Lib.hs
+ 2951  cabal run SPHSimulation-exe
+ 2952  nvim src/Lib.hs
+ 2953  cabal run SPHSimulation-exe
+ 2954  nvim src/Lib.hs
+ 2955  cabal run SPHSimulation-exe
+ 2956  nvim src
+ 2957  nvim src/RenderingOfUniverse.hs
+ 2958  cabal run SPHSimulation-exe
+ 2959  nvim src/RenderingOfUniverse.hs
+ 2960  cabal run SPHSimulation-exe
+ 2961  nvim src/RenderingOfUniverse.hs
+ 2962  cabal run SPHSimulation-exe
+ 2963  nvim src/RenderingOfUniverse.hs
+ 2964  cabal run SPHSimulation-exe
+ 2965  nvim src/RenderingOfUniverse.hs
+ 2966  git status
+ 2967  nvim src/Lib.hs
+ 2968  cabal run SPHSimulation-exe
+ 2969  nvim src/Lib.hs
+ 2970  git status
+ 2971  nvim src/RenderingOfUniverse.hs
+ 2972  nvim src/
+ 2973  git status
+ 2974  git diff
+ 2975  nvim src/
+ 2976  git diff
+ 2977  nvim src/
+ 2978  git add src/RenderingOfUniverse.hs src/TimeModule.hs
+ 2979  git commit -m "style: add spaces"
+ 2980  git pull
+ 2981  git status
+ 2982  git push
+ 2983  cabal run SPHSimulation-exe
+ 2984  nvim src/
+ 2985  cd -
+ 2986  cd Developer/FinalProject/SPHSimulation/
+ 2987  nvim src/
+ 2988  cabal run SPHSimulation-exe
+ 2989  :wq
+ 2990  cabal run SPHSimulation-exe
+ 2991  git add src/Lib.hs
+ 2992  git commit -m "refactor: move funcion of changing time and change color of background" 
+ 2993  git add src/UsefulFunctions.hs
+ 2994  git commit -m "feat: add function of changing time"
+ 2995  git status
+ 2996  cabal run SPHSimulation-exe
+ 2997  nvim src/
+ 2998  cabal run SPHSimulation-exe
+ 2999  git add src/Lib.hs
+ 3000  git commit -m "refactor: change amount of particles"
+ 3001  git push
+ 3002  clear
+ 3003  nvim src
+ 3004  cabal run SPHSimulation-exe
+ 3005  nvim src
+ 3006  cabal run SPHSimulation-exe
+ 3007  cd Developer/HaskellProjects/I:O/src
+ 3008  touch Light.hs
+ 3009  touch Main.hs
+ 3010  touch Object.hs
+ 3011  touch Trace.hs
+ 3012  touch Vec3.hs
+ 3013  touch World.hs
+ 3014  cd ..
+ 3015  cd I:O
+ 3016  cabal v2-run --disable-tests
+ 3017  export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+ 3018  cabal v2-run --disable-tests
+ 3019  cabal run SPHSimulation-exe
+ 3020  cd 
+ 3021  cd Developer
+ 3022  mkdir h
+ 3023  cd h
+ 3024  git init
+ 3025  git clone https://github.com/cmc-haskell-2015/fluid-sph.git
+ 3026  cd fluid-sph
+ 3027  cabal install
+ 3028  cd ..
+ 3029  cd fluid-sph
+ 3030  cabal init
+ 3031  cabal run
+ 3032  cabal install
+ 3033  fluid-sph
+ 3034  cabal run SPHSimulation-exe
+ 3035  brew install gsl
+ 3036  cabal install hmatrix
+ 3037  cabal run SPHSimulation-exe
+ 3038  cabal ghci
+ 3039  cabal run Test
+ 3040  cabal ghci Test
+ 3041  cabal ghci
+ 3042  cd src
+ 3043  cabal ghci Test
+ 3044  cabal run Test.hs
+ 3045  cd
+ 3046  cabal run Test.hs
+ 3047  cd -
+ 3048  cd ..
+ 3049  cabal run Test.hs
+ 3050  cabal run src/Test.hs
+ 3051  cd src
+ 3052  cabal run Test.hs
+ 3053  stack run Test.hs
+ 3054  cabal run SPHSimulation-exe
+ 3055  cabal init
+ 3056  cd ..
+ 3057  cabal run SPHSimulation-exe
+ 3058  htop
+ 3059  brew install htop
+ 3060  htop
+ 3061  cabal run SPHSimulation-exe
+ 3062  cabal install bimap
+ 3063  cabal run SPHSimulation-exe
+ 3064  clear
+ 3065  cd Developer/CLionProjects
+ 3066  cd ..
+ 3067  cd FinalProject/SPHSimulation/src
+ 3068  nvim Test.hs
+ 3069  cabal run SPHSimulation-exe
+ 3070  git add src/Test.hs
+ 3071  git commit -m "feat: develop the rendering of metaballs"
+ 3072  cabal run SPHSimulation-exe
+ 3073  OA
+ 3074  cabal run SPHSimulation-exe
+ 3075  git diff
+ 3076  cabal run SPHSimulation-exe
+ 3077  cabal install gloss
+ 3078  cabal install
+ 3079  cabal update
+ 3080  cabal run SPHSimulation-exe
+ 3081  git add SPHSimulation.cabal
+ 3082  git commit -m "feat: add additional libraries for rendering metaballs"
+ 3083  cabal run SPHSimulation-exe
+ 3084  git add app/Main.hs
+ 3085  git commit -m "feat: add module Test of rendering metaballs"
+ 3086  git add src/RenderingOfUniverse.hs
+ 3087  git commit -m "feat: add rendering of metaballs"
+ 3088  git add src/Lib.hs
+ 3089  git commit -m "refactor: change different configurations"
+ 3090  git add src/Test.hs
+ 3091  git commit -m "refactor: refactor code of using Quadtrees"
+ 3092  git status
+ 3093  git add .gitignore
+ 3094  git commit -m "feat: add ignoring of file .DS_Store"
+ 3095  git status
+ 3096  git pull
+ 3097  git switch master 
+ 3098  git rm src/Lib.hs
+ 3099  git pull
+ 3100  git rebase --skip
+ 3101  cabal run SPHSimulation-exe
+ 3102  git status
+ 3103  git push
+ 3104  git status
+ 3105  cabal run SPHSimulation-exe
+ 3106  clear
+ 3107  cabal run SPHSimulation-exe
+ 3108  git pull
+ 3109  cabal run SPHSimulation-exe
+ 3110  git pull
+ 3111  git status
+ 3112  git diff
+ 3113  git add src/Test.hs
+ 3114  git commit -m "refactor: fix different warnings"
+ 3115  git pull
+ 3116  cabal run SPHSimulation-exe
+ 3117  git diff
+ 3118  git add src/Test.hs
+ 3119  git commit -m "refactor: delete unused library"
+ 3120  git pull
+ 3121  cabal run SPHSimulation-exe
+ 3122  git push
+ 3123  cabal run SPHSimulation-exe
+ 3124  cabal update
+ 3125  cabal install
+ 3126  cabal run SPHSimulation-exe
+ 3127  git add src/Test.hs
+ 3128  git commit -m "refactor: delete library from module"
+ 3129  git add SPHSimulation.cabal
+ 3130  git commit -m "refactor: delete library from project"
+ 3131  git push
+ 3132  cabal run SPHSimulation-exe
+ 3133  git add src/Test.hs
+ 3134  git commit -m "style: change the names of functions"
+ 3135  git push
+ 3136  cabal run SPHSimulation-exe
+ 3137  git add .
+ 3138  git commit -m "style: rename file from test.hs to metaballs.hs"
+ 3139  git pull
+ 3140  cabal run SPHSimulation-exe
+ 3141  git rebase continue
+ 3142  git rebase --continue
+ 3143  git rebase --skip
+ 3144  cabal run SPHSimulation-exe
+ 3145  git add .
+ 3146  git commit -m "style: rename file from Test.hs to Metaballs.hs"
+ 3147  git push
+ 3148  cabal run SPHSimulation-exe
+ 3149  ghc
+ 3150  ghci-8.10.7
+ 3151  ghci version
+ 3152  ghcup
+ 3153  ghcup list
+ 3154  cabal -h
+ 3155  cabal --default-user-config=FILE
+ 3156  cd
+ 3157  cabal --default-user-config=FILE
+ 3158  cabal run SPHSimulation-exe
+ 3159  cabal update
+ 3160  cabal install
+ 3161  cabal run SPHSimulation-exe
+ 3162  touch assignment_6.tex
+ 3163  cabal run SPHSimulation-exe
+ 3164  git add SPHSimulation.cabal app/Main.hs src/Cluster.hs
+ 3165  git commit -m "feat: add realisation of clusstering"
+ 3166  git diff
+ 3167  git push
+ 3168  cabal run SPHSimulation-exe
+ 3169  git diff
+ 3170  git add .
+ 3171  git commit -m "refactor: change function of clustering"
+ 3172  git pull
+ 3173  cabal run SPHSimulation-exe
+ 3174  git diff
+ 3175  git add src/RenderingOfUniverse.hs
+ 3176  git commit -m "refactor: delete unsused functions"
+ 3177  git add src/Metaballs.hs
+ 3178  git commit -m "refactor: delete function of importing clustering"
+ 3179  git add src/Cluster.hs
+ 3180  git commit -m "refactor: delete function of importing clustering"
+ 3181  git push
+ 3182  cabal run SPHSimulation-exe
+ 3183  git diff
+ 3184  git add src/RenderingOfUniverse.hs
+ 3185  git commit -m "refactor: change rendering function"
+ 3186  git add src/Metaballs.hs
+ 3187  git commit -m "refactor: code"
+ 3188  git push
+ 3189  git diff
+ 3190  cd 
+ 3191  cd -
+ 3192  git pull
+ 3193  cabal run SPHSimulation-exe
+ 3194  cabal v2-run --disable-tests
+ 3195  cabal run SPHSimulation-exe
+ 3196  git pull
+ 3197  git diff
+ 3198  git add src/RenderingOfUniverse.hs
+ 3199  git commit -m "refactor: change rendering function"
+ 3200  git pull
+ 3201  git push
+ 3202  cabal run SPHSimulation-exe
+ 3203  cabal install
+ 3204  cabal run SPHSimulation-exe
+ 3205  git diff
+ 3206  git pull
+ 3207  cabal run SPHSimulation-exe
+ 3208  git add src/Metaballs.hs
+ 3209  git commit -m "refactore: return working metaballs"
+ 3210  git push
+ 3211  touch report.tex
+ 3212  git pull
+ 3213  cabal run SPHSimulation-exe
+ 3214  cabal v2-run --disable-tests
+ 3215  cabal run SPHSimulation-exe
+ 3216  cabal install
+ 3217  cabal run SPHSimulation-exe
+ 3218  cd Developer/FinalProject/SPHSimulation/
+ 3219  nvim src/Test.hs
+ 3220  cabal run SPHSimulation-exe
+ 3221  cabal v2-run --disable-tests
+ 3222  cabal run SPHSimulation-exe
+ 3223  cabal install
+ 3224  cabal run SPHSimulation-exe
+ 3225  nvim src/Metaballs.hs
+ 3226  cabal run SPHSimulation-exe
+ 3227  cd Developer/FinalProject/SPHSimulation/
+ 3228  nvim src/Metaballs.hs
+ 3229  cabal run SPHSimulation-exe
+ 3230  nvim src/Metaballs.hs
+ 3231  cabal run SPHSimulation-exe
+ 3232  nvim src/Metaballs.hs
+ 3233  cabal run SPHSimulation-exe
+ 3234  git diff
+ 3235  cabal run SPHSimulation-exe
+ 3236  git diff
+ 3237  git add app/
+ 3238  git commit -m "refactor: delete comments"
+ 3239  git add src/InitUniverse.hs
+ 3240  git commit -m "refactor: change sample particle list"
+ 3241  git diff
+ 3242  git add src/RenderingOfUniverse.hs
+ 3243  git commit -m "refactor: create function of rendering by clustering" 
+ 3244  git add src/Metaballs.hs
+ 3245  git commit -m "refactor: delete roman's quadTree"
+ 3246  git diff
+ 3247  git add src/Cluster.hs
+ 3248  git commit -m "refactor: delete function of creating tree"
+ 3249  git pull
+ 3250  cabal run SPHSimulation-exe
+ 3251  git push
+ 3252  cabal run SPHSimulation-exe
+ 3253  git add .
+ 3254  git commit -m "refactor: add rendering metaballs"
+ 3255  git pull
+ 3256  cabal run SPHSimulation-exe
+ 3257  git add src/Metaballs.hs
+ 3258  git commit -m "refactor: add rendering metaballs"
+ 3259  git push
+ 3260  cabal run SPHSimulation-exe
+ 3261  git diff
+ 3262  cabal run SPHSimulation-exe
+ 3263  git diff
+ 3264  git add src/InitUniverse.hs
+ 3265  git commit -m "refactor: uncommit walls"
+ 3266  git add src/Metaballs.hs
+ 3267  git commit -m "refactor: change radius of ball"
+ 3268  git add src/SampleUnits.hs
+ 3269  git commit -m "refactor: change the constants"
+ 3270  git push
+ 3271  git pull
+ 3272  git push
+ 3273  cabal run SPHSimulation-exe
+ 3274  ё
+ 3275  git pull
+ 3276  cabal run SPHSimulation-exe
+ 3277  git add 
+ 3278  git add .
+ 3279  git commit -m "refactor: change color of metaballs"
+ 3280  git push
+ 3281  cabal run SPHSimulation-exe
+ 3282  git pull
+ 3283  git push
+ 3284  cabal run SPHSimulation-exe
+ 3285  git add src/Metaballs.hs
+ 3286  git commit -m "refactor: change size of tree for metaballs"
+ 3287  git push
+ 3288  cabal run SPHSimulation-exe
+ 3289  git diff
+ 3290  git add src/Metaballs.hs
+ 3291  git commit -m "refactor: change size of tree for metaballs"
+ 3292  git push
+ 3293  git pull
+ 3294  git diff
+ 3295  git pull
+ 3296  git status
+ 3297  git fer
+ 3298  touch report.tex
+ 3299  git fetch
+ 3300  git fetch --all
+ 3301  git status
+ 3302  git rebase
+ 3303  cabal run SPHSimulation-exe
+ 3304  git diff
+ 3305  git add src/InitUniverse.hs
+ 3306  git commit -m "refactor: delete imposter particles"
+ 3307  git add src/RenderingOfUniverse.hs
+ 3308  git commit -m "refactor: change rendering particles"
+ 3309  git pull
+ 3310  git push
+ 3311  cabal run SPHSimulation-exe
+ 3312  git diff
+ 3313  cd Developer/CLionProjects
+ 3314  cd ..
+ 3315  cd FinalProject/SPHSimulation/
+ 3316  cabal run SPHSimulation-exe
+ 3317  nvim src/RenderingOfUniverse.hs
+ 3318  cabal run SPHSimulation-exe
+ 3319  git diff
+ 3320  nvim src/Metaballs.hs
+ 3321  git diff
+ 3322  nvim src/Metaballs.hs
+ 3323  git diff
+ 3324  git add src/Metaballs.hs
+ 3325  git commit -m "style: add line"
+ 3326  git add src/RenderingOfUniverse.hs
+ 3327  git commit -m "refactor: change rendering particles"
+ 3328  git pull
+ 3329  git rebase --continue
+ 3330  git rebase --skip
+ 3331  cabal run SPHSimulation-exe
+ 3332  git push
+ 3333  cabal run SPHSimulation-exe
+ 3334  git diff
+ 3335  git add src/SampleUnits.hs
+ 3336  git commit -m "refactor: change constants"
+ 3337  git add src/TotalConfig.hs
+ 3338  git commit -m "refactor: change the debag mod"
+ 3339  git add src/UserInteraction.hs
+ 3340  git commit -m "refactor: change the time multiplier"
+ 3341  git pull
+ 3342  git fetch
+ 3343  git rebase
+ 3344  git stash
+ 3345  git rebase
+ 3346  git rebase --continue
+ 3347  git rebase --skip
+ 3348  cabal run SPHSimulation-exe
+ 3349  git push
+ 3350  cabal run SPHSimulation-exe
+ 3351  cd ..
+ 3352  cd HaskellProjects
+ 3353  git diff
+ 3354  git add .
+ 3355  git commit "feat: initial commit"
+ 3356  git commit -m "feat: initial commit"
+ 3357  git push
+ 3358  cabal run SPHSimulation-exe
+ 3359  git diff
+ 3360  git add src/SampleUnits.hs
+ 3361  git commit -m "refactor: change constants"
+ 3362  git pull
+ 3363  git push
+ 3364  cabal run SPHSimulation-exe
+ 3365  git checkout HEAD ~
+ 3366  git checkout HEAD~1
+ 3367  cabal run SPHSimulation-exe
+ 3368  git checkout HEAD~1
+ 3369  cabal run SPHSimulation-exe
+ 3370  git checkout master
+ 3371  cabal run SPHSimulation-exe
+ 3372  cabal clean
+ 3373  cabal install
+ 3374  cabal run SPHSimulation-exe
+ 3375  cabal clean
+ 3376  cabal run
+ 3377  cabal install
+ 3378  cabal clean
+ 3379  cabal init
+ 3380  cabal run
+ 3381  cabal run SPHSimulation-exe
+ 3382  git checkout HEAD~2
+ 3383  cabal run SPHSimulation-exe
+ 3384  mkdir HomeWork#2
+ 3385  cd HomeWork\#2
+ 3386  nvim nomework2.tex
+ 3387  cd ..
+ 3388  cd 
+ 3389  cd Developer/GolandProjects
+ 3390  ls
+ 3391  cd GoTutorials/Tasks
+ 3392  nvim tasks.go
+ 3393  go run tasks.go
+ 3394  cd ..
+ 3395  cd Developer/GolandProjects/GoTutorials/Tasks
+ 3396  go run tasks.go
+ 3397  cabal run SPHSimulation-exe
+ 3398  nvim tasks.go
+ 3399  cabal run SPHSimulation-exe
+ 3400  cd ..
+ 3401  clear
+ 3402  cd Developer/GolandProjects/Pocket_bot
+ 3403  cd ..
+ 3404  cd Pocket_bot/
+ 3405  git init
+ 3406  git list
+ 3407  git -h
+ 3408  git add .github/workflows/ci.yml .gitignore Makefile .golangci.yml README.md go.mod main/main.go 
+ 3409  git commit -m "init commit"
+ 3410  find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch
+ 3411  git list
+ 3412  git add .gitignore
+ 3413  git commit -m "add: all .DS_Store to .gitignore"
+ 3414  git push
+ 3415  git remote add origin https://github.com/r-mol/telegram-pocket-bot.git
+ 3416  git push -u origin main
+ 3417  git push -u origin master
+ 3418  go run main.go
+ 3419  go run main/main.go
+ 3420  nvim main/main.go
+ 3421  cd Developer/GolandProjects/Pocket_bot/
+ 3422  git add main/main.go 
+ 3423  git commit -m "refactor: clean main file"
+ 3424  git push
+ 3425  go run main/main.go
+ 3426  cd ..
+ 3427  cd GoTutorials
+ 3428  cd Tasks
+ 3429  nvim tasks.go
+ 3430  cd ..
+ 3431  cd golang
+ 3432  cd ..
+ 3433  cd GoTutorials/Tasks
+ 3434  nvim tasks.go
+ 3435  nvim main/main.go
+ 3436  cd ..
+ 3437  cd GoTutorials
+ 3438  go Tasks/tasks.go
+ 3439  go run Tasks/tasks.go
+ 3440  mpv "https://www.youtube.com/watch\?v\=Nqie-xSvveY\&list\=PLbTTxxr-hMmzSGTsO5mdYLrvKY-RZFanp\&index\=2"
+ 3441  brew install youtube-del
+ 3442  brew install youtube-dl
+ 3443  mpv "https://www.youtube.com/watch\?v\=Nqie-xSvveY\&list\=PLbTTxxr-hMmzSGTsO5mdYLrvKY-RZFanp\&index\=2"
+ 3444  zsh
+ 3445  mpv "https://www.youtube.com/watch\?v\=Nqie-xSvveY\&list\=PLbTTxxr-hMmzSGTsO5mdYLrvKY-RZFanp\&index\=2"
+ 3446  brew list
+ 3447  brew uninstall mpv
+ 3448  brew uninstall youtube-dl
+ 3449  brew list
+ 3450  brew info freetype
+ 3451  brew unistall freetype
+ 3452  brew uninstall freetype
+ 3453  brew uninstall jbig2dec
+ 3454  brew uninstall python@3.10
+ 3455  go run Tasks/tasks.go
+ 3456  cd ..
+ 3457  cd Pocket_bot/
+ 3458  cd ..
+ 3459  cd Pocket_bot
+ 3460  cd ..
+ 3461  cd golang
+ 3462  nvim mainhw1/main.go
+ 3463  cd ..
+ 3464  cd Developer/GolandProjects/tfs-go/
+ 3465  nvim .github/workflows/ci.yml
+ 3466  git init
+ 3467  git add .
+ 3468  git status
+ 3469  git add .gitignore
+ 3470  git status
+ 3471  git add .gitignore
+ 3472  git status
+ 3473  git commit -m "initial commit"
+ 3474  git remote add origin https://github.com/r-mol/tgs-go.git\ngit push -u origin master
+ 3475  git add .gitignore
+ 3476  git commit -m "feat: add .DS_Store to .gitignore"
+ 3477  git push
+ 3478  find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch
+ 3479  git add .gitignore
+ 3480  git status
+ 3481  git add .
+ 3482  git commit -m "feat: delete .DS_Store"
+ 3483  git push
+ 3484  go run mainhw1/main.go
+ 3485  nvim mainhw1/main.go
+ 3486  cd ..
+ 3487  cd tfs-go
+ 3488  cd mainhw1
+ 3489  cd ..
+ 3490  mkdir ht1-v2
+ 3491  cd ht1-v2
+ 3492  nvim ht1.go
+ 3493  go run ht1.go
+ 3494  nvim ht1.go
+ 3495  go run ht1-v2/ht1.go
+ 3496  git add ht1-v2/ht1.go
+ 3497  git commit -m "fear: add second version of solving ht1"
+ 3498  git push
+ 3499  go run ht1-v2/ht1.go
+ 3500  git add ht1-v2/ht1.go
+ 3501  git commit -m "refactor: refactor code by go linter"
+ 3502  git push
+ 3503  git add mainhw1/main.go
+ 3504  git commit -m "refactor: refactor code by go linter"
+ 3505  git push
+ 3506  cd ..
+ 3507  cd GoTutorials
+ 3508  cd Tasks
+ 3509  nvim tasks.go
+ 3510  clear
+ 3511  cd ..
+ 3512  cd GoTutorials
+ 3513  clear
+ 3514  go run Tasks/tasks.go
+ 3515  cd ..
+ 3516  cd tfs-go
+ 3517  nvim ht1-v2/ht1.go
+ 3518  cd ..
+ 3519  cd tfs-go
+ 3520  go run ht1-v2/ht1.go
+ 3521  cd 
+ 3522  brew install --cask vlc
+ 3523  св -
+ 3524  cd -
+ 3525  cd ..
+ 3526  cd GolandProjects/GoTutorials/Tasks
+ 3527  cd 
+ 3528  cd -
+ 3529  cd ..
+ 3530  cd GoTutorials
+ 3531  nvim 
+ 3532  nvim Tasks/tasks.go
+ 3533  cd
+ 3534  cd .config
+ 3535  cd nvim
+ 3536  nvim init.vim
+ 3537  cd -
+ 3538  cd 
+ 3539  cd Developer/GolandProjects/GoTutorials
+ 3540  go run Tasks/tasks.go
+ 3541  cd ~/.config/nvim
+ 3542  cd -
+ 3543  go run Tasks/tasks.go
+ 3544  find . | grep golangci-lint
+ 3545  cd
+ 3546  find . | grep golangci-lint
+ 3547  clear
+ 3548  cd Developer/GolandProjects/GoTutorials/Tasks
+ 3549  ls
+ 3550  nvim tasks.go
+ 3551  cd Developer/GolandProjects/GoTutorials/Tasks
+ 3552  go run tasks.go
+ 3553  cd ..
+ 3554  cd Haskell
+ 3555  cd ..
+ 3556  cd FinalProject/SPHSimulation
+ 3557  cabal run SPHSimulation-exe
+ 3558  go install golang.org/x/tools/cmd/goimports@latest
+ 3559  go install golang.org/x/tools/...@latest
+ 3560  godoc
+ 3561  godoc mathslice/math.go
+ 3562  godoc mathslice
+ 3563  godoc -http=:6060
+ 3564  godoc
+ 3565  godoc -http=:6060
+ 3566  godoc fmt
+ 3567  cd mathslice
+ 3568  godoc
+ 3569  godoc math.go
+ 3570  cd
+ 3571  cd -
+ 3572  cd ..
+ 3573  cd arrint
+ 3574  gofmt -w
+ 3575  gofmt
+ 3576  go vet
+ 3577  gofmt
+ 3578  godoc
+ 3579  cd ..
+ 3580  go mod init
+ 3581  go mod
+ 3582  go init mod
+ 3583  go mod init RoomTgBot
+ 3584  clear
+ 3585  cd -
+ 3586  cd 
+ 3587  clear
+ 3588  nvim Developer/GolandProjects/tfs-go/ht1-v2/ht1.go
+ 3589  brew list
+ 3590  brew update
+ 3591  cd Developer/FinalProject/SPHSimulation/
+ 3592  cabal run SPHSimulation-exe
+ 3593  go get github.com/robfig/cron/v3
+ 3594  go get gopkg.in/telebot.v3
+ 3595  go get github.com/go-redis/redis/v9
+ 3596  go get go.mongodb.org/mongo-driver
+ 3597  go get github.com/golang/snappy
+ 3598  go get github.com/klauspost/compress
+ 3599  go get github.com/montanaflynn/stats
+ 3600  go get github.com/xdg-go/scram
+ 3601  go get github.com/xdg-go/stringprep
+ 3602  go get github.com/youmark/pkcs8
+ 3603  golinter
+ 3604  go golinter
+ 3605  golangci-lint run
+ 3606  go
+ 3607  golangci-lint -v
+ 3608  golangci-lint --version
+ 3609  golangci-lint run
+ 3610  go get github.com/golang/snappy v0.0.1
+ 3611  go get github.com/golang/snappy/v0.0.1
+ 3612  git checkout -b v3-feature
+ 3613  git add .
+ 3614  git commit -m "add some feature"
+ 3615  git push origin v3-feature
+ 3616  git checkout -b master
+ 3617  golangci-lint run
+ 3618  go get github.com/r-mol/RoomTgBot
+ 3619  docker run -it -p 80:80 `\n  --net redis `\n  -e REDIS_SENTINELS="sentinel-0:5000,sentinel-1:5000,sentinel-2:5000" `\n  -e REDIS_MASTER_NAME="mymaster" `\n  -e REDIS_PASSWORD="a-very-complex-password-here" `\n  -v ${PWD}:/work go sh\nq\n:q\nquit
+ 3620  docker-compose up
+ 3621  docker-compose -f ./docker-compose.debug.yml up
+ 3622  brew insrall docker
+ 3623  brew install docker
+ 3624  docker-compose up
+ 3625  brew install redis
+ 3626  clear
+ 3627  docker-compose up
+ 3628  brew install docker-compose
+ 3629  docker-compose up
+ 3630  Systemcl
+ 3631  docker run
+ 3632  docker-compose up
+ 3633  launchctl
+ 3634  launchctl start
+ 3635  docker-compose up
+ 3636  launchctl start docker
+ 3637  docker-compose up
+ 3638  launchctl stop docker
+ 3639  launchctl start docker
+ 3640  launchctl start com.docker.registry
+ 3641  docker-compose up
+ 3642  open /Applications/Docker.app
+ 3643  launchctl start com.docker.docker.port
+ 3644  docker-compose up
+ 3645  launchctl list | grep docker
+ 3646  cd ~
+ 3647  launchctl list | grep docker
+ 3648  brew install docker
+ 3649  brew install launchctl
+ 3650  launchctl list
+ 3651  brew -h
+ 3652  brew list
+ 3653  brew uninstall sqlite
+ 3654  find mysql
+ 3655  find . | grep mysql
+ 3656  brew uninstall pytohon
+ 3657  brew list
+ 3658  launchctl list
+ 3659  brew list
+ 3660  brew uninstall mysql
+ 3661  brew uninstall mxcl
+ 3662  launchctl stop homebrew.mxcl.mysql\n
+ 3663  brew list
+ 3664  launchctl list
+ 3665  launchctl stop  homebrew.mxcl.mysql
+ 3666  launchctl stop mysql
+ 3667  launchctl stop  homebrew.mxcl
+ 3668  launchctl list
+ 3669  clear
+ 3670  cd -
+ 3671  cd Developer/GolandProjects/RoomTgBot/
+ 3672  redis 
+ 3673  launchctl list | grep docker
+ 3674  cd
+ 3675  launchctl list | grep docker
+ 3676  cd -
+ 3677  launchctl start docker
+ 3678  docker-compose up
+ 3679  docker exec -it 1e1ea8f9d22839128dbaffcbfb7966325bd1ea9ebf60ce632d751d0c08eb5313 /bin/sh
+ 3680  launchctl stop docker
+ 3681  launchctl list
+ 3682  launchctl start docker
+ 3683  docker-compose up
+ 3684  launchctl start docker
+ 3685  docker-compose up
+ 3686  docker exec -it 1e1ea8f9d22839128dbaffcbfb7966325bd1ea9ebf60ce632d751d0c08eb5313 /bin/sh
+ 3687  docker-compose up
+ 3688  docker exec -it 236ab7d604e75fbeb7c305491fe20e1c234065d97d972b5f7cf1ecb0d5b25e54 /bin/sh
+ 3689  redis run
+ 3690  docker run
+ 3691  docker exec -it c07bf4a859832178dc3461b89491d3631d1778c12b72134ad351d64901811514 /bin/sh
+ 3692  docker-compose ps
+ 3693  docker roomtgbot_redis_1
+ 3694  docker inspect roomtgbot_redis_1
+ 3695  docker-compose up
+ 3696  redis-sli
+ 3697  brew install redis-sli
+ 3698  brew install redis-sci
+ 3699  redis-sci
+ 3700  cd -
+ 3701  cd 
+ 3702  find . | grep redis
+ 3703  find . | grep redis.conf
+ 3704  brew uninstall yabai
+ 3705  brew -h
+ 3706  go get github.com/youmark/pkcs8@0.0.0-20181117223130-1be2e3e5546d
+ 3707  go get github.com/golang/snappy@0.0.1
+ 3708  go get github.com/golang/snappy@v0.0.1
+ 3709  go get github.com/klauspost/compress@v1.13.6
+ 3710  go get github.com/montanaflynn/stats@v0.0.0-20171201202039-1bf9dbcd8cbe
+ 3711  go get github.com/youmark/pkcs8@v0.0.0-20181117223130-1be2e3e5546d
+ 3712  redis-server
+ 3713  redis-server stop
+ 3714  redis-cli shutdown
+ 3715  redis-server
+ 3716  redis-cli shutdown
+ 3717  redis-server
+ 3718  redis-cli
+ 3719  redis-cli shutdown
+ 3720  redis cli
+ 3721  redis-cle
+ 3722  redis-server
+ 3723  redis-clI
+ 3724  redis-cli shutdown
+ 3725  go-linter run
+ 3726  golangci-lint run
+ 3727  redis-server
+ 3728  redis-cli shutdown
+ 3729  redis-server
+ 3730  redis-cli shutdown
+ 3731  redis-server
+ 3732  redis-cli
+ 3733  golangci-lint run
+ 3734  redis-cli shutdown
+ 3735  golangci-lint run
+ 3736  nvim Developer/GolandProjects/RoomTgBot/cmd/bot/handler.go
+ 3737  cd -
+ 3738  cd Developer/GolandProjects/RoomTgBot
+ 3739  go run main.go
+ 3740  go run cmd/main.go
+ 3741  go run cmd/bot/main.go
+ 3742  go run cmd/main.go
+ 3743  redis-server
+ 3744  go run cmd/main.go
+ 3745  cd Developer/GolandProjects/RoomTgBot/
+ 3746  go run cmd/main.go
+ 3747  cd cmd/
+ 3748  go run main.go
+ 3749  redis-cli shutdown
+ 3750  brew list
+ 3751  golangci-lint --version
+ 3752  golangci-lint -h
+ 3753  golangci-lint version 1.37.0
+ 3754  golangci-lint v1.37.0
+ 3755  golangci-lint config
+ 3756  golangci-lint config 1.37.0
+ 3757  nvim Developer/GolandProjects/RoomTgBot/cmd/bot/handler.go
+ 3758  brew update golangci-lint
+ 3759  brew upgrate golangci-lint
+ 3760  brew upgrade golangci-lint
+ 3761  nvim Developer/GolandProjects/RoomTgBot/cmd/bot/handler.go
+ 3762  go run main.go
+ 3763  redis-cli shutdown
+ 3764  redis-server
+ 3765  redis-cli shutdown
+ 3766  redis-server
+ 3767  redis-cli
+ 3768  redis-cli shutdown
+ 3769  redis-server
+ 3770  redis-cli
+ 3771  redis-cli shutdown
+ 3772  redis-server
+ 3773  redis-cli
+ 3774  redis-cli shutdown
+ 3775  redis-server
+ 3776  redis-cli
+ 3777  redis-cli shutdown
+ 3778  golangci-lint run
+ 3779  redis-server
+ 3780  redis-cli shutdown
+ 3781  golangci-lint run
+ 3782  git push
+ 3783  redis-server
+ 3784  redis-cli
+ 3785  redis-cli shutdown
+ 3786  golangci-lint run
+ 3787  redis-server
+ 3788  redis-cli
+ 3789  redis-cli shutdown
+ 3790  git push
+ 3791  redis-server
+ 3792  redis-cli
+ 3793  redis-cli shutdown
+ 3794  redis-server
+ 3795  redis-cli shutdown
+ 3796  redis-server
+ 3797  redis-cli shutdown
+ 3798  redis-server
+ 3799  redis-cli
+ 3800  redis-cli shutdown
+ 3801  golangci-lint run
+ 3802  redis-cli shutdown
+ 3803  go run cmd/main.go
+ 3804  go run cmd/main.go 5455937729:AAEVDvLDJczTncZ0aOfIA0Xn6dVcFgcMIO0
+ 3805  go run cmd/main.go TG_TOKEN:5455937729:AAEVDvLDJczTncZ0aOfIA0Xn6dVcFgcMIO0
+ 3806  go run cmd/main.go
+ 3807  redis-server
+ 3808  source ./env/*.env
+ 3809  go run cmd/main.go source ./env/*.env
+ 3810  source ./env/*.env
+ 3811  echo$TG_TOKEN
+ 3812  echo$MONGO_URI
+ 3813  echo $TG_TOKEN
+ 3814  go run cmd/main.go
+ 3815  go run .env cmd/main.go
+ 3816  go run .
+ 3817  cd cmd/
+ 3818  go run .
+ 3819  golangci-lint run
+ 3820  PATH=/bin:/sbin:/user/bin:/user/sbin:/system/Library/ export PATH
+ 3821  go run .
+ 3822  env
+ 3823  PATH=~/Developer/GolandProjects/RoomTgBot/env/bot.env
+ 3824  go run .
+ 3825  PATH=/bin:/sbin:/user/bin:/user/sbin:/system/Library/ export PATH
+ 3826  go run .
+ 3827  cd
+ 3828  cd -
+ 3829  cd ..
+ 3830  go run .
+ 3831  go run cmd/main.go
+ 3832  PATH=/opt/homebrew/Cellar/go/1.18.3/libexec/bin:/Users/roman_molochkov/Developer/GoLib/bin:/opt/homebrew/bin:/opt/homebrew/opt/llvm@12/bin:/Users/roman_molochkov/.cabal/bin:/Users/roman_molochkov/.ghcup/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Library/Apple/usr/bin:/Users/roman_molochkov/Library/Application Support/JetBrains/Toolbox/scripts:/Users/roman_molochkov/Developer/GoLib/bin\n_=/usr/bin/env\n
+ 3833  PATH=/opt/homebrew/Cellar/go/1.18.3/libexec/bin:/Users/roman_molochkov/Developer/GoLib/bin:/opt/homebrew/bin:/opt/homebrew/opt/llvm@12/bin:/Users/roman_molochkov/.cabal/bin:/Users/roman_molochkov/.ghcup/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Library/Apple/usr/bin:/Users/roman_molochkov/Library/Application Support/JetBrains/Toolbox/scripts:/Users/roman_molochkov/Developer/GoLib/bin
+ 3834  go run .
+ 3835  export $(cat env/bot.env)
+ 3836  export $(cat env/bot.env | xargs)
+ 3837  go run .
+ 3838  patj
+ 3839  PATH=/bin:/sbin:/user/bin:/user/sbin:/system/Library/ export PATH
+ 3840  go run .
+ 3841  PATH=/bin:/sbin:/user/bin:/user/sbin:/system/Library/ export PATH
+ 3842  go run .
+ 3843  cd 
+ 3844  cd-
+ 3845  cd -
+ 3846  bot.env
+ 3847  env
+ 3848  cd 
+ 3849  cd ~/.config/
+ 3850  nvim nvim/init.vim
+ 3851  nvim ~/.config/nvim/init.vim
+ 3852  cd ~/Developer/GoLib/bin
+ 3853  cd
+ 3854  cd Developer/GolandProjects/RoomTgBot
+ 3855  PATH=~/Developer/GoLib/bin
+ 3856  go run .
+ 3857  PATH=/usr/local/go/bin
+ 3858  go run .
+ 3859  св
+ 3860  cd
+ 3861  homebrew
+ 3862  find . | grep homebrew
+ 3863  brew -help
+ 3864  brew -h
+ 3865  brew list
+ 3866  brew go
+ 3867  brew info go
+ 3868  PATH=/opt/homebrew/Cellar/go/1.18.3/bin/
+ 3869  go run .
+ 3870  go run cmd/main.go
+ 3871  nvim ~/.zshrc
+ 3872  go run .
+ 3873  go run cmd/main.go
+ 3874  source ./env/*.env
+ 3875  go run cmd/main.go
+ 3876  export $(cat env/*.env)
+ 3877  go run cmd/main.go
+ 3878  go run .
+ 3879  TG_TOKEN=5019468771:AAHM7d1lUyQqRH0d32aUNNJQaVJu1twwXL8 go run cmd/main.go
+ 3880  redis-cli shutdown
+ 3881  redis-server
+ 3882  go run cmd/main.go TG_TOKEN:5455937729:AAEVDvLDJczTncZ0aOfIA0Xn6dVcFgcMIO0
+ 3883  TG_TOKEN=5455937729:AAEVDvLDJczTncZ0aOfIA0Xn6dVcFgcMIO0 go run cmd/main.go
+ 3884  go run cmd/main.go
+ 3885  export $TG_TOKEN=5455937729:AAEVDvLDJczTncZ0aOfIA0Xn6dVcFgcMIO0
+ 3886  export TG_TOKEN=5455937729:AAEVDvLDJczTncZ0aOfIA0Xn6dVcFgcMIO0
+ 3887  go run cmd/main.go
+ 3888  export $(cat env/*.env)
+ 3889  golangci-lint run
+ 3890  go run cmd/main.go
+ 3891  redis-cli shutdown
+ 3892  redis-server
+ 3893  TG_TOKEN=5019468771:AAHM7d1lUyQqRH0d32aUNNJQaVJu1twwXL8 go run cmd/main.go
+ 3894  export TG_TOKEN=5455937729:AAEVDvLDJczTncZ0aOfIA0Xn6dVcFgcMIO0
+ 3895  go run cmd/main.go
+ 3896  golangci-lint run
+ 3897  cd Desktop
+ 3898  nvim test.txt
+ 3899  redis-cli shutdown
+ 3900  golangci-lint run
+ 3901  redis-server
+ 3902  redis-cli shutdown
+ 3903  redis-server
+ 3904  redis-cli
+ 3905  redis-cli shutdown
+ 3906  redis-server
+ 3907  redis-cli
+ 3908  redis-cli shutdown
+ 3909  golangci-lint run
+ 3910  redis-cl
+ 3911  golangci-lint run
+ 3912  redis-cli shutdown
+ 3913  golangci-lint run
+ 3914  redis-server
+ 3915  redis-cli shutdown
+ 3916  redis-server
+ 3917  redis-cli shutdown
+ 3918  redis-server stop
+ 3919  golangci-lint run
+ 3920  golangci-lint version
+ 3921  go version
+ 3922  golangci-lint run
+ 3923  go mod tidy
+ 3924  golangci-lint run
+ 3925  redis-server
+ 3926  redis-cli shutdown
+ 3927  golangci-lint run
+ 3928  docker-compose --profile=debug u
+ 3929  docker-compose --profile=debug up
+ 3930  docker-compose build app
+ 3931  docker-compose --profile=debug up
+ 3932  docker-compose build app
+ 3933  redis-server
+ 3934  redis-cli shutdown
+ 3935  redis-server stop
+ 3936  redis-server
+ 3937  redis-cli shutdown
+ 3938  redis-server stop
+ 3939  redis-cli shutdown
+ 3940  redis-server
+ 3941  redis-server stop
+ 3942  redis-cli shutdown
+ 3943  redis-server
+ 3944  redis-cli
+ 3945  redis-cli shutdown
+ 3946  redis-server stop
+ 3947  redis-server
+ 3948  redis-cli shutdown
+ 3949  redis-server
+ 3950  redis-cli
+ 3951  golangci-lint run
+ 3952  redis-cli shutdown
+ 3953  docker-compose --profile=debug up
+ 3954  docker-compose build app
+ 3955  docker-compose up
+ 3956  redis-server
+ 3957  call-it http://localhost:6379/
+ 3958  call-it http://localhost:6379
+ 3959  call-it http://localhost:6379/XBvHFJ
+ 3960  redis-server
+ 3961  redis-cli
+ 3962  redis-server
+ 3963  redis-cli
+ 3964  redis-cli shutdown
+ 3965  redis-server
+ 3966  redis-cli
+ 3967  redis-cli shutdown
+ 3968  golangci-lint run
+ 3969  redis-server
+ 3970  redis-cli
+ 3971  golangci-lint run
+ 3972  redis-cli shutdown
+ 3973  golangci-lint run
+ 3974  redis-server
+ 3975  redis-cli shutdown
+ 3976  redis-server
+ 3977  redis-cli
+ 3978  redis-cli shutdown
+ 3979  golangci-lint run
+ 3980  go get github.com/sirupsen/logrus
+ 3981  ps -ax | grep mysql
+ 3982  /Volumes/Cleaner-App\ 8.2.3\ MAS/Open\ Gatekeeper\ friendly; exit
+ 3983  brew list
+ 3984  brew uninstall ghcup
+ 3985  brew uninstall haskell-language-server
+ 3986  brew uninstall haskell-stack
+ 3987  brew uninstall sqlite
+ 3988  brew info gh
+ 3989  brew info bash
+ 3990  brew info brotli
+ 3991  brew info cmake
+ 3992  build info fontconfig
+ 3993  brew info fontconfig
+ 3994  brew info freetype
+ 3995  brew info libpng
+ 3996  brew list
+ 3997  brew info gsl
+ 3998  brew info appcleaner
+ 3999  brew info llvm
+ 4000  redis-server
+ 4001  golangci-lint run
+ 4002  redis-cli shutdown
+ 4003  golangci-lint run
+ 4004  go get github.com/stretchr/testify
+ 4005  go test
+ 4006  cd Tasks/estimate
+ 4007  go test
+ 4008  go test . -coverprofile=coverage.out 
+ 4009  go cover
+ 4010  go get github.com/cweill/gotests
+ 4011  gotests -only EstimateValue .
+ 4012  go test
+ 4013  go test . -coverprofile=coverage.out 
+ 4014  redis-server
+ 4015  golangci-lint run
+ 4016  redis-server
+ 4017  redis-cli
+ 4018  redis-cli shutdown
+ 4019  clear
+ 4020  cd Developer/GolandProjects/RoomTgBot
+ 4021  alias d=docker
+ 4022  docker compose
+ 4023  alias dc="docker compose"
+ 4024  dc up app
+ 4025  dc build redis
+ 4026  dc build app
+ 4027  dc build mongo
+ 4028  dc up app
+ 4029  ls
+ 4030  dc up redis 
+ 4031  ls
+ 4032  cp env env2
+ 4033  ls
+ 4034  mkdir env2
+ 4035  cp env/* env2
+ 4036  ls env
+ 4037  ls env2
+ 4038  cd env
+ 4039  ls
+ 4040  nv bot.env
+ 4041  alias nv=nvim
+ 4042  nv bot.env
+ 4043  ls
+ 4044  gs
+ 4045  alias g=git
+ 4046  alias gs="git status"
+ 4047  gs
+ 4048  ls
+ 4049  nv redis.env
+ 4050  nv bot.env
+ 4051  ls
+ 4052  nv mongo.env
+ 4053  ls
+ 4054  nv redis.env
+ 4055  nv bot.env
+ 4056  cd ..
+ 4057  ls
+ 4058  nv docker-compose.yml
+ 4059  dc
+ 4060  dc convert
+ 4061  ls
+ 4062  cd env
+ 4063  ls
+ 4064  nv bot.env
+ 4065  cd ..]
+ 4066  ls
+ 4067  cd ..
+ 4068  ls
+ 4069  dc convert
+ 4070  dc build app
+ 4071  dc up app
+ 4072  ls
+ 4073  ping archlinux.org
+ 4074  ls
+ 4075  dc build app
+ 4076  d pull alpine 
+ 4077  dc pull busybox
+ 4078  d pull busybox
+ 4079  d pull golang:1-alpine
+ 4080  dc build app
+ 4081  dc up app
+ 4082  ls
+ 4083  htop
+ 4084  find **/mysql
+ 4085  fzf 
+ 4086  brew install fzf
+ 4087  fzf
+ 4088  brew list
+ 4089  brew openjpeg
+ 4090  brew info openjpeg
+ 4091  brew info vlc
+ 4092  brew info skim
+ 4093  brew info brotli
+ 4094  brew info cmake
+ 4095  clear
+ 4096  brew list
+ 4097  brew info c-areas
+ 4098  brew info c-ares
+ 4099  brew info gettext
+ 4100  nvim ./.config/nvim/init.vim
+ 4101  clear
+ 4102  brew info go
+ 4103  clear
+ 4104  docker --version
+ 4105  docker version
+ 4106  mkdir hello-docker
+ 4107  cd hello-docker
+ 4108  code .
+ 4109  node app.js
+ 4110  docker build -t hello-docker .
+ 4111  wsl
+ 4112  docker image ls
+ 4113  docker build -t hello-docker .
+ 4114  docker image ls
+ 4115  docker run hello-docker
+ 4116  python
+ 4117  python3
+ 4118  cd ~/Developer/GolandProjects/RoomTgBot/
+ 4119  docker compose up mongo
+ 4120  docker compose up redis
+ 4121  docker compose down
+ 4122  docker compose up -at app
+ 4123  docker compose up -it app
+ 4124  docker compose up app
+ 4125  alias d=docker
+ 4126  d ps
+ 4127  d ps -a
+ 4128  d images
+ 4129  d tag
+ 4130  d tag golang gobiba
+ 4131  d tag golang:1-alpine gobiba
+ 4132  d pull golang
+ 4133  d images
+ 4134  d ps -a
+ 4135  d image prune 
+ 4136  d images
+ 4137  d image prune --all
+ 4138  d images
+ 4139  d compose build app
+ 4140  d images
+ 4141  d ps -a
+ 4142  d compose down
+ 4143  d ps -a
+ 4144  brew info go
+ 4145  brew install go 1.18.3
+ 4146  brew switch go 1.18.3
+ 4147  cd 
+ 4148  brew install go@1/18.3
+ 4149  brew install go@1.18.3
+ 4150  brew install go@1.18
+ 4151  redis-server
+ 4152  clear
+ 4153  open Documents/Education/Innopolis/PS
+ 4154  open Documents/Education/Innopolis/PS/835598806.pdf
+ 4155  nvim namelist
+ 4156  sort -n -t namelist > namelist.sorted
+ 4157  ls
+ 4158  sort -n -t namelist > namelist.sorted
+ 4159  nvim namelist
+ 4160  sort -n -t namelist > namelist.sorted
+ 4161  sort --help
+ 4162  clear
+ 4163  sort -n -t namelist > namelist.sorted
+ 4164  ls
+ 4165  sort namelist
+ 4166  sort -n namelist
+ 4167  sort -n -t  namelist
+ 4168  sort -n -r  namelist
+ 4169  nvim
+ 4170  sort -n -r  namelist
+ 4171  sort --help
+ 4172  sort --info
+ 4173  sort --help
+ 4174  whoami
+ 4175  hostname
+ 4176  man man
+ 4177  man whoami
+ 4178  less namelist
+ 4179  head namelist
+ 4180  tail namelist
+ 4181  nvim namelist
+ 4182  head namelist
+ 4183  tail namelist
+ 4184  tail --help
+ 4185  tail -n 2 namelist
+ 4186  head -n 2 namelist
+ 4187  ls > list.txt
+ 4188  nvim list.txt
+ 4189  rm namelist list.txt namelist.sorted
+ 4190  ls
+ 4191  grep applications
+ 4192  find . | grep /proc/driver
+ 4193  sudo find . | grep /proc/driver
+ 4194  find . | grep /proc/driver > output.txt
+ 4195  grep /proc/driver > output.txt
+ 4196  ls | grep "driver"
+ 4197  ls . | grep "driver"
+ 4198  ls | grep "Library"
+ 4199  ls | grep "Cashes"
+ 4200  ls | grep "Caches"
+ 4201  find . | grep "Caches"
+ 4202  find . | grep "Caches" > output.txt
+ 4203  nvim output.txt
+ 4204  find . | grep "Caches" > output.txt 2> error.txt
+ 4205  cat error.txt
+ 4206  head -n 3 output.txt
+ 4207  pwd
+ 4208  cd ..
+ 4209  ls
+ 4210  cd
+ 4211  nvim ~/.zshrc
+ 4212  nv output.txt
+ 4213  . .zshrc
+ 4214  . ./.zshrc
+ 4215  nv output.txt
+ 4216  find . --name "Cashes"
+ 4217  find . -name "Cashes"
+ 4218  find /Library -name Cashes 1> output.txt 2> error.txt
+ 4219  cat error.txt
+ 4220  cat output.txt
+ 4221  nv output.txt
+ 4222  jobs
+ 4223  nv pupa
+ 4224  jobs
+ 4225  fg
+ 4226  mkdir week1
+ 4227  cd week1
+ 4228  cd ..
+ 4229  ls
+ 4230  cd roman_molochkov/week1
+ 4231  find ~/bin -name gcc 1> ex1.txt
+ 4232  find /roman_molochkov/bin -name gcc 1> ex1.txt
+ 4233  find /bin -name gcc 1> ex1.txt
+ 4234  ls
+ 4235  cat ex1.txt
+ 4236  docker run ubuntu
+ 4237  d ps
+ 4238  d ps -a
+ 4239  d rename boring_jepsen ubuntu
+ 4240  d start -ai ubuntu
+ 4241  d pa
+ 4242  d ps
+ 4243  d run -it --name ubuntu2 ubuntu 
+ 4244  d start -ai ubuntu2u 
+ 4245  d start -ai ubuntu2
+ 4246  cd CLionProjects/Operating_Systems_Innopolis
+ 4247  cd week01
+ 4248  nvim ex1.txt
+ 4249  nvim ex1.sh
+ 4250  nvim ex2.txt
+ 4251  nvim ex2.sh
+ 4252  find . | grep brew
+ 4253  find . | grep homebrew
+ 4254  find .
+ 4255  find . | grep Library
+ 4256  find . | grep homebrew
+ 4257  ls
+ 4258  find ~ | grep homebrew
+ 4259  history
+ 4260  nvim ex2.sh
+ 4261  nvim ex2.txt
+ 4262  bash ex2.sh
+ 4263  nvim ~/.zshrc
+ 4264  ubuntu
+ 4265  . ./.zshrc
+ 4266  ubuntu
+ 4267  . ./.zshrc
+ 4268  ~ Z/.
+ 4269  ~ ~/.zshrc
+ 4270  ubuntu
+ 4271  cd
+ 4272  . ./.zshrc
+ 4273  ubuntu
+ 4274  nvim ex3.sh
+ 4275  cd /
+ 4276  ls
+ 4277  cd ~/
+ 4278  ls
+ 4279  bash ex3.sh
+ 4280  nvim homeDir/home.txt
+ 4281  nvim rootDir/root.txt
+ 4282  nvim ex3.sh
+ 4283  bash ex3.sh
+ 4284  nvim ex3.sh
+ 4285  bash ex3.sh
+ 4286  ls
+ 4287  bash ex3.sh
+ 4288  nvim ex3.sh
+ 4289  bash ex3.sh
+ 4290  ls
+ 4291  ls /
+ 4292  bash ex1.sh
+ 4293  nvim ex1.sh
+ 4294  bash ex2.sh
+ 4295  nvim ex2.sh
+ 4296  gcc
+ 4297  ls
+ 4298  gcc ex01.c
+ 4299  gcc ex01.c -o ex4
+ 4300  ls
+ 4301  ./ex4
+ 4302  nvim ex4.c
+ 4303  rm ex4
+ 4304  rm ex01.c
+ 4305  mv ex4.c main.c
+ 4306  ls
+ 4307  gcc main.c -o ex4
+ 4308  nvim main.c
+ 4309  nv ~/.config
+ 4310  cd ..
+ 4311  cd Developer/GolandProjects/RoomTgBot/
+ 4312  nvim cmd/bot/bot.go
+ 4313  cd ~
+ 4314  cd CLionProjects/Operating_Systems_Innopolis/week01
+ 4315  brew list
+ 4316  brew info llvn@12
+ 4317  brew info llvm@12
+ 4318  brew uninstall llvm@12
+ 4319  brew list
+ 4320  brew install llvm
+ 4321  echo 'export PATH="/opt/homebrew/opt/llvm/bin:$PATH"'
+ 4322  brew install clang-format
+ 4323  export LD_LIBRARY_PATH="/Library/Developer/CommandLineTools/usr/lib/:$LD_LIBRARY_PATH"
+ 4324  nv ~/.config
+ 4325  nv
+ 4326  nv main.c
+ 4327  gcc main.c
+ 4328  history
+ 4329  git add ex01.c a.out ex1.sh ex2.sh
+ 4330  \t\tgit add ex1.txt ex2.txt ex3.sh homeDir/home.txt
+ 4331  \t\tgit add main.c rootDir/root.txt
+ 4332  git commit "feat: solve first assignment"
+ 4333  git commit -m  "feat: solve first assignment"
+ 4334  git -h
+ 4335  git list
+ 4336  git status
+ 4337  nv a.out
+ 4338  rm error.txt output.txt pupa week1
+ 4339  rmdir week1
+ 4340  rm week1/ex1.txt 
+ 4341  rmdir week1
+ 4342  clear
+ 4343  cd CLionProjects/Operating_Systems_Innopolis/
+ 4344  nvim README.md
+ 4345  cd week01
+ 4346  bash ex3.sh
+ 4347  bash ex2.sh
+ 4348  bash ex1.sh
+ 4349  nv ex1.sh
+ 4350  gcc main.c -o ex4
+ 4351  ./ex4
+ 4352  cd 
+ 4353  cd -
+ 4354  cd ..
+ 4355  nvim .idea/.gitignore
+ 4356  nv .gitignore
+ 4357  clear
+ 4358  ubuntu
+ 4359  cd 
+ 4360  ubuntu
+ 4361  srdin
+ 4362  stdin
+ 4363  nvim notes
+ 4364  ls
+ 4365  nv notes
+ 4366  ls
+ 4367  nv notes
+ 4368  nv notes.txt
+ 4369  jobs
+ 4370  fg $1
+ 4371  jobs
+ 4372  fg %1
+ 4373  notes.txt > notes
+ 4374  sort notes.txt > notes
+ 4375  fg%1
+ 4376  jobs
+ 4377  nv notes
+ 4378  jobs
+ 4379  stop job#1
+ 4380  stop jobs
+ 4381  jobs -h
+ 4382  jobs --help
+ 4383  jobs
+ 4384  kill %1
+ 4385  jobs
+ 4386  kill %2
+ 4387  jobs
+ 4388  open Applications/Calendar
+ 4389  find . | grep Calendar
+ 4390  cal
+ 4391  cal 1 9 2022
+ 4392  cal 9 2022
+ 4393  open Library/Calendars
+ 4394  cd Documents/Education/Innopolis/DE
+ 4395  ls
+ 4396  cd ..
+ 4397  nv
+ 4398  cd ..
+ 4399  history | tail -n 5 > tmp.txt
+ 4400  nv tmp.txt
+ 4401  rm tmp.txt
+ 4402  nv week01/ex3.sh
+ 4403  ls --sort=time
+ 4404  ls --help
+ 4405  ls -h
+ 4406  man ls
+ 4407  ls -S=time
+ 4408  man ls
+ 4409  ls -S
+ 4410  nv ex3.sh
+ 4411  ls
+ 4412  cd week01
+ 4413  nv ex3.sh
+ 4414  ls -tl
+ 4415  ls -halt
+ 4416  ls -haltr
+ 4417  cd homeDir
+ 4418  ls -haltr
+ 4419  cd ..
+ 4420  ls -ltr > ./rootDir/root.txt
+ 4421  nv rootDir/root.txt
+ 4422  ls / -ltr > ./rootDir/root.txt
+ 4423  ls -ltr / > ./rootDir/root.txt
+ 4424  nv rootDir/root.txt
+ 4425  ls -ltr ~ > ./homeDir/home.txt
+ 4426  nv homeDir/home.txt
+ 4427  git status
+ 4428  git add homeDir/home.txt rootDir/root.txt
+ 4429  nv ex3.sh
+ 4430  ls -ltr ~ > ./homeDir/home.txt
+ 4431  nv ex3.sh
+ 4432  git status
+ 4433  git add ex3.sh
+ 4434  git commit -m "refactor: change sorting of the directories in the home and root dir"
+ 4435  git push
+ 4436  git pull
+ 4437  git merge
+ 4438  git pull
+ 4439  git status
+ 4440  git commit -m "delete: .gitignore in .idea\nQ\n:q\nquit
+ 4441  git commit -m "delete: .gitignore in .idea"\nQ\n:q\nquit
+ 4442  git push
+ 4443  clear
+ 4444  тм ex1.sh
+ 4445  nv ex1.sh

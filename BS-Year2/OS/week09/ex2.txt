@@ -1,0 +1,29 @@
+For example, we can decrease the hit/miss ratio by using 32 bits counter, 32
+page frames and this sequence:
+
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30
+31 32 33 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27
+28 29 30 31 32 33 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
+25 26 27 28 29 30 31 32 33 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+22 23 24 25 26 27 28 29 30 31 32 33 1 2 ...
+
+In this example we will meet with the case, that 33 page will be written to page
+frame of the 1 page, that is why when 1 page should be written to page frames
+after first time, it will be missed because page frame will contain 33, 2 , ...
+, 32. From this example we get minimum hit/miss ratio, because each page will
+never hit in a page frame.
+
+--------------------------------------------------------------------------------
+For example, we can increase the hit/miss ratio by using 32 bits counter, 32
+page frames and this sequence:
+
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30
+31 32 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28
+29 30 31 32 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26
+27 28 29 30 31 32 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
+25 26 27 28 29 30 31 32 1 2 ...
+
+In this example we will meet with the case, when 1 page should be written to
+page frames it will be hit because page frame will contain 1 , ... , 32. From this
+example we get maximum hit/miss ratio, because each page will never removed from
+page frames.

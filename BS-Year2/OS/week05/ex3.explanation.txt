@@ -1,0 +1,5 @@
+From the execution time output of the program is clearly see, that when we divide one big task
+on m small tasks which executed by m threads, we get better result than one thread execute this task.
+Because all threads executed in parallel and do the small tasks and after combine results in the total result.
+That is why in this case we will decrease execution time by increasing number of threads but till the number of elements
+in array.

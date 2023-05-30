@@ -1,0 +1,4 @@
+The difference between FCFS and SJF, that first one just take the processes in order it comes. But as for SJF,
+at first it sorts processes by arrival time and after by burst time. And it chooses the process with the shortest burst time in
+an available set of processes. Comparing with FCFS, SJF always will have less average waiting time, because it will always
+take process with the shortest burst time. And that is why turnaround time of processes will be shorter.

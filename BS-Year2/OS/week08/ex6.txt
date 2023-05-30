@@ -1,0 +1,5 @@
+In order to byte address 8 KB, we require 2^13 entries. If we consider the 
+Virtual Address given to us of 16 bits, this gives us 16−13=3 bits. These are
+the bits that are used for indexing into the page table for determining the
+address of the page or 'frame' in main memory. That is why 13 bits is offset and
+3 bits is for entries 8 pages.

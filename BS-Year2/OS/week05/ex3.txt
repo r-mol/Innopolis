@@ -1,0 +1,25 @@
+
+Execution time for 10000000 numbers and 1 threads
+real 2.66
+user 2.24
+sys 0.00
+
+Execution time for 10000000 numbers and 2 threads
+real 1.41
+user 2.27
+sys 0.00
+
+Execution time for 10000000 numbers and 4 threads
+real 0.75
+user 2.32
+sys 0.00
+
+Execution time for 10000000 numbers and 10 threads
+real 0.40
+user 2.72
+sys 0.00
+
+Execution time for 10000000 numbers and 100 threads
+real 0.36
+user 2.84
+sys 0.00

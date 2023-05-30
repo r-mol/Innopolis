@@ -1,0 +1,5 @@
+Every operating process forks off once every five seconds.
+Only the manually performed process is produced at first,
+and thereafter further processes are created. Then, one
+more is produced by each of them, and so on. The resulting
+hierarchy, where n is the number of seconds, is a binomial tree of order n.

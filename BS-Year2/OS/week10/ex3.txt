@@ -1,0 +1,13 @@
+-rw-rw-rw-  1 roman_molochkov  staff    34B 11 Nov 08:16 _ex3.txt
+-rwxrw-rwx  1 roman_molochkov  staff    34B 11 Nov 08:16 _ex3.txt
+-rwxrwxrwx  1 roman_molochkov  staff    34B 11 Nov 08:16 _ex3.txt
+
+1. 660 -- 110 => Owner has read & write permissions
+       |- 110 => Group has read & write permissions
+       |- 000 => Other does not have any permissions
+2. 775 -- 111 => Owner has read & write & execute permissions
+       |- 111 => Group has read & write & execute permissions
+       |- 101 => Other have read & execute permissions
+3. 777 -- 111 => Owner has read & write & execute permissions
+       |- 111 => Group has read & write & execute permissions
+       |- 111 => Other have read & write & execute permissions

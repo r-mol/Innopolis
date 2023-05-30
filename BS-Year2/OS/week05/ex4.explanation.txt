@@ -1,0 +1,3 @@
+From the execution time output of the program is clearly see, creating m threads leads to decrease execution time.
+But after some number of threads we will get again increasing of execution time because threads start to wait when another
+thread finish his work and unlock mutex.
